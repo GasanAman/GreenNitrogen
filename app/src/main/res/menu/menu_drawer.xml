@@ -25,7 +25,7 @@
                     android:title="@string/asuransi" />
 
                 <item
-                    android:id="@+id/drawer_youtube"
+                    android:id="@+id/drawer_kerja_sama_bisnis"
                     android:icon="@drawable/ic_work_white_36dp"
                     android:title="@string/bisnis_kerja_sama" />
             </menu>

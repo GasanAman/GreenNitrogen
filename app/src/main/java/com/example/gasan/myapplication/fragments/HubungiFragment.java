@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.example.gasan.myapplication.R;
 import com.example.gasan.myapplication.ServiceHandler;
@@ -45,18 +46,27 @@ public class HubungiFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         rootView = inflater.inflate(R.layout.fragment_hubungi, container, false);
-        getActivity().setTitle(getString(R.string.hubungi_kami));
+        getActivity().setTitle(R.string.hubungi_kami);
 
-        inputnama = (EditText) rootView.findViewById(R.id.inputnama);
-        inputnohp = (EditText) rootView.findViewById(R.id.inputnohp);
-        inputemail = (EditText) rootView.findViewById(R.id.inputemail);
-        kolomPesan = (EditText) rootView.findViewById(R.id.kolomPesan);
+        inputnama = (EditText) rootView.findViewById(R.id.inputnamaHubungi);
+        inputnohp = (EditText) rootView.findViewById(R.id.inputnohpHubungi);
+        inputemail = (EditText) rootView.findViewById(R.id.inputemailHubungi);
+        kolomPesan = (EditText) rootView.findViewById(R.id.kolomPesanHubungi);
 
-        submit = (Button) rootView.findViewById(R.id.buttonSubmit);
+        submit = (Button) rootView.findViewById(R.id.buttonSubmitHubungi);
         submit.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
-
-                new HubungiFragment.SaveData().execute();
+                if (inputnama.getText().toString().trim().isEmpty()) {
+                    Toast.makeText(v.getContext().getApplicationContext(), "Nama Masih Kosong", Toast.LENGTH_LONG).show();
+                } else if (inputnohp.getText().toString().trim().isEmpty()) {
+                    Toast.makeText(v.getContext().getApplicationContext(), "Nomor HP Masih Kosong", Toast.LENGTH_LONG).show();
+                } else if (inputemail.getText().toString().trim().isEmpty()) {
+                    Toast.makeText(v.getContext().getApplicationContext(), "Email Masih Kosong", Toast.LENGTH_LONG).show();
+                } else if (kolomPesan.getText().toString().trim().isEmpty()) {
+                    Toast.makeText(v.getContext().getApplicationContext(), "Pesan Masih Kosong", Toast.LENGTH_LONG).show();
+                } else {
+                    new SaveData().execute();
+                }
             }
         });
 

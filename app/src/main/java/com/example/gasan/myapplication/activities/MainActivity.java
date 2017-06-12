@@ -22,6 +22,7 @@ import com.example.gasan.myapplication.fragments.AwardFragment;
 import com.example.gasan.myapplication.fragments.CarWashFragment;
 import com.example.gasan.myapplication.fragments.GaransiFragment;
 import com.example.gasan.myapplication.fragments.HubungiFragment;
+import com.example.gasan.myapplication.fragments.KerjaSamaBisnisFragment;
 import com.example.gasan.myapplication.fragments.ProdukFragment;
 import com.example.gasan.myapplication.fragments.TabFragment;
 import com.example.gasan.myapplication.fragments.TentangFragment;
@@ -108,6 +109,11 @@ public class MainActivity extends AppCompatActivity {
                 if (menuItem.getItemId() == R.id.drawer_asuransi) {
                     FragmentTransaction fragmentTransaction = mFragmentManager.beginTransaction();
                     fragmentTransaction.replace(R.id.frame_container, new AsuransiFragment()).commit();
+                }
+
+                if (menuItem.getItemId() == R.id.drawer_kerja_sama_bisnis) {
+                    FragmentTransaction fragmentTransaction = mFragmentManager.beginTransaction();
+                    fragmentTransaction.replace(R.id.frame_container, new KerjaSamaBisnisFragment()).commit();
                 }
                 if (menuItem.getItemId() == R.id.drawer_visi_misi) {
                     FragmentTransaction fragmentTransaction = mFragmentManager.beginTransaction();
