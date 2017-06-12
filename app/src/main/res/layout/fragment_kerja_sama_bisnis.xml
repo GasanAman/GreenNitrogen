@@ -1,0 +1,309 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.gasan.myapplication.fragments.KerjaSamaBisnisFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:id="@+id/lineatas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="10dp">
+
+        <TextView
+            android:id="@+id/judulTestimoni"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/judul_kerjasama_bisnis"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#000000"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:background="@android:color/holo_red_dark" />
+    </LinearLayout>
+
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/lineatas">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
+
+
+                <TextView
+                    android:id="@+id/nama"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/nama"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/inputnama"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/nama"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:layout_marginBottom="10dp"
+                    android:hint="@string/nama" />
+
+                <TextView
+                    android:id="@+id/nohp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/inputnama"
+                    android:text="@string/no_hp"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/inputnohp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/nohp"
+                    android:layout_marginBottom="10dp"
+                    android:ems="10"
+                    android:inputType="phone"
+                    android:hint="@string/no_hp" />
+
+                <TextView
+                    android:id="@+id/email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/inputnohp"
+                    android:text="@string/email"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/inputemail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/email"
+                    android:ems="10"
+                    android:inputType="textEmailAddress"
+                    android:layout_marginBottom="10dp"
+                    android:hint="@string/email" />
+
+                <TextView
+                    android:id="@+id/instansi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/inputemail"
+                    android:text="@string/instansi"
+                    android:textColor="#000000" />
+
+                <EditText
+                    android:id="@+id/inputinstansi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/instansi"
+                    android:scrollbars="vertical"
+                    android:layout_marginBottom="10dp"
+                    android:fadeScrollbars="false"
+                    android:layout_weight="1"
+                    android:inputType="textPersonName"
+                    android:hint="@string/instansi" />
+
+                <TextView
+                    android:id="@+id/informasiygdidapat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/inputinstansi"
+                    android:text="@string/informasi_yang_ingin_didapat"
+                    android:textColor="#000000" />
+
+                <EditText
+                    android:id="@+id/inputinfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/informasiygdidapat"
+                    android:scrollbars="vertical"
+                    android:fadeScrollbars="false"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="1"
+                    android:inputType="textMultiLine"
+                    android:hint="@string/informasi_yang_ingin_didapat" />
+
+                <TextView
+                    android:id="@+id/alasan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/inputinfo"
+                    android:text="@string/alasan"
+                    android:textColor="#000000" />
+
+                <EditText
+                    android:id="@+id/inputalasan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/alasan"
+                    android:scrollbars="vertical"
+                    android:fadeScrollbars="false"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="1"
+                    android:inputType="textMultiLine"
+                    android:hint="@string/alasan" />
+
+                <TextView
+                    android:id="@+id/mengenal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/inputalasan"
+                    android:text="@string/mengenal"
+                    android:textColor="#000000" />
+
+                <EditText
+                    android:id="@+id/inputmengenal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/mengenal"
+                    android:scrollbars="vertical"
+                    android:fadeScrollbars="false"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="1"
+                    android:inputType="textMultiLine"
+                    android:hint="@string/mengenal" />
+
+                <TextView
+                    android:id="@+id/brp_lama_mengenal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/inputmengenal"
+                    android:text="@string/berapa_lama_mengenal_nitrogen"
+                    android:textColor="#000000" />
+
+                <EditText
+                    android:id="@+id/input_brp_lama_mengenal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/brp_lama_mengenal"
+                    android:scrollbars="vertical"
+                    android:fadeScrollbars="false"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="1"
+                    android:inputType="text"
+                    android:hint="@string/berapa_lama_mengenal_nitrogen" />
+
+                <TextView
+                    android:id="@+id/outlet_dikunjungi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/input_brp_lama_mengenal"
+                    android:text="@string/outlet_dikunjungi"
+                    android:textColor="#000000" />
+
+                <EditText
+                    android:id="@+id/input_outlet_dikunjungi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/outlet_dikunjungi"
+                    android:scrollbars="vertical"
+                    android:fadeScrollbars="false"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="1"
+                    android:inputType="textMultiLine"
+                    android:hint="@string/outlet_dikunjungi" />
+
+                <TextView
+                    android:id="@+id/bandrex"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/input_outlet_dikunjungi"
+                    android:text="@string/bandrex"
+                    android:textColor="#000000" />
+
+                <EditText
+                    android:id="@+id/input_bandrex"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/bandrex"
+                    android:scrollbars="vertical"
+                    android:fadeScrollbars="false"
+                    android:layout_marginBottom="10dp"
+                    android:hint="@string/layanan_bandrex"
+                    android:layout_weight="1"
+                    android:inputType="textMultiLine" />
+
+
+                <TextView
+                    android:id="@+id/usaha"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/input_bandrex"
+                    android:text="@string/usaha"
+                    android:textColor="#000000" />
+
+                <EditText
+                    android:id="@+id/input_usaha"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/usaha"
+                    android:scrollbars="vertical"
+                    android:fadeScrollbars="false"
+                    android:layout_marginBottom="10dp"
+                    android:hint="@string/usaha_input"
+                    android:layout_weight="1"
+                    android:inputType="textMultiLine" />
+
+                <TextView
+                    android:id="@+id/kritik_saran"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/input_usaha"
+                    android:text="@string/kritik_saran"
+                    android:textColor="#000000" />
+
+                <EditText
+                    android:id="@+id/input_kritik_saran"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/kritik_saran"
+                    android:scrollbars="vertical"
+                    android:fadeScrollbars="false"
+                    android:layout_marginBottom="10dp"
+                    android:hint="@string/kritik_saran"
+                    android:layout_weight="1"
+                    android:inputType="textMultiLine" />
+
+                <TextView
+                    android:id="@+id/upload_ktp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/input_kritik_saran"
+                    android:text="Untuk Melengkapi Form Bisnis Kerja Sama ini, harap upload KTP anda"
+                    android:textColor="#D00000"
+                    android:textStyle="bold"/>
+
+                    <Button
+                        android:id="@+id/buttonSubmit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/upload_ktp"
+                        android:layout_marginLeft="10dp"
+                        android:onClick="onClick"
+                        android:text="@string/submit" />
+
+
+
+
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+
+
+</RelativeLayout>

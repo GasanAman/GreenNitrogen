@@ -1,0 +1,227 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.gasan.myapplication.fragments.VisiMisiFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:id="@+id/visilineatas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/judulvisi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Visi dan Misi "
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#000000"/>
+
+        <TextView
+            android:id="@+id/judulvisi2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/judulvisi"
+            android:layout_toRightOf="@+id/judulvisi"
+
+            android:text="Green "
+            android:textColor="@android:color/holo_green_dark"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/judulvisi3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/judulvisi2"
+            android:layout_toRightOf="@+id/judulvisi2"
+
+            android:text="Nitrogen"
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:background="@android:color/holo_red_dark"
+            android:layout_below="@+id/judulvisi" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignLeft="@+id/visilineatas"
+        android:layout_alignStart="@+id/visilineatas"
+        android:layout_below="@+id/visilineatas"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/isivisi1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="@string/visi_1"
+                android:textColor="#000000"/>
+
+            <TextView
+                android:id="@+id/isivisi2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/isivisi1"
+                android:layout_alignStart="@+id/isivisi1"
+                android:layout_below="@+id/isivisi1"
+                android:text="@string/visi_2"
+                android:textColor="#000000"/>
+
+            <TextView
+                android:id="@+id/isivisi3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/isivisi2"
+                android:layout_alignStart="@+id/isivisi2"
+                android:layout_below="@+id/isivisi2"
+                android:text="@string/visi_3"
+                android:textColor="#000000"/>
+
+            <TextView
+                android:id="@+id/isimisi1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/misi_1"
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/isivisi3"
+                android:layout_alignLeft="@+id/isivisi3"
+                android:layout_alignStart="@+id/isivisi3"
+                android:textColor="#000000"/>
+
+            <TextView
+                android:id="@+id/isimisi2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/isimisi1"
+                android:layout_alignStart="@+id/isimisi1"
+                android:layout_below="@+id/isimisi1"
+                android:text="@string/misi_2"
+                android:textColor="#000000"/>
+
+            <TextView
+                android:id="@+id/isimisi3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/isimisi2"
+                android:layout_alignStart="@+id/isimisi2"
+                android:layout_below="@+id/isimisi2"
+                android:text="@string/misi_3"
+                android:textColor="#000000"/>
+
+            <TextView
+                android:id="@+id/isimisi4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/isimisi3"
+                android:layout_alignStart="@+id/isimisi3"
+                android:layout_below="@+id/isimisi3"
+                android:text="@string/misi_4"
+                android:textColor="#000000"/>
+
+            <TextView
+                android:id="@+id/isimisi5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/isimisi4"
+                android:layout_alignStart="@+id/isimisi4"
+                android:layout_below="@+id/isimisi4"
+                android:text="@string/misi_5"
+                android:textColor="#000000"/>
+
+            <TextView
+                android:id="@+id/isitujuan1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/isimisi5"
+                android:layout_alignStart="@+id/isimisi5"
+                android:layout_below="@+id/isimisi5"
+                android:text="@string/tujuan_1"
+                android:layout_marginTop="20dp"
+                android:textColor="#000000"/>
+
+            <TextView
+                android:id="@+id/isitujuan2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/isitujuan1"
+                android:layout_alignStart="@+id/isitujuan1"
+                android:layout_below="@+id/isitujuan1"
+                android:text="@string/tujuan_2"
+                android:textColor="#000000"/>
+
+            <TextView
+                android:id="@+id/isinilai"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/isitujuan2"
+                android:layout_alignStart="@+id/isitujuan2"
+                android:layout_below="@+id/isitujuan2"
+                android:text="@string/nilai_1"
+                android:layout_marginTop="20dp"
+                android:textColor="#000000"/>
+
+            <TextView
+                android:id="@+id/isimodel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/isinilai"
+                android:layout_alignStart="@+id/isinilai"
+                android:layout_below="@+id/isinilai"
+                android:text="@string/model_1"
+                android:layout_marginTop="20dp"
+                android:textColor="#000000"/>
+
+            <TextView
+                android:id="@+id/isimodel2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/isimodel"
+                android:layout_alignStart="@+id/isimodel"
+                android:layout_below="@+id/isimodel"
+                android:text="@string/model_2"
+                android:textColor="#000000"/>
+
+            <TextView
+                android:id="@+id/isimodel3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/isimodel2"
+                android:layout_alignStart="@+id/isimodel2"
+                android:layout_below="@+id/isimodel2"
+                android:text="@string/model_3"
+                android:textColor="#000000"/>
+
+            <TextView
+                android:id="@+id/isimodel4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/isimodel3"
+                android:layout_alignStart="@+id/isimodel3"
+                android:layout_below="@+id/isimodel3"
+                android:text="@string/model_4"
+                android:textColor="#000000"/>
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

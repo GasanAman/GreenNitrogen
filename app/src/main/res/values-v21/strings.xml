@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="green_steam_wash">Green Steam Wash</string>
+    <string name="testimoni_pelanggan">Testimoni Pelanggan</string>
+    <string name="isu_nitrogen_palsu">Isu Nitrogen Palsu</string>
+    <string name="green_nitrogen_palsu">Green Nitrogen Palsu</string>
+    <string name="submit">Submit</string>
+    <string name="merek_kendaraan">Merek Kendaraan</string>
+    <string name="jenis_kendaraan">Jenis Kendaraan</string>
+    <string name="email">Email</string>
+    <string name="no_hp">No HP</string>
+    <string name="alamat">Alamat</string>
+    <string name="nama">Nama</string>
+    <string name="comment">Comment</string>
+    <string name="steam_wash">Steam Wash</string>
+    <string name="judul_steam_wash">Comment Of The Week Green Steam Wash</string>
+    <string name="judul_testimoni">Testimoni Pelanggan Green Nitrogen</string>
+    <string name="pertanyaan_testimoni">Testimoni anda terhadap Pelayanan dan Produk dari Green Nitrogen</string>
+    <string name="testimoni">Testimoni</string>
+    <string name="comments_of_the_week_green_nitrogen">Comments Of The Week Green Nitrogen</string>
+    <string name="pertanyaan_isu_palsu">Berikan komentar Anda tentang Isu HOAX Nitrogen Palsu?</string>
+    <string name="paragraf_1_isu">Dapatkan Gratis e-book buku Angin Perubahan dari Adang Wijaya, Owner dan CEO Green Nitrogen dan Xtravoucher Senilai Rp. 200 Ribu . Pelopor dalam membangun raksasa bisnis dari menjual angin nitrogen dan tambal ban bergaransi di SPBU Pertamina seluruh Indonesia.</string>
+    <string name="paragraf_2_isu">Untuk e-book dapat di download di Link yang akan kami kirim melalui Email/SMS, mohon lengkapi data pribadi Anda. Terima kasih.</string>
+    <string name="pertanyaan_green_palsu">Merebaknya outlet Green Nitrogen palsu, apakah Anda tahu cara membedakannya? Menurut Anda apa yang menjafi ciri khas outlet Green Nitrogen?</string>
+    <string name="green_palsu_paragraf1">Dapatkan Gratis e-book buku Angin Perubahan dari Adang Wijaya, Owner dan CEO Green Nitrogen dan Xtravoucher Senilai Rp. 200 Ribu . Pelopor dalam membangun raksasa bisnis dari menjual angin nitrogen dan tambal ban bergaransi di SPBU Pertamina seluruh Indonesia.</string>
+    <string name="green_palsu_paragraf2">Untuk e-book dapat di download di Link yang akan kami kirim melalui Email/SMS, mohon lengkapi data pribadi Anda. Terima kasih.</string>
+    <string name="award">Award</string>
+    <string name="info">Info</string>
+    <string name="garansi">Garansi</string>
+    <string name="bisnis_kerja_sama">Bisnis Kerja Sama</string>
+    <string name="layanan">Layanan</string>
+    <string name="produk_dan_layanan">Produk dan Layanan</string>
+    <string name="car_wash">Car Wash</string>
+    <string name="profil">Profil</string>
+    <string name="hubungi_kami">Hubungi Kami</string>
+    <string name="back_image_button_desc">Back To Main Activity Button</string>
+    <string name="hub_form">Anda akan dibalas oleh pihak Green Nitrogen melalui Email</string>
+    <string name="pesan">Pesan</string>
+    <string name="tentang">Tentang</string>
+    <string name="unit_kerja_strategis">Unit Kerja Strategis</string>
+    <string name="asuransi">Asuransi</string>
+</resources>

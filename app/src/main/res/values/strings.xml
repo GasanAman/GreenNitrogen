@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!--application name-->
+    <string name="app_name">Green Nitrogen</string>
+
+    <!--tab name-->
+    <string name="tab1">Berita</string>
+    <string name="tab2">Promo</string>
+    <string name="tab3">Comment Of The Week</string>
+
+    <!--Tab 1-->
+    <string name="cd_main_image">main image</string>
+    <string name="material_icon_like">&#xeb03;</string>
+    <string name="material_icon_favorite">&#xe9b6;</string>
+    <string name="material_icon_share">&#xeac0;</string>
+    <string name="lorem_ipsum_long">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</string>
+
+    <!--navigation drawer menu name-->
+    <string name="drawer_home">Home</string>
+    <string name="drawer_facebook">Facebook</string>
+    <string name="drawer_gPlus">Google+</string>
+    <string name="drawer_youtube">YouTube</string>
+    <string name="drawer_rate">Rate</string>
+    <string name="drawer_more">More</string>
+    <string name="drawer_share">Share</string>
+    <string name="drawer_exit">Exit</string>
+    <string name="drawer_profile">Profile</string>
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+
+    <string name="drawer_visibility">@string/drawer_content_on</string>
+    <string name="drawer_content_on">0</string>
+    <string name="drawer_content_off">2</string>
+    <string name="app_email">dr.m.karthiik@gmail.com</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <!--Exit Dialog-->
+    <string name="message">Do you want to exit?</string>
+    <string name="positive_button">Yes</string>
+    <string name="negative_button">No</string>
+
+
+    <!--MY STRING-->
+    <string name="bullet">\u2022 </string>
+    <string name="no1">1. </string>
+    <string name="no2">2. </string>
+    <string name="no3">3. </string>
+    <string name="no4">4. </string>
+    <string name="no5">5. </string>
+    <string name="no6">6. </string>
+    <string name="no7">7. </string>
+    <string name="no8">8. </string>
+    <string name="no9">9. </string>
+    <string name="no10">10. </string>
+    <string name="green_steam_wash">Green Steam Wash</string>
+    <string name="testimoni_pelanggan">Testimoni Pelanggan</string>
+    <string name="isu_nitrogen_palsu">Isu Nitrogen Palsu</string>
+    <string name="green_nitrogen_palsu">Green Nitrogen Palsu</string>
+    <string name="submit">Submit</string>
+    <string name="merek_kendaraan">Merek Kendaraan</string>
+    <string name="jenis_kendaraan">Jenis Kendaraan</string>
+    <string name="no_polisi">No Polisi</string>
+    <string name="email">Email</string>
+    <string name="no_hp">No HP</string>
+    <string name="alamat">Alamat</string>
+    <string name="nama">Nama</string>
+    <string name="comment">Comment</string>
+    <string name="pertanyaan_komen">Apa yang anda ketahui tentang Cuci Mobil Teknologi Uap Panas salah satu produk andalan Green Nitrogen ?</string>
+    <string name="steam_wash">Steam Wash</string>
+    <string name="judul_steam_wash">Comment Of The Week Green Steam Wash</string>
+    <string name="judul_testimoni">Testimoni Pelanggan Green Nitrogen</string>
+    <string name="pertanyaan_testimoni">Testimoni anda terhadap Pelayanan dan Produk dari Green Nitrogen</string>
+    <string name="testimoni">Testimoni</string>
+    <string name="comments_of_the_week_green_nitrogen">Comments Of The Week Green Nitrogen</string>
+    <string name="pertanyaan_isu_palsu">Berikan komentar Anda tentang Isu HOAX Nitrogen Palsu?</string>
+    <string name="paragraf_1_isu">Dapatkan Gratis e-book buku Angin Perubahan dari Adang Wijaya, Owner dan CEO Green Nitrogen dan Xtravoucher Senilai Rp. 200 Ribu . Pelopor dalam membangun raksasa bisnis dari menjual angin nitrogen dan tambal ban bergaransi di SPBU Pertamina seluruh Indonesia.</string>
+    <string name="paragraf_2_isu">Untuk e-book dapat di download di Link yang akan kami kirim melalui Email/SMS, mohon lengkapi data pribadi Anda. Terima kasih.</string>
+    <string name="pertanyaan_green_palsu">Merebaknya outlet Green Nitrogen palsu, apakah Anda tahu cara membedakannya? Menurut Anda apa yang menjafi ciri khas outlet Green Nitrogen?</string>
+    <string name="green_palsu_paragraf1">Dapatkan Gratis e-book buku Angin Perubahan dari Adang Wijaya, Owner dan CEO Green Nitrogen dan Xtravoucher Senilai Rp. 200 Ribu . Pelopor dalam membangun raksasa bisnis dari menjual angin nitrogen dan tambal ban bergaransi di SPBU Pertamina seluruh Indonesia.</string>
+    <string name="green_palsu_paragraf2">Untuk e-book dapat di download di Link yang akan kami kirim melalui Email/SMS, mohon lengkapi data pribadi Anda. Terima kasih.</string>
+    <string name="award">Award</string>
+    <string name="info">Info</string>
+    <string name="garansi">Garansi</string>
+    <string name="bisnis_kerja_sama">Bisnis Kerja Sama</string>
+    <string name="layanan">Layanan</string>
+    <string name="produk_dan_layanan">Produk dan Layanan</string>
+    <string name="car_wash">Car Wash</string>
+    <string name="profil">Profil</string>
+    <string name="hubungi_kami">Hubungi Kami</string>
+    <string name="unit_kerja_bisnis">Unit Kerja Strategis</string>
+    <string name="visi_misi">Visi Misi</string>
+    <string name="tentang_kami">Tentang Kami</string>
+    <string name="back_image_button_desc">Back To Main Activity Button</string>
+    <string name="hub_form">Anda akan dibalas oleh pihak Green Nitrogen melalui Email</string>
+    <string name="pesan">Pesan</string>
+
+    <string name="paragraf_1">      Green Nitrogen merupakan salah satu unit usaha strategis yang menjadi merk andalan (Anchor Brand) dari PT Global Insight Utama yang berfokus kepada layanan prima untuk nitrogen dan tambal ban bergaransi di SPBU Pertamina. Unit usaha ini merupakan mitra bisnis resmi sebagai operator tunggal yang dipercaya oleh Pertamina memberikan layanan nitrogen dan tambal ban. Selain sebagai mitra strategis Pertamina, Green Nitrogen pernah dipercaya oleh Ferrari Indonesia untuk mendukung ajang Ferrari Rally Corso Pilota pada tanggal 14–15 Oktober 2011, dan sampai saat ini masih dipercaya sebagai Official Service Provider di Ferrari Indonesia, Lexus Indonesia, dan Nissan Motor Indonesia. Juga Auto 2000, principal ban Michelin, dan lainnya.</string>
+    <string name="paragraf_2">      Beberapa mitra strategis Green Nitrogen yang telah bekerja sama diantaranya adalah Bank Mandiri, BCA, BNI, dan BRI untuk layanan transaksi pembayaran melalui mesin Debit dan Kartu Kredit (khusus untuk BNI); Sosro Indonesia untuk layanan promsi Teh Sosro di beberapa outlet; Adira Insurance dan Adira Finance, serta Politeknik Negeri Malang (Polinema) untuk pembuatan mesin N2 Generator yang penandatanganannya disaksikan oleh Gubernur Jawa Timur yaitu  Bp. DR. Soekarwo. Selain itu sedang dilakukan pembangunan wahana pemeliharaan kendaraan pertama dan terbesar di Indonesia, yaitu Polinema Autopark, yang akan diresmikan oleh Presiden RI.</string>
+    <string name="paragraf_3">      Green Nitrogen mengedepankan layanan prima untuk kepuasan mitra bisnis (Pertamina) dan pelanggan (baik pelanggan SPBU dan pelanggan nitrogen).</string>
+    <string name="tentang">Tentang</string>
+
+    <string name="visi_1"> Visi, merupakan cita-cita masa depan yang akan dicapai perusahaan. </string>
+    <string name="visi_2">Adapun visi yang akan dicapai adalah:</string>
+    <string name="visi_3">Menjadi teladan dalam menjalankan bisnis yang beretika.</string>
+    <string name="misi_1">Misi, adalah bisnis yang dijalankan untuk mencapai cita-cita yang akan dicapai.</string>
+    <string name="misi_2">Adapun misi yang dijalankan adalah:</string>
+    <string name="misi_3">1. Memberi pelayanan pengisian nitrogen yang prima di \n \t SPBU Pertamina</string>
+    <string name="misi_4">2. Menerapkan sistem bagi hasil yang transparan dan \n \t akuntabel</string>
+    <string name="misi_5">3. Membuka peluang kerja  kepada semua kalangan dan \n \t kesempatan berinvestasi kepada siapapun</string>
+    <string name="tujuan_1">Tujuan, yaitu tujuan yang akan dicapai adalah </string>
+    <string name="tujuan_2">Menjadi perusahaan yang terbesar, terbaik, dan terpercaya dalam memberikan layanan bisnis.</string>
+    <string name="nilai_1">Nilai-nilai bisnis yang dianut dalam menjalankan bisnis adalah Jujur, Amanah, Cerdas, dan Transparansi </string>
+    <string name="model_1">Model kerja sama bisnis: </string>
+    <string name="model_2">1. Terbuka untuk semua kalangan </string>
+    <string name="model_3">2. Sistem bagi hasil yang seimbang </string>
+    <string name="model_4">3. Silaturahim dan Berjamaah </string>
+
+    <string name="unit_kerja_strategis">Unit Kerja Strategis</string>
+    <string name="unit_kerja_paragraf1">Unit kerja merupakan pembagian tugas atau pekerjaan yang dikelompokan berdasarkan organisasi. Semua unit kerja yang ada di dalam green nitrogen merupakan unit kerja strategis, artinya setiap unit kerja memiliki nilai yang tinggi di mata perusahaan, karena keberhasilan perusahaan sangat bergantung pada sinergi keseluruhan unit kerja.</string>
+    <string name="unit_kerja_paragraf2">Unit kerja meliputi enam unit kerja yang terdiri atas:</string>
+
+    <string name="support_unit">Supporting Strategic Unit</string>
+    <string name="support_unit2">Merupakan unit kerja yang memberikan dukungan bagi kelancaran unit usaha yang meliputi</string>
+    <string name="support_unit3">1. HR dan General Affair Department</string>
+    <string name="support_unit4">2. Finance dan Administration Department</string>
+    <string name="support_unit5">3. IT Department]</string>
+    <string name="support_unit6">4. Distribution Center</string>
+
+    <string name="bussiness_strategic">Business Strategic Unit</string>
+    <string name="bussiness_strategic2">Merupakan unit kerja yang bertugas menjalin kerja sama strategik kepada mitra bisnis strategis seperti pemilik SPBU dan Pertamina, ATPM, prinsipal ban, dan lainnya yang akan mendukung masa depan bisnis. Termasuk di dalamnya bertanggungjawab untuk melakukan pengembangan bisnis, produk dan layanan baru.</string>
+
+    <string name="client_strategic">Client Strategic Unit</string>
+    <string name="client_strategic2">Merupakan unit kerja yang menjalin kerja sama strategik kepada para investor, dan mencari investor-investor potensial bagi pengembangan bisnis masa depan. Selain itu bertanggungjawab dalam menjalin hubungan baik kepada pelanggan melalui layanan hotline.</string>
+    <string name="client_strategic3">Unit kerja ini akan terus menjalin komunikasi kepada para investor sehingga bila ada kritik, saran dan informasi lainnya dapat berkomunikasi kepada unit kerja ini.</string>
+
+    <string name="operation_strategic">Operation Strategic Unit</string>
+    <string name="operation_strategic2">Merupakan unit kerja yang melakukan pengoperasian SPGN secara terus-menurus selama 24 jam sehari dan 7 hari seminggu. Unit kerja ini pula yang akan membangun SPGN, memelihara dan melakukan pengelolaan. </string>
+
+    <string name="controlling_strategic">Controlling Strategic Unit</string>
+    <string name="controlling_strategic2">Merupakan unit kerja yang melakukan pengawasan kerja operasional outlet mulai dari kedisiplinan operator, pelayanan kepada pelanggan, pelaporan, setoran, supplies, pemeliharaan perangkat dan outlet. Pengawasan  juga menggunakan perangkat CCTV guna memaksimalkan fungsi pengawasan.</string>
+
+    <string name="learning_strategic">Learning Strategic Unit</string>
+    <string name="learning_strategic2">Merupakan unit kerja pembelajaran integratif yang bertugas mencetak SDM handal melalui pelatihan dan pembelajaran. Selanjutnya untuk area kerja perusahaan meliputi area Jabodetabek, Jawa Barat, Jawa Tengah, Jawa Timur dan Bali, dan Sumatera. Wilayah kerja akan terus bertambah sesuai dengan perkembangan bisnis perusahaan.</string>
+
+    <string name="cuci_mobil_judul">Cuci Mobil Teknologi Uap Panas</string>
+    <string name="cuci_mobil_paragraf1">PT Global Insight Utama, kini menghadirkan teknologi cuci mobil mutakhir yang menggunakan teknologi mutkahir uap air panas. Teknologi uap air panas ini merupakan terobosan terbaru yang kami hadirkan untuk pencucian mobil premium.</string>
+    <string name="cuci_mobil_paragraf2">Kelebihan dari Steam Wash Uap Panas ini:</string>
+    <string name="cuci_mobil_paragraf3">1. Mampu Hilangkan Bakteri dan Virus Penyebab Bau</string>
+    <string name="cuci_mobil_paragraf4">2. Lebih Bersih dan Aman</string>
+    <string name="cuci_mobil_paragraf5">3. Pencucian Cepat, kurang dari 30 menit</string>
+    <string name="cuci_mobil_paragraf6">4. Hemat Energi dan Air</string>
+    <string name="cuci_mobil_paragraf7">5. Ramah Lingkungan karena Bebas Detergen</string>
+    <string name="cuci_mobil_paragraf8">6. Bebas Becek</string>
+    <string name="cuci_mobil_paragraf9">Dengan teknologi ini Anda tak perlu lagi risau soal bakteri maupun virus menempel yang mengakibatkan aroma tak sedap di dalam mobil. Karena dengan suhu uap panas yang diatur antara 120–130 derajat, Steam Wash Uap Panas kami mampu membunuh virus dan bakteri penyebab bau di mobil Anda yang bahkan sulit ditangani oleh salon mobil premium sekalipun.</string>
+    <string name="cuci_mobil_paragraf10">Alat kami pun menjamin kebersihan di atas cuci mobil konvesional karena teknologi uap air panas kami mampu menghasilkan tekanan uap antara 8–12 bar. Bahkan kami mampu membersihkan sela-sela mesin mobil Anda dengan aman. Karena teknologi uap panas ini tidak mengeluarkan air yang dapat mengakibatkan korsleting.</string>
+    <string name="cuci_mobil_paragraf11">Proses pencucian kami untuk satu unit mobil hanya perlu waktu sekitar 30 menit karena kami tidak perlu melalui proses membasuh dan membilas.</string>
+    <string name="cuci_mobil_paragraf12">Steam wash uap panas kami pun tidak menggunakan listrik, melainkan gas. Karena itu teknologi ini tergolong hemat energi. Selain itu, dengan alat ini kami hanya memerlukan 2 liter air untuk mencuci satu unit mobil dan tanpa perlu menggunakan detergen.</string>
+    <string name="cuci_mobil_paragraf13">Saat ini, kami memberikan harga promosi untuk paket Clean (Cuci Eksterior, Vakum Interior dan Semir Ban) hanya Rp 50.000,-</string>
+    <string name="cuci_mobil_paragraf14">Bagi Anda yang ingin mencoba jasa pencucian mobil kelas premium dan berteknologi mutakhir ini silakan langsung datang ke kantor kami atau calling hotline kami di 0851–0079–2450 untuk panggilan dengan biaya tambahan.</string>
+
+    <string name="produk_paragraf1">Produk yang diberikan perusahaan kepada pelanggan meliputi dua produk unggulan, yaitu nitrogen dan tambal ban. Sementara produk lainnya yang dijual di outlet tertentu adalah layanan bongkar-pasang ban serep dan tukar posisi ban (dikenakan tarif seperti yang tertera di struk).</string>
+    <string name="produk_paragraf2">Tujuh manfaat nitrogen bagi ban:</string>
+    <string name="produk_paragraf3">1. Tekanan dan temperatur lebih stabil </string>
+    <string name="produk_paragraf4">2. Daya cengkram lebih maksimal</string>
+    <string name="produk_paragraf5">3. Usia pakai lebih panjang</string>
+    <string name="produk_paragraf6">4. Ban dan pelek terbebas dari korosi</string>
+    <string name="produk_paragraf7"> Performa mesin lebih maksimal dan hemat BBM (akibat performa ban)</string>
+    <string name="produk_paragraf8">6. Ban lebih lentur</string>
+    <string name="produk_paragraf9">7. Berkendara terasa lebih nyaman dan aman.</string>
+
+    <string name="produk_paragraf10">Tujuh keunggulan layanan nitrogen di seluruh jaringan Green Nitrogen:</string>
+    <string name="produk_paragraf11"> Operator resmi layanan nitrogen dan tambal ban di SPBU Pertamina seluruh Indonesia.</string>
+    <string name="produk_paragraf12"> Jaringan layanan besar di seluruh Indonesia hingga mencapai 500 outlet.</string>
+    <string name="produk_paragraf13"> Layanan panggilan darurat tambal ban express (Bandrex) di Hotline 0851 0079 2450.</string>
+    <string name="produk_paragraf14"> Garansi layanan, asuransi kecelakaan, dan promo gratis isi baru nitrogen dengan menunjukan struk transaksi (syarat dan ketentuan berlaku).</string>
+    <string name="produk_paragraf15"> Menggunakan perangkat mesin yang andal demi menjamin kesempurnaan pengisian awal nitrogen melalui sistem vakum.</string>
+    <string name="produk_paragraf16"> Didukung mitra strategis papan atas, Pertamina Pusat, Adira, Astra, Ferarri, dll.</string>
+    <string name="produk_paragraf17"> Memiliki manajemen tangguh dan komitmen layanan terbaik serta sistem pembelajaran SDM melalui Learning Center.</string>
+    <string name="produk_paragraf18">Sertifikat Kualitas dan Kemurnian Nitrogen</string>
+    <string name="produk_paragraf19">Kemurnian nitrogen yang dihasilkan mesin N2 Generator kami berada di bawah pengawasan langsung institusi independen asal Amerika bernama Nuvair. Pengecekan kualitas dan penyesuaian kemurnian nitrogen dilakukan oleh Nuvair kepada Green Nitrogen secara periodik.</string>
+
+    <string name="produk_paragraf20">Sertifikat Kalibrasi Tekanan Kompresor di Salah Satu Outlet</string>
+
+    <string name="produk_paragraf21">Layanan lainnya yang tersedia di outlet tertentu adalah:</string>
+    <string name="produk_paragraf22"> Auto Medical Check-Up, yaitu layanan check-up gratis ketika pelanggan mendapatkan layanan nitrogen. Layanan ini meliputi pengecekan aki, air radiator, oli mesin, oli persneling, karet wiper dan airnya, dan tekanan ban.</string>
+    <string name="produk_paragraf23"> Layanan Gratis Interior Detailing (salon interior) bagi pelanggan yang mengumpulkan struk transaksi nitrogen senilai Rp 200,000.</string>
+    <string name="produk_paragraf24"> Layanan gratis pengecekan tekanan ban. Layanan ini merupakan Red Carpet hasil kerja sama dengan SPBU guna mendongkrak penjualan Pertamax/Pertamax Plus.</string>
+
+    <string name="judul_garansi">Syarat dan Ketentuan Klaim Garansi</string>
+    <string name="garansi_paragraf1">Sangat penting untuk mengetahui syarat dan ketentuan berlaku untuk bisa mengklaim garansi kami.</string>
+    <string name="garansi_paragraf2">Syarat Garansi:</string>
+    <string name="garansi_paragraf3">Untuk bisa mendapatkan garansi dari kami Anda hanya perlu menyimpan struk transaksi Green Nitrogen setelah melakukan pengisian nitrogen di outlet kami.</string>
+    <string name="garansi_paragraf4">Untuk klaim garansi Anda cukup menunjukkan struk transaksi Green Nitrogen kepada operator di outlet terdekat.</string>
+    <string name="garansi_paragraf5">Ketentuan yang harus dipahami oleh Sahabat Nitrogen bila ingin mengklaim garansi:</string>
+    <string name="garansi_paragraf6">Ketentuan Waktu:</string>
+    <string name="garansi_paragraf7">Garansi yang berlaku dari setiap struk transaksi Green Nitrogen ialah 7 (tujuh) hari.</string>
+    <string name="garansi_paragraf8">Ketentuan Klaim:</string>
+    <string name="garansi_paragraf9">Dibebaskan biaya pengisian nitrogen jika tekanan ban berkurang setelah mengisi nitrogen di outlet kami.</string>
+    <string name="garansi_paragraf10">Dibebaskan biaya penambalan jika kembali terjadi kebocoran pada bagian ban yang sudah ditambal oleh operator kami sebelumnya.</string>
+    <string name="garansi_paragraf11">Garansi Tidak Berlaku Jika:</string>
+    <string name="garansi_paragraf12">Pelat nomor yang tercantum di struk transaksi berbeda dengan pelat nomor kendaraan yang dibawa untuk klaim garansi.</string>
+    <string name="garansi_paragraf13">Kondisi ban:</string>
+    <string name="garansi_paragraf14">Ban Gundul.</string>
+    <string name="garansi_paragraf15">Ban Sobek.</string>
+    <string name="garansi_paragraf16">Ban Expired.</string>
+    <string name="garansi_paragraf17">Tambal Ban Samping.</string>
+    <string name="garansi_paragraf18">Tekanan Ban Tidak Standar.</string>
+    <string name="garansi_paragraf19">Tidak dapat menunjukkan bukti struk transaksi Green Nitrogen.</string>
+    <string name="garansi_paragraf20">Masa struk transaksi sudah melewati 7 hari.</string>
+
+    <string name="judul_asuransi">Syarat dan Ketentuan Klaim Asuransi</string>
+    <string name="asuransi_paragraf1">Sangat penting untuk mengetahui syarat dan ketentuan berlaku untuk bisa klaim asuransi kami.</string>
+    <string name="asuransi_paragraf2">Syarat Asuransi:</string>
+    <string name="asuransi_paragraf3">Untuk klaim asuransi ahli waris perlu menunjukkan struk transaksi Green Nitrogen ke operator terdekat dan mengonfirmasi ke hotline (0851–0079–2450).</string>
+    <string name="asuransi_paragraf4">Dapat menunjukkan surat keterangan kecelakaan dari kepolisian.</string>
+    <string name="asuransi_paragraf5">Memberikan foto copy SIM dan STNK kepada operator kami.</string>
+    <string name="asuransi_paragraf6">Ketentuan yang harus dipahami oleh Sahabat Nitrogen bila ingin mengklaim asuransi.</string>
+    <string name="asuransi_paragraf7">Ketentuan Waktu:</string>
+    <string name="asuransi_paragraf8">Asuransi berupa santunan dari setiap struk transaksi yang berlaku ialah 14 (empat belas) hari.</string>
+    <string name="asuransi_paragraf9">Ketentuan Klaim:</string>
+    <string name="asuransi_paragraf10">Asuransi diberikan dalam bentuk santunan kecelakaan yang mengakibatkan meninggal dunia akibat kecelakaan lalulintas senilai Rp 1 juta.</string>
+    <string name="asuransi_paragraf11">Asuransi diberikan kepada ahli waris yang bisa menunjukkan beberapa syarat yang sudah disebutkan di atas.</string>
+    <string name="asuransi_paragraf12">Asuransi Tidak Berlaku Jika:</string>
+    <string name="asuransi_paragraf13">Pelat nomor yang tercantum di struk transaksi tidak sesuai dengan pelat kendaraan yang mengalami insiden kecelakaan lalulintas.</string>
+    <string name="asuransi_paragraf14">Kondisi ban:</string>
+    <string name="asuransi_paragraf15">Ban Gundul.</string>
+    <string name="asuransi_paragraf16">Ban Sobek.</string>
+    <string name="asuransi_paragraf17">Ban Expired.</string>
+    <string name="asuransi_paragraf18">Tambal Ban Samping.</string>
+    <string name="asuransi_paragraf19">Tekanan Ban Tidak Standar.</string>
+    <string name="asuransi_paragraf20">Tidak dapat menunjukkan bukti struk transaksi.</string>
+    <string name="asuransi_paragraf21">Masa struk transaksi sudah melewati 14 (empat belas) hari.</string>
+
+    <string name="judul_kerjasama_bisnis"> Membangun Kerjasama Bisnis bersama Green Nitrogen</string>
+    <string-array name="jenis_kendaraan">
+        <item>SUV</item>
+        <item>Sedan</item>
+        <item>Minibus</item>
+        <item>Motor</item>
+        <item>Lainnya</item>
+    </string-array>
+
+
+    <!-- Messages -->
+    <string name="message_empty_layout_changes">Add an item above to get started.</string>
+    <string name="message_zoom_touch_expand">Touch photo to expand it.</string>
+
+    <!-- Accessibility-only descriptions -->
+    <string name="description_image_1">Image 1</string>
+    <string name="description_image_2">Image 2</string>
+    <string name="description_zoom_touch_close">Expanded image (touch to close)</string>
+    <string name="asuransi">Asuransi</string>
+    <string name="instansi">Instansi</string>
+    <string name="informasi_yang_ingin_didapat">Informasi yang ingin didapat</string>
+    <string name="alasan">Alasan utama ingin membangun kerjasama dengan Green Nitrogen</string>
+    <string name="mengenal">Darimana mengenal Green Nitrogen ?</string>
+    <string name="berapa_lama_mengenal_nitrogen">Berapa Lama Mengenal Nitrogen</string>
+    <string name="outlet_dikunjungi">Outlet Green Nitrogen yang biasa dikunjungi ?</string>
+    <string name="bandrex">Apakah pernah menggunakan layanan panggilan darurat tambal ban ekspres (BANDREX)? Mohon masukan dan sarannya ?</string>
+    <string name="layanan_bandrex">Layanan Bandrex</string>
+    <string name="usaha">Apakah Anda pernah menjalankan usaha? Bagaimana sikap Anda dalam menghadapi risiko kegagalan usaha?</string>
+    <string name="usaha_input">Apakah Anda pernah menjalankan usaha?</string>
+    <string name="kritik_saran">Kritik dan Saran untuk Green Nitrogen</string>
+
+</resources>

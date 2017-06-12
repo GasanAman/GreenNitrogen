@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/drawer_home"
+            android:icon="@drawable/ic_home"
+            android:title="@string/drawer_home" />
+
+        <item android:title="@string/info">
+            <menu>
+                <item
+                    android:id="@+id/drawer_award"
+                    android:icon="@drawable/ic_rate"
+                    android:title="@string/award" />
+
+                <item
+                    android:id="@+id/drawer_garansi"
+                    android:icon="@drawable/ic_profile"
+                    android:title="@string/garansi" />
+
+                <item
+                    android:id="@+id/drawer_asuransi"
+                    android:icon="@drawable/ic_profile"
+                    android:title="@string/asuransi" />
+
+                <item
+                    android:id="@+id/drawer_youtube"
+                    android:icon="@drawable/ic_work_white_36dp"
+                    android:title="@string/bisnis_kerja_sama" />
+            </menu>
+        </item>
+
+        <item android:title="@string/layanan">
+            <menu>
+                <item
+                    android:id="@+id/drawer_produk"
+                    android:icon="@drawable/ic_gplus"
+                    android:title="@string/produk_dan_layanan" />
+
+                <item
+                    android:id="@+id/drawer_car_wash"
+                    android:icon="@drawable/ic_local_car_wash_white_36dp"
+                    android:title="@string/car_wash" />
+            </menu>
+        </item>
+
+        <item android:title="@string/profil">
+            <menu>
+                <item
+                    android:id="@+id/drawer_tentang"
+                    android:icon="@drawable/ic_info_white_36dp"
+                    android:title="@string/tentang_kami" />
+
+                <item
+                    android:id="@+id/drawer_visi_misi"
+                    android:icon="@drawable/ic_share"
+                    android:title="@string/visi_misi" />
+
+                <item
+                    android:id="@+id/drawer_unit_kerja_strategis"
+                    android:icon="@drawable/ic_exit"
+                    android:title="@string/unit_kerja_bisnis" />
+            </menu>
+        </item>
+
+    </group>
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/drawer_hub"
+            android:icon="@drawable/ic_email_white_36dp"
+            android:title="@string/hubungi_kami" />
+
+    </group>
+
+</menu>

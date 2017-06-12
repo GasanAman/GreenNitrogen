@@ -1,0 +1,216 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/container1"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.example.gasan.myapplication.fragments.CarWashFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <LinearLayout
+            android:id="@+id/lineatas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="10dp">
+
+            <TextView
+                android:id="@+id/judul"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cuci_mobil_judul"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#000000"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:background="@android:color/holo_red_dark" />
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/lineatas"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:id="@+id/barislogo"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/logo_car_wash"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:layout_gravity="center"
+                        android:scaleType="centerCrop"
+                        android:background="@drawable/car_wash3" />
+
+                    <TextView style="?android:textAppearanceSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/message_zoom_touch_expand" />
+
+                </LinearLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_below="@id/barislogo">
+
+                    <TextView
+                        android:id="@+id/cuci_paragraf1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textColor="#000000"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/cuci_mobil_paragraf1"/>
+
+                    <TextView
+                        android:id="@+id/cuci_paragraf2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textColor="#000000"
+                        android:layout_below="@id/cuci_paragraf1"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/cuci_mobil_paragraf2"/>
+
+                    <TextView
+                        android:id="@+id/cuci_paragraf3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textColor="#000000"
+                        android:layout_below="@id/cuci_paragraf2"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/cuci_mobil_paragraf3"/>
+
+                    <TextView
+                        android:id="@+id/cuci_paragraf4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textColor="#000000"
+                        android:layout_below="@id/cuci_paragraf3"
+                        android:text="@string/cuci_mobil_paragraf4"/>
+
+                    <TextView
+                        android:id="@+id/cuci_paragraf5"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textColor="#000000"
+                        android:layout_below="@id/cuci_paragraf4"
+                        android:text="@string/cuci_mobil_paragraf5"/>
+
+                    <TextView
+                        android:id="@+id/cuci_paragraf6"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textColor="#000000"
+                        android:layout_below="@id/cuci_paragraf5"
+                        android:text="@string/cuci_mobil_paragraf6"/>
+
+                    <TextView
+                        android:id="@+id/cuci_paragraf7"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textColor="#000000"
+                        android:layout_below="@id/cuci_paragraf6"
+                        android:text="@string/cuci_mobil_paragraf7"/>
+
+                    <TextView
+                        android:id="@+id/cuci_paragraf8"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textColor="#000000"
+                        android:layout_below="@id/cuci_paragraf7"
+                        android:text="@string/cuci_mobil_paragraf8"/>
+
+                    <TextView
+                        android:id="@+id/cuci_paragraf9"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textColor="#000000"
+                        android:layout_marginTop="10dp"
+                        android:layout_below="@id/cuci_paragraf8"
+                        android:text="@string/cuci_mobil_paragraf9"/>
+
+                    <TextView
+                        android:id="@+id/cuci_paragraf10"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textColor="#000000"
+                        android:layout_marginTop="10dp"
+                        android:layout_below="@id/cuci_paragraf9"
+                        android:text="@string/cuci_mobil_paragraf10"/>
+
+                    <TextView
+                        android:id="@+id/cuci_paragraf11"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textColor="#000000"
+                        android:layout_marginTop="10dp"
+                        android:layout_below="@id/cuci_paragraf10"
+                        android:text="@string/cuci_mobil_paragraf11"/>
+
+                    <TextView
+                        android:id="@+id/cuci_paragraf12"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textColor="#000000"
+                        android:layout_marginTop="10dp"
+                        android:layout_below="@id/cuci_paragraf11"
+                        android:text="@string/cuci_mobil_paragraf12"/>
+
+                    <TextView
+                        android:id="@+id/cuci_paragraf13"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textColor="#000000"
+                        android:layout_marginTop="10dp"
+                        android:layout_below="@id/cuci_paragraf12"
+                        android:text="@string/cuci_mobil_paragraf13"/>
+
+                    <TextView
+                        android:id="@+id/cuci_paragraf14"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textColor="#000000"
+                        android:layout_marginTop="10dp"
+                        android:layout_below="@id/cuci_paragraf13"
+                        android:text="@string/cuci_mobil_paragraf14"/>
+
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/expanded_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        android:contentDescription="@string/description_zoom_touch_close" />
+
+
+</FrameLayout>
