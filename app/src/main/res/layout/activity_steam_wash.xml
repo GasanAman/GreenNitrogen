@@ -39,11 +39,14 @@
 
 
     <ScrollView
+        android:layout_below="@id/header1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:layout_editor_absoluteY="8dp"
         tools:layout_editor_absoluteX="8dp"
-        android:layout_below="@+id/header1">
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
 
         <RelativeLayout
             android:id="@+id/relativelayout"
@@ -81,7 +84,7 @@
                 android:layout_below="@+id/lineatas">
 
                 <EditText
-                    android:id="@+id/judulText"
+                    android:id="@+id/judulTextSteamWash"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
@@ -98,7 +101,7 @@
                     android:textColor="#000000" />
 
                 <EditText
-                    android:id="@+id/kolomComment"
+                    android:id="@+id/kolomCommentSteamWash"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/textView2"
@@ -111,7 +114,7 @@
                     android:id="@+id/text1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/kolomComment"
+                    android:layout_below="@+id/kolomCommentSteamWash"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
                     android:layout_marginTop="10dp"
@@ -142,7 +145,7 @@
                     android:textSize="16sp" />
 
                 <EditText
-                    android:id="@+id/inputnama"
+                    android:id="@+id/inputnamaSteamWash"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/nama"
@@ -157,7 +160,7 @@
                     android:id="@+id/alamat"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/inputnama"
+                    android:layout_below="@+id/inputnamaSteamWash"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
                     android:layout_marginTop="10dp"
@@ -166,7 +169,7 @@
                     android:textSize="16sp" />
 
                 <EditText
-                    android:id="@+id/inputalamat"
+                    android:id="@+id/inputalamatSteamWash"
                     android:layout_width="match_parent"
                     android:layout_height="100dp"
                     android:layout_below="@+id/alamat"
@@ -181,7 +184,7 @@
                     android:id="@+id/nohp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/inputalamat"
+                    android:layout_below="@+id/inputalamatSteamWash"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
                     android:layout_marginTop="10dp"
@@ -190,7 +193,7 @@
                     android:textSize="16sp" />
 
                 <EditText
-                    android:id="@+id/inputnohp"
+                    android:id="@+id/inputnohpSteamWash"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/nohp"
@@ -205,7 +208,7 @@
                     android:id="@+id/email"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/inputnohp"
+                    android:layout_below="@+id/inputnohpSteamWash"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
                     android:layout_marginTop="10dp"
@@ -214,7 +217,7 @@
                     android:textSize="16sp" />
 
                 <EditText
-                    android:id="@+id/inputemail"
+                    android:id="@+id/inputemailSteamWash"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/email"
@@ -229,7 +232,7 @@
                     android:id="@+id/nopol"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/inputemail"
+                    android:layout_below="@+id/inputemailSteamWash"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
                     android:layout_marginTop="10dp"
@@ -238,7 +241,7 @@
                     android:textSize="16sp" />
 
                 <EditText
-                    android:id="@+id/inputnopol"
+                    android:id="@+id/inputnopolSteamWash"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/nopol"
@@ -253,7 +256,7 @@
                     android:id="@+id/jnsKend"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/inputnopol"
+                    android:layout_below="@+id/inputnopolSteamWash"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
                     android:layout_marginTop="10dp"
@@ -284,7 +287,7 @@
                     android:textSize="16sp" />
 
                 <EditText
-                    android:id="@+id/inputMrkKend"
+                    android:id="@+id/inputMrkKendSteamWash"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/mrkKend"
@@ -296,11 +299,11 @@
                     android:hint="@string/merek_kendaraan" />
 
                 <Button
-                    android:id="@+id/buttonSubmit"
+                    android:id="@+id/buttonSubmitSteamWash"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/inputMrkKend"
-                    android:onClick="onClick"
+                    android:layout_below="@+id/inputMrkKendSteamWash"
+                    android:layout_marginLeft="10dp"
                     android:text="@string/submit" />
 
             </RelativeLayout>

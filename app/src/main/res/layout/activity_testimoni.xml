@@ -87,7 +87,7 @@
                     android:textSize="16sp" />
 
                 <EditText
-                    android:id="@+id/inputnama"
+                    android:id="@+id/inputnamaTestimoni"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/nama"
@@ -102,7 +102,7 @@
                     android:id="@+id/nohp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/inputnama"
+                    android:layout_below="@+id/inputnamaTestimoni"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
                     android:layout_marginTop="10dp"
@@ -111,7 +111,7 @@
                     android:textSize="16sp" />
 
                 <EditText
-                    android:id="@+id/inputnohp"
+                    android:id="@+id/inputnohpTestimoni"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/nohp"
@@ -126,7 +126,7 @@
                     android:id="@+id/email"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/inputnohp"
+                    android:layout_below="@+id/inputnohpTestimoni"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
                     android:layout_marginTop="10dp"
@@ -135,7 +135,7 @@
                     android:textSize="16sp" />
 
                 <EditText
-                    android:id="@+id/inputemail"
+                    android:id="@+id/inputemailTestimoni"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/email"
@@ -151,7 +151,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
-                    android:layout_below="@+id/inputemail"
+                    android:layout_below="@+id/inputemailTestimoni"
                     android:text="@string/pertanyaan_testimoni"
                     android:textColor="#000000" />
 
@@ -174,7 +174,6 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/kolomTestimoni"
                     android:layout_marginLeft="10dp"
-                    android:onClick="onClick"
                     android:text="@string/submit" />
 
             </RelativeLayout>

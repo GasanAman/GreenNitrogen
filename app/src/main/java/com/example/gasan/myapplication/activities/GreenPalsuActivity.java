@@ -3,8 +3,6 @@ package com.example.gasan.myapplication.activities;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.AsyncTask;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -14,6 +12,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import com.example.gasan.myapplication.R;
 import com.example.gasan.myapplication.ServiceHandler;
@@ -42,17 +41,17 @@ public class GreenPalsuActivity extends AppCompatActivity {
         setContentView(R.layout.activity_green_palsu);
         //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        kolomComment = (EditText) findViewById(R.id.kolomComment);
-        inputnama = (EditText) findViewById(R.id.inputnama);
-        inputalamat = (EditText) findViewById(R.id.inputalamat);
-        inputnohp = (EditText) findViewById(R.id.inputnohp);
-        inputemail = (EditText) findViewById(R.id.inputemail);
-        inputnopol = (EditText) findViewById(R.id.inputnopol);
+        kolomComment = (EditText) findViewById(R.id.kolomCommentNitrogenPalsu);
+        inputnama = (EditText) findViewById(R.id.inputnamaNitrogenPalsu);
+        inputalamat = (EditText) findViewById(R.id.inputalamatNitrogenPalsu);
+        inputnohp = (EditText) findViewById(R.id.inputnohpNitrogenPalsu);
+        inputemail = (EditText) findViewById(R.id.inputemailNitrogenPalsu);
+        inputnopol = (EditText) findViewById(R.id.inputnopolNitrogenPalsu);
 
         spinner = (Spinner) findViewById(R.id.spinner);
 
-        inputMrkKend = (EditText) findViewById(R.id.inputMrkKend);
-        judulText = (EditText) findViewById(R.id.judulText);
+        inputMrkKend = (EditText) findViewById(R.id.inputMrkKendNitrogenPalsu);
+        judulText = (EditText) findViewById(R.id.judulTextNitrogenPalsu);
 
         arrayAdapter = ArrayAdapter.createFromResource(this, R.array.jenis_kendaraan, android.R.layout.simple_spinner_item);
         arrayAdapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
@@ -70,20 +69,35 @@ public class GreenPalsuActivity extends AppCompatActivity {
             }
         });
 
-        b1 = (Button) findViewById(R.id.buttonSubmit);
+        b1 = (Button) findViewById(R.id.buttonSubmitNitrogenPalsu);
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                new SaveData().execute();
+                if (kolomComment.getText().toString().trim().isEmpty()) {
+                    Toast.makeText(v.getContext().getApplicationContext(), "Komentar Masih Kosong", Toast.LENGTH_LONG).show();
+                } else if (inputnama.getText().toString().trim().isEmpty()) {
+                    Toast.makeText(v.getContext().getApplicationContext(), "Nama Masih Kosong", Toast.LENGTH_LONG).show();
+                } else if (inputalamat.getText().toString().trim().isEmpty()) {
+                    Toast.makeText(v.getContext().getApplicationContext(), "Alamat Masih Kosong", Toast.LENGTH_LONG).show();
+                } else if (inputnohp.getText().toString().trim().isEmpty()) {
+                    Toast.makeText(v.getContext().getApplicationContext(), "Nomor HP Masih Kosong", Toast.LENGTH_LONG).show();
+                } else if (inputemail.getText().toString().trim().isEmpty()) {
+                    Toast.makeText(v.getContext().getApplicationContext(), "Email Masih Kosong", Toast.LENGTH_LONG).show();
+                } else if (inputnopol.getText().toString().trim().isEmpty()) {
+                    Toast.makeText(v.getContext().getApplicationContext(), "Nomor Polisi Masih Kosong", Toast.LENGTH_LONG).show();
+                } else if (spinner.getSelectedItem().toString().trim().isEmpty()) {
+                    Toast.makeText(v.getContext().getApplicationContext(), "Jenis Kendaraan Masih Kosong", Toast.LENGTH_LONG).show();
+                } else if (inputMrkKend.getText().toString().trim().isEmpty()) {
+                    Toast.makeText(v.getContext().getApplicationContext(), "Merek Kendaraan Masih Kosong", Toast.LENGTH_LONG).show();
+                } else {
+                    new SaveData().execute();
+                }
             }
         });
 
     }
 
-    public void onClick(View v){
 
-        new SaveData().execute();
-    }
 
     private class SaveData extends AsyncTask<String, String, String> {
 

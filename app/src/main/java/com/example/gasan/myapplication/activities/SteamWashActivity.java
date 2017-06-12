@@ -3,8 +3,6 @@ package com.example.gasan.myapplication.activities;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.AsyncTask;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -14,6 +12,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import com.example.gasan.myapplication.R;
 import com.example.gasan.myapplication.ServiceHandler;
@@ -31,6 +30,7 @@ public class SteamWashActivity extends AppCompatActivity {
 
     ProgressDialog pDialog;
     Spinner spinner;
+    Button submit;
     ArrayAdapter<CharSequence> arrayAdapter;
     EditText kolomComment, inputnama, inputalamat, inputnohp, inputemail, inputnopol, inputMrkKend, judulText;
 
@@ -39,20 +39,20 @@ public class SteamWashActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_steam_wash);
 
-       // getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        // getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         //getSupportActionBar().setDisplayShowHomeEnabled(true);
 
-        kolomComment = (EditText) findViewById(R.id.kolomComment);
-        inputnama = (EditText) findViewById(R.id.inputnama);
-        inputalamat = (EditText) findViewById(R.id.inputalamat);
-        inputnohp = (EditText) findViewById(R.id.inputnohp);
-        inputemail = (EditText) findViewById(R.id.inputemail);
-        inputnopol = (EditText) findViewById(R.id.inputnopol);
+        kolomComment = (EditText) findViewById(R.id.kolomCommentSteamWash);
+        inputnama = (EditText) findViewById(R.id.inputnamaSteamWash);
+        inputalamat = (EditText) findViewById(R.id.inputalamatSteamWash);
+        inputnohp = (EditText) findViewById(R.id.inputnohpSteamWash);
+        inputemail = (EditText) findViewById(R.id.inputemailSteamWash);
+        inputnopol = (EditText) findViewById(R.id.inputnopolSteamWash);
 
         spinner = (Spinner) findViewById(R.id.spinner); // Jenis Kendaraan
 
-        inputMrkKend = (EditText) findViewById(R.id.inputMrkKend);
-        judulText = (EditText) findViewById(R.id.judulText);
+        inputMrkKend = (EditText) findViewById(R.id.inputMrkKendSteamWash);
+        judulText = (EditText) findViewById(R.id.judulTextSteamWash);
 
 
         arrayAdapter = ArrayAdapter.createFromResource(this, R.array.jenis_kendaraan, android.R.layout.simple_spinner_item);
@@ -72,29 +72,50 @@ public class SteamWashActivity extends AppCompatActivity {
             }
         });
 
+        submit  = (Button) findViewById(R.id.buttonSubmitSteamWash);
 
+        submit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (kolomComment.getText().toString().trim().isEmpty()) {
+                    Toast.makeText(v.getContext().getApplicationContext(), "Komentar Masih Kosong", Toast.LENGTH_LONG).show();
+                } else if (inputnama.getText().toString().trim().isEmpty()) {
+                    Toast.makeText(v.getContext().getApplicationContext(), "Nama Masih Kosong", Toast.LENGTH_LONG).show();
+                } else if (inputalamat.getText().toString().trim().isEmpty()) {
+                    Toast.makeText(v.getContext().getApplicationContext(), "Alamat Masih Kosong", Toast.LENGTH_LONG).show();
+                } else if (inputnohp.getText().toString().trim().isEmpty()) {
+                    Toast.makeText(v.getContext().getApplicationContext(), "Nomor HP Masih Kosong", Toast.LENGTH_LONG).show();
+                } else if (inputemail.getText().toString().trim().isEmpty()) {
+                    Toast.makeText(v.getContext().getApplicationContext(), "Email Masih Kosong", Toast.LENGTH_LONG).show();
+                } else if (inputnopol.getText().toString().trim().isEmpty()) {
+                    Toast.makeText(v.getContext().getApplicationContext(), "Nomor Polisi Masih Kosong", Toast.LENGTH_LONG).show();
+                } else if (spinner.getSelectedItem().toString().trim().isEmpty()) {
+                    Toast.makeText(v.getContext().getApplicationContext(), "Jenis Kendaraan Masih Kosong", Toast.LENGTH_LONG).show();
+                } else if (inputMrkKend.getText().toString().trim().isEmpty()) {
+                    Toast.makeText(v.getContext().getApplicationContext(), "Merek Kendaraan Masih Kosong", Toast.LENGTH_LONG).show();
+                } else {
+                    new SaveData().execute();
+                }
+            }
+        });
 
 
     }
 
-    public void onClick(View v){
 
-        new SaveData().execute();
-    }
-
-    private class SaveData extends AsyncTask<String, String, String> {
+    class SaveData extends AsyncTask<String, String, String> {
 
         boolean isNewCategoryCreated = false;
 
-        String kolomComentParam     = kolomComment.getText().toString();
-        String inputNamaParam       = inputnama.getText().toString();
-        String inputAlamatParam     = inputalamat.getText().toString();
-        String inputNoHpParam       = inputnohp.getText().toString();
-        String inputEmailParam      = inputemail.getText().toString();
-        String inputNoPolParam      = inputnopol.getText().toString();
-        String inputJenisKend       = spinner.getSelectedItem().toString();
-        String inputMrkKendParam    = inputMrkKend.getText().toString();
-        String judulTextParam       = judulText.getText().toString();
+        String kolomComentParam = kolomComment.getText().toString();
+        String inputNamaParam = inputnama.getText().toString();
+        String inputAlamatParam = inputalamat.getText().toString();
+        String inputNoHpParam = inputnohp.getText().toString();
+        String inputEmailParam = inputemail.getText().toString();
+        String inputNoPolParam = inputnopol.getText().toString();
+        String inputJenisKend = spinner.getSelectedItem().toString();
+        String inputMrkKendParam = inputMrkKend.getText().toString();
+        String judulTextParam = judulText.getText().toString();
 
 
         @Override
@@ -161,4 +182,5 @@ public class SteamWashActivity extends AppCompatActivity {
 
         }
     }
+
 }

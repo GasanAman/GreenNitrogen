@@ -9,8 +9,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 import com.example.gasan.myapplication.R;
 import com.example.gasan.myapplication.ServiceHandler;
@@ -26,6 +28,7 @@ import java.util.List;
 public class TestimoniActivity extends AppCompatActivity {
     ProgressDialog pDialog;
     EditText inputnama, inputnohp, inputemail, kolomTestimoni;
+    Button submit;
 
     private String URL_NEW_CATEGORY = "http://10.0.3.2/input_testimoni.php";
     @Override
@@ -34,9 +37,9 @@ public class TestimoniActivity extends AppCompatActivity {
         setContentView(R.layout.activity_testimoni);
 //        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        inputnama = (EditText) findViewById(R.id.inputnama);
-        inputnohp = (EditText) findViewById(R.id.inputnohp);
-        inputemail = (EditText) findViewById(R.id.inputemail);
+        inputnama = (EditText) findViewById(R.id.inputnamaTestimoni);
+        inputnohp = (EditText) findViewById(R.id.inputnohpTestimoni);
+        inputemail = (EditText) findViewById(R.id.inputemailTestimoni);
         kolomTestimoni = (EditText) findViewById(R.id.kolomTestimoni);
 
         ImageButton back = (ImageButton) findViewById(R.id.imageButton);
@@ -51,14 +54,27 @@ public class TestimoniActivity extends AppCompatActivity {
             }
         });
 
+        submit  = (Button) findViewById(R.id.buttonSubmitSteamWash);
 
+        submit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (inputnama.getText().toString().trim().isEmpty()) {
+                    Toast.makeText(v.getContext().getApplicationContext(), "Nama Masih Kosong", Toast.LENGTH_LONG).show();
+                } else if (inputnohp.getText().toString().trim().isEmpty()) {
+                    Toast.makeText(v.getContext().getApplicationContext(), "Nomor HP Masih Kosong", Toast.LENGTH_LONG).show();
+                } else if (inputemail.getText().toString().trim().isEmpty()) {
+                    Toast.makeText(v.getContext().getApplicationContext(), "Email Masih Kosong", Toast.LENGTH_LONG).show();
+                } else if (kolomTestimoni.getText().toString().trim().isEmpty()) {
+                    Toast.makeText(v.getContext().getApplicationContext(), "Testimoni Masih Kosong", Toast.LENGTH_LONG).show();
+                } else {
+                    new SaveData().execute();
+                }
+            }
+        });
 
     }
 
-    public void onClick(View v){
-
-        new TestimoniActivity.SaveData().execute();
-    }
 
     private class SaveData extends AsyncTask<String, String, String> {
 
