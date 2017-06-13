@@ -287,14 +287,36 @@
                     android:textColor="#D00000"
                     android:textStyle="bold"/>
 
-                    <Button
-                        android:id="@+id/buttonSubmit"
+                <LinearLayout
+                    android:id="@+id/UploadFoto"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/upload_ktp"
+                    android:orientation="horizontal">
+
+                    <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_below="@+id/upload_ktp"
                         android:layout_marginLeft="10dp"
-                        android:onClick="onClick"
-                        android:text="@string/submit" />
+                        android:layout_marginTop="10dp"/>
+
+                    <Button
+                        android:id="@+id/buttonUploadFoto"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="@string/upload_foto" />
+
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/buttonSubmit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/UploadFoto"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/submit" />
 
 
 

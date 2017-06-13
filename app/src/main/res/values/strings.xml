@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+<resources>
 
     <!--application name-->
     <string name="app_name">Green Nitrogen</string>
@@ -271,5 +271,8 @@
     <string name="usaha">Apakah Anda pernah menjalankan usaha? Bagaimana sikap Anda dalam menghadapi risiko kegagalan usaha?</string>
     <string name="usaha_input">Apakah Anda pernah menjalankan usaha?</string>
     <string name="kritik_saran">Kritik dan Saran untuk Green Nitrogen</string>
+    <string name="upload_foto">Upload Foto</string>
+    <string name="steam_wash_p1">Dapatkan Gratis Layanan Cuci Interior mobil dengan mengikuti program komentar setiap periodenya akan terpilih setiap harinya 5 orang dengan komentar terbaik</string>
+    <string name="steam_wash_p2">Agar kami dapat menghubungi pemenang yang berhak mendapatkan voucher gratis Cuci mobil, mohon lengkapi data pribadi Anda. Terima kasih.</string>
 
 </resources>

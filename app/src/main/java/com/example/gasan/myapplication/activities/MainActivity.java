@@ -2,19 +2,23 @@ package com.example.gasan.myapplication.activities;
 
 
 
+import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.DialogPreference;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.example.gasan.myapplication.R;
 import com.example.gasan.myapplication.fragments.AsuransiFragment;
@@ -114,6 +118,7 @@ public class MainActivity extends AppCompatActivity {
                 if (menuItem.getItemId() == R.id.drawer_kerja_sama_bisnis) {
                     FragmentTransaction fragmentTransaction = mFragmentManager.beginTransaction();
                     fragmentTransaction.replace(R.id.frame_container, new KerjaSamaBisnisFragment()).commit();
+
                 }
                 if (menuItem.getItemId() == R.id.drawer_visi_misi) {
                     FragmentTransaction fragmentTransaction = mFragmentManager.beginTransaction();

@@ -1,8 +1,11 @@
 package com.example.gasan.myapplication.activities;
 
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Paint;
 import android.os.AsyncTask;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -14,6 +17,7 @@ import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.example.gasan.myapplication.JustifiedTextView;
 import com.example.gasan.myapplication.R;
 import com.example.gasan.myapplication.ServiceHandler;
 
@@ -33,6 +37,7 @@ public class SteamWashActivity extends AppCompatActivity {
     Button submit;
     ArrayAdapter<CharSequence> arrayAdapter;
     EditText kolomComment, inputnama, inputalamat, inputnohp, inputemail, inputnopol, inputMrkKend, judulText;
+    JustifiedTextView mJTv, mJTv2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +46,14 @@ public class SteamWashActivity extends AppCompatActivity {
 
         // getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         //getSupportActionBar().setDisplayShowHomeEnabled(true);
+
+        mJTv=(JustifiedTextView) findViewById(R.id.text1);
+        mJTv.setText(getResources().getString(R.string.steam_wash_p1));
+        mJTv.setAlignment(Paint.Align.LEFT);
+
+        mJTv2=(JustifiedTextView) findViewById(R.id.text2);
+        mJTv2.setText(getResources().getString(R.string.steam_wash_p2));
+        mJTv2.setAlignment(Paint.Align.LEFT);
 
         kolomComment = (EditText) findViewById(R.id.kolomCommentSteamWash);
         inputnama = (EditText) findViewById(R.id.inputnamaSteamWash);
@@ -99,7 +112,17 @@ public class SteamWashActivity extends AppCompatActivity {
             }
         });
 
-
+//        final AlertDialog.Builder myAlert = new AlertDialog.Builder(this);
+//        myAlert.setTitle("TEST");
+//        myAlert.setMessage("Green Nitrogen (GN) adalah salah satu unit bisnis strategis dari PT Global Insight Utama. GN merupakan pelopor layanan nitrogen dan tambal ban bergaransi di SPBU Pertamina dengan jaringan bisnis terluas di seluruh Indonesia. Konsep kerjasama bisnis menggunakan sistem kerjasama bagi hasil dan pengelolaan dilakukan sepenuhnya oleh Manajemen GN. Informasi lengkap untuk membangun kerjasama dengan kami dapat mengisi formulir berikut ini, dan selanjutnya team kami akan menghubungi Anda. Terima kasih telah menjadi bagian mitra strategis kami.");
+//        myAlert.setNeutralButton("OK", new DialogInterface.OnClickListener() {
+//            public void onClick(DialogInterface dialog, int which) {
+//                // Write your code here to execute after dialog closed
+//                Toast.makeText(getApplicationContext(), "", Toast.LENGTH_SHORT).show();
+//
+//            }
+//        });
+//        myAlert.show();
     }
 
 

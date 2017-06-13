@@ -41,7 +41,7 @@
         <RelativeLayout
             android:id="@+id/isi"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="vertical">
 
             <ImageView
@@ -78,42 +78,38 @@
 
             </LinearLayout>
 
-            <TextView
+
+            <com.example.gasan.myapplication.JustifiedTextView
                 android:id="@+id/paragraf1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentLeft="false"
-                android:layout_alignParentRight="false"
                 android:layout_below="@+id/baris_logo"
-                android:layout_marginBottom="10dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
                 android:textColor="#000000"
-                android:text="@string/paragraf_1"
+                android:padding="10dp"
+                xmlns:noghteh="http://noghteh.ir"
+                noghteh:textSize="14sp"
                  />
 
-            <TextView
+            <com.example.gasan.myapplication.JustifiedTextView
                 android:id="@+id/paragraf2"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="@string/paragraf_2"
-                android:layout_below="@+id/paragraf1"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginBottom="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:textColor="#000000"
+                android:padding="10dp"
+                android:layout_below="@+id/paragraf1"
+                xmlns:noghteh="http://noghteh.ir"
+                noghteh:textSize="14sp"
                 />
 
-            <TextView
+            <com.example.gasan.myapplication.JustifiedTextView
                 android:id="@+id/paragraf3"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="@string/paragraf_3"
-                android:layout_below="@+id/paragraf2"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginBottom="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:textColor="#000000"
+                android:layout_below="@+id/paragraf2"
+                android:padding="10dp"
+                xmlns:noghteh="http://noghteh.ir"
+                noghteh:textSize="14sp"
                 />
 
         </RelativeLayout>

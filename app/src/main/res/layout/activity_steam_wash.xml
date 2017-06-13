@@ -110,27 +110,25 @@
                     android:inputType="textMultiLine"
                     android:hint="@string/comment" />
 
-                <TextView
+                <com.example.gasan.myapplication.JustifiedTextView
                     android:id="@+id/text1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/kolomCommentSteamWash"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginTop="10dp"
-                    android:text="Dapatkan Gratis Layanan Cuci Interior mobil dengan mengikuti program komentar setiap periodenya akan terpilih setiap harinya 5 orang dengan komentar terbaik"
-                    android:textColor="#000000" />
+                    android:textColor="#000000"
+                    android:padding="10dp"
+                    xmlns:noghteh="http://noghteh.ir"
+                    noghteh:textSize="14sp" />
 
-                <TextView
+                <com.example.gasan.myapplication.JustifiedTextView
                     android:id="@+id/text2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/text1"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginTop="10dp"
-                    android:text="Agar kami dapat menghubungi pemenang yang berhak mendapatkan voucher gratis Cuci mobil, mohon lengkapi data pribadi Anda. Terima kasih."
-                    android:textColor="#000000" />
+                    android:textColor="#000000"
+                    android:padding="10dp"
+                    xmlns:noghteh="http://noghteh.ir"
+                    noghteh:textSize="14sp" />
 
                 <TextView
                     android:id="@+id/nama"
