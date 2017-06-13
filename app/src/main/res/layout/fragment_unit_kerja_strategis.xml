@@ -92,7 +92,18 @@
                     app:srcCompat="@drawable/unit_kerja_stategis_page_2" />
             </LinearLayout>
 
-
+                <!--<com.example.gasan.myapplication.JustifiedTextView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:id="@+id/isiunitkerja"-->
+                    <!--android:layout_alignParentTop="true"-->
+                    <!--android:layout_toRightOf="@+id/barisanlogo"-->
+                    <!--android:layout_toEndOf="@+id/barisanlogo"-->
+                    <!--android:layout_above="@+id/barisanparagraf"-->
+                    <!--android:textColor="#000000"-->
+                    <!--android:padding="10dp"-->
+                    <!--xmlns:noghteh="http://noghteh.ir"-->
+                    <!--noghteh:textSize="14sp"/>-->
 
                 <TextView
                     android:id="@+id/isiunitkerja"
@@ -116,201 +127,206 @@
                     android:id="@+id/isivisi2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignLeft="@+id/isiunitkerja"
-                    android:layout_alignStart="@+id/isiunitkerja"
-                    android:layout_below="@+id/isiunitkerja"
                     android:layout_marginTop="20dp"
                     android:textColor="#000000"
                     android:text="@string/unit_kerja_paragraf2" />
 
                 <TextView
-                    android:id="@+id/isivisi3"
+                    android:id="@+id/supporting_strategic1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignLeft="@+id/isivisi2"
-                    android:layout_alignStart="@+id/isivisi2"
-                    android:layout_below="@+id/isivisi2"
                     android:text="@string/support_unit"
                     android:layout_marginTop="10dp"
                     android:textColor="#000000"
                     android:textStyle="bold"/>
 
                 <TextView
-                    android:id="@+id/isimisi1"
+                    android:id="@+id/supporting_strategic2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/support_unit2"
                     android:layout_marginTop="5dp"
-                    android:layout_below="@+id/isivisi3"
-                    android:layout_alignLeft="@+id/isivisi3"
-                    android:layout_alignStart="@+id/isivisi3"
+                    android:paddingLeft="5dp"
                     android:textColor="#000000"/>
 
                 <TextView
-                    android:id="@+id/isimisi2"
+                    android:id="@+id/supporting_strategic3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignLeft="@+id/isimisi1"
-                    android:layout_alignStart="@+id/isimisi1"
-                    android:layout_below="@+id/isimisi1"
+                    android:paddingLeft="5dp"
                     android:text="@string/support_unit3"
                     android:textColor="#000000"/>
 
                 <TextView
-                    android:id="@+id/isimisi3"
+                    android:id="@+id/supporting_strategic4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignLeft="@+id/isimisi2"
-                    android:layout_alignStart="@+id/isimisi2"
-                    android:layout_below="@+id/isimisi2"
+                    android:paddingLeft="5dp"
                     android:text="@string/support_unit4"
                     android:textColor="#000000"/>
 
                 <TextView
-                    android:id="@+id/isimisi4"
+                    android:id="@+id/supporting_strategic5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignLeft="@+id/isimisi3"
-                    android:layout_alignStart="@+id/isimisi3"
-                    android:layout_below="@+id/isimisi3"
+                    android:paddingLeft="5dp"
                     android:text="@string/support_unit5"
                     android:textColor="#000000"/>
 
                 <TextView
-                    android:id="@+id/isimisi5"
+                    android:id="@+id/supporting_strategic6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignLeft="@+id/isimisi4"
-                    android:layout_alignStart="@+id/isimisi4"
-                    android:layout_below="@+id/isimisi4"
+                    android:paddingLeft="5dp"
                     android:text="@string/support_unit6"
                     android:textColor="#000000"/>
 
                 <TextView
-                    android:id="@+id/isitujuan1"
+                    android:id="@+id/bussines_strategic1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignLeft="@+id/isimisi5"
-                    android:layout_alignStart="@+id/isimisi5"
-                    android:layout_below="@+id/isimisi5"
                     android:text="@string/bussiness_strategic"
                     android:textStyle="bold"
                     android:layout_marginTop="10dp"
                     android:textColor="#000000"/>
 
-                <TextView
-                    android:id="@+id/isitujuan2"
-                    android:layout_width="wrap_content"
+
+                <com.example.gasan.myapplication.JustifiedTextView
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_alignLeft="@+id/isitujuan1"
-                    android:layout_alignStart="@+id/isitujuan1"
-                    android:layout_below="@+id/isitujuan1"
-                    android:layout_marginTop="5dp"
-                    android:text="@string/bussiness_strategic2"
-                    android:textColor="#000000"/>
+                    android:id="@+id/bussines_strategic2"
+                    android:textColor="#000000"
+                    android:padding="5dp"
+                    xmlns:noghteh="http://noghteh.ir"
+                    noghteh:textSize="14sp"/>
+
+                <!--<TextView-->
+                    <!--android:id="@+id/isitujuan2"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginTop="5dp"-->
+                    <!--android:text="@string/bussiness_strategic2"-->
+                    <!--android:textColor="#000000"/>-->
 
                 <TextView
-                    android:id="@+id/isinilai"
+                    android:id="@+id/client_strategic1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignLeft="@+id/isitujuan2"
-                    android:layout_alignStart="@+id/isitujuan2"
-                    android:layout_below="@+id/isitujuan2"
                     android:text="@string/client_strategic"
                     android:textStyle="bold"
                     android:layout_marginTop="10dp"
                     android:textColor="#000000"/>
 
-                <TextView
-                    android:id="@+id/isimodel"
-                    android:layout_width="wrap_content"
+                <!--<TextView-->
+                    <!--android:id="@+id/client_strategic2"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="@string/client_strategic2"-->
+                    <!--android:layout_marginTop="5dp"-->
+                    <!--android:textColor="#000000"/>-->
+
+                <com.example.gasan.myapplication.JustifiedTextView
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_alignLeft="@+id/isinilai"
-                    android:layout_alignStart="@+id/isinilai"
-                    android:layout_below="@+id/isinilai"
-                    android:text="@string/client_strategic2"
-                    android:layout_marginTop="5dp"
-                    android:textColor="#000000"/>
+                    android:id="@+id/client_strategic2"
+                    android:textColor="#000000"
+                    android:padding="5dp"
+                    xmlns:noghteh="http://noghteh.ir"
+                    noghteh:textSize="14sp"/>
+
+                <!--<TextView-->
+                    <!--android:id="@+id/client_strategic3"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="@string/client_strategic3"-->
+                    <!--android:textColor="#000000"/>-->
+
+                <com.example.gasan.myapplication.JustifiedTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/client_strategic3"
+                    android:textColor="#000000"
+                    android:padding="5dp"
+                    xmlns:noghteh="http://noghteh.ir"
+                    noghteh:textSize="14sp"/>
 
                 <TextView
-                    android:id="@+id/isimodel2"
+                    android:id="@+id/operation_strategic1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignLeft="@+id/isimodel"
-                    android:layout_alignStart="@+id/isimodel"
-                    android:layout_below="@+id/isimodel"
-                    android:text="@string/client_strategic3"
-                    android:textColor="#000000"/>
-
-                <TextView
-                    android:id="@+id/isimodel3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignLeft="@+id/isimodel2"
-                    android:layout_alignStart="@+id/isimodel2"
-                    android:layout_below="@+id/isimodel2"
                     android:text="@string/operation_strategic"
                     android:textStyle="bold"
                     android:layout_marginTop="10dp"
                     android:textColor="#000000"/>
 
-                <TextView
-                    android:id="@+id/isimodel4"
-                    android:layout_width="wrap_content"
+                <!--<TextView-->
+                    <!--android:id="@+id/operation_strategic2"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginTop="5dp"-->
+                    <!--android:text="@string/operation_strategic2"-->
+                    <!--android:textColor="#000000"/>-->
+
+                <com.example.gasan.myapplication.JustifiedTextView
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_alignLeft="@+id/isimodel3"
-                    android:layout_alignStart="@+id/isimodel3"
-                    android:layout_below="@+id/isimodel3"
-                    android:layout_marginTop="5dp"
-                    android:text="@string/operation_strategic2"
-                    android:textColor="#000000"/>
+                    android:id="@+id/operation_strategic2"
+                    android:textColor="#000000"
+                    android:padding="5dp"
+                    xmlns:noghteh="http://noghteh.ir"
+                    noghteh:textSize="14sp"/>
 
                 <TextView
                     android:id="@+id/controllingunit"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignLeft="@+id/isimodel4"
-                    android:layout_alignStart="@+id/isimodel4"
-                    android:layout_below="@+id/isimodel4"
                     android:text="@string/controlling_strategic"
                     android:textStyle="bold"
                     android:layout_marginTop="10dp"
                     android:textColor="#000000"/>
 
-                <TextView
-                    android:id="@+id/controllingunit2"
-                    android:layout_width="wrap_content"
+                <!--<TextView-->
+                    <!--android:id="@+id/controllingunit2"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginTop="5dp"-->
+                    <!--android:text="@string/controlling_strategic2"-->
+                    <!--android:textColor="#000000"/>-->
+
+                <com.example.gasan.myapplication.JustifiedTextView
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_alignLeft="@+id/controllingunit"
-                    android:layout_alignStart="@+id/controllingunit"
-                    android:layout_below="@+id/controllingunit"
-                    android:layout_marginTop="5dp"
-                    android:text="@string/controlling_strategic2"
-                    android:textColor="#000000"/>
+                    android:id="@+id/controlling_strategic2"
+                    android:textColor="#000000"
+                    android:padding="5dp"
+                    xmlns:noghteh="http://noghteh.ir"
+                    noghteh:textSize="14sp"/>
 
                 <TextView
                     android:id="@+id/learingunit"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignLeft="@+id/controllingunit2"
-                    android:layout_alignStart="@+id/controllingunit2"
-                    android:layout_below="@+id/controllingunit2"
                     android:text="@string/learning_strategic"
                     android:textStyle="bold"
                     android:layout_marginTop="10dp"
                     android:textColor="#000000"/>
 
-                <TextView
-                    android:id="@+id/learningunit2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignLeft="@+id/learingunit"
-                    android:layout_alignStart="@+id/learingunit"
-                    android:layout_below="@+id/learingunit"
-                    android:layout_marginTop="5dp"
-                    android:text="@string/learning_strategic2"
-                    android:textColor="#000000"/>
+                <!--<TextView-->
+                    <!--android:id="@+id/learningunit2"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginTop="5dp"-->
+                    <!--android:text="@string/learning_strategic2"-->
+                    <!--android:textColor="#000000"/>-->
 
+                <com.example.gasan.myapplication.JustifiedTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/learning_strategic2"
+                    android:textColor="#000000"
+                    android:padding="5dp"
+                    xmlns:noghteh="http://noghteh.ir"
+                    noghteh:textSize="14sp"/>
 
             </LinearLayout>
 

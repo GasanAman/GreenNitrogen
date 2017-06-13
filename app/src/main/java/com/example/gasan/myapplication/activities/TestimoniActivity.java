@@ -54,7 +54,7 @@ public class TestimoniActivity extends AppCompatActivity {
             }
         });
 
-        submit  = (Button) findViewById(R.id.buttonSubmitSteamWash);
+        submit  = (Button) findViewById(R.id.buttonSubmitTestimoni);
 
         submit.setOnClickListener(new View.OnClickListener() {
             @Override

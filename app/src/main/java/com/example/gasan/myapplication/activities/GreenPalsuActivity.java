@@ -2,6 +2,7 @@ package com.example.gasan.myapplication.activities;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.graphics.Paint;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -14,6 +15,7 @@ import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.example.gasan.myapplication.JustifiedTextView;
 import com.example.gasan.myapplication.R;
 import com.example.gasan.myapplication.ServiceHandler;
 
@@ -32,6 +34,7 @@ public class GreenPalsuActivity extends AppCompatActivity {
     ProgressDialog pDialog;
     EditText kolomComment, inputnama, inputalamat, inputnohp, inputemail, inputnopol, inputMrkKend, judulText;
     Button b1;
+    JustifiedTextView ls, ls2;
 
     private String URL_NEW_CATEGORY = "http://10.0.3.2/input_comment.php";
 
@@ -40,6 +43,14 @@ public class GreenPalsuActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_green_palsu);
         //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        ls=(JustifiedTextView) findViewById(R.id.green_palsu_paragraf1);
+        ls.setText(getResources().getString(R.string.green_palsu_paragraf1));
+        ls.setAlignment(Paint.Align.LEFT);
+
+        ls2=(JustifiedTextView) findViewById(R.id.green_palsu_paragraf2);
+        ls2.setText(getResources().getString(R.string.green_palsu_paragraf2));
+        ls2.setAlignment(Paint.Align.LEFT);
 
         kolomComment = (EditText) findViewById(R.id.kolomCommentNitrogenPalsu);
         inputnama = (EditText) findViewById(R.id.inputnamaNitrogenPalsu);
