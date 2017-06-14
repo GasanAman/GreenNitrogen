@@ -45,19 +45,22 @@ public class tab3CommentFragment extends Fragment implements View.OnClickListene
             case R.id.buttonSteamWash:
                 Intent SteamWash = new Intent(v.getContext(), SteamWashActivity.class);
                 startActivity(SteamWash);
+                getActivity().finish();
                 break;
             case R.id.buttonTestimoni:
                 Intent Testimoni = new Intent(v.getContext(), TestimoniActivity.class);
                 startActivity(Testimoni);
-
+                getActivity().finish();
                 break;
             case R.id.buttonIsuPalsu:
                 Intent IsuPalsu = new Intent(v.getContext(), IsuPalsuActivity.class);
                 startActivity(IsuPalsu);
+                getActivity().finish();
                 break;
             case R.id.buttonGreenPalsu:
                 Intent GreenPalsu = new Intent(v.getContext(), GreenPalsuActivity.class);
                 startActivity(GreenPalsu);
+                getActivity().finish();
                 break;
         }
     }
