@@ -88,7 +88,7 @@ public class HubungiFragment extends Fragment {
 
                     public void onClick(DialogInterface dialog, int which) {
                         //ActionNya Apa
-                        dialog.cancel();
+                        dialog.dismiss();
                     }
                 });
 

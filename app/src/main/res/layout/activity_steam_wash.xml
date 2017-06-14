@@ -30,8 +30,7 @@
             android:layout_gravity="center"
             android:layout_marginLeft="30dp"
             android:textColor="@android:color/white"
-            android:textStyle="bold"
-            android:textSize="8pt"
+            android:textSize="20sp"
             />
 
     </LinearLayout>

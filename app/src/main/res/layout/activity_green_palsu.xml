@@ -12,7 +12,10 @@
         android:gravity="center"
         android:background="#D00000"
         android:id="@+id/header1"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
 
 
         <ImageButton
@@ -28,9 +31,8 @@
             android:text="Section Green Nitrogen Palsu"
             android:layout_gravity="center"
             android:textColor="@android:color/white"
-            android:textStyle="bold"
             android:layout_marginLeft="30dp"
-            android:textSize="8pt"
+            android:textSize="20sp"
             />
 
     </LinearLayout>

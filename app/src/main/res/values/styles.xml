@@ -15,7 +15,6 @@
         <!-- Used for the title and text -->
         <item name="android:textColorPrimary">@android:color/black</item>
         <!-- Used for the background -->
-        <item name="android:background">@android:color/white</item>
     </style>
 
     <style name="DrawerArrowStyle" parent="Widget.AppCompat.DrawerArrowToggle">

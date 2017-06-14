@@ -29,9 +29,8 @@
             android:text="Section Isu Nitrogen Palsu"
             android:layout_gravity="center"
             android:textColor="@android:color/white"
-            android:textStyle="bold"
             android:layout_marginLeft="30dp"
-            android:textSize="8pt"
+            android:textSize="20sp"
             />
 
     </LinearLayout>
