@@ -1,7 +1,9 @@
 package com.example.gasan.myapplication.fragments;
 
 
+import android.app.AlertDialog;
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -54,19 +56,44 @@ public class HubungiFragment extends Fragment {
         kolomPesan = (EditText) rootView.findViewById(R.id.kolomPesanHubungi);
 
         submit = (Button) rootView.findViewById(R.id.buttonSubmitHubungi);
-        submit.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v){
-                if (inputnama.getText().toString().trim().isEmpty()) {
-                    Toast.makeText(v.getContext().getApplicationContext(), "Nama Masih Kosong", Toast.LENGTH_LONG).show();
-                } else if (inputnohp.getText().toString().trim().isEmpty()) {
-                    Toast.makeText(v.getContext().getApplicationContext(), "Nomor HP Masih Kosong", Toast.LENGTH_LONG).show();
-                } else if (inputemail.getText().toString().trim().isEmpty()) {
-                    Toast.makeText(v.getContext().getApplicationContext(), "Email Masih Kosong", Toast.LENGTH_LONG).show();
-                } else if (kolomPesan.getText().toString().trim().isEmpty()) {
-                    Toast.makeText(v.getContext().getApplicationContext(), "Pesan Masih Kosong", Toast.LENGTH_LONG).show();
-                } else {
-                    new SaveData().execute();
-                }
+        submit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+//                LayoutInflater inflater = getLayoutInflater(null);
+//                View alertLayout = inflater.inflate(R.layout.alert_dialog_konfirmasi_inputan, null);
+                final AlertDialog.Builder tampilKotakAlert = new AlertDialog.Builder(v.getContext());
+
+                tampilKotakAlert.setTitle("Alert");
+                tampilKotakAlert.setIcon(R.drawable.ic_pref_info);
+//                tampilKotakAlert.setView(alertLayout);
+                tampilKotakAlert.setMessage(R.string.alert_message_inputan);
+                tampilKotakAlert.setPositiveButton (R.string.ya, new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                //ActionNya Apa
+                                if (inputnama.getText().toString().trim().isEmpty()) {
+                                    Toast.makeText(rootView.getContext().getApplicationContext(), "Nama Masih Kosong", Toast.LENGTH_LONG).show();
+                                } else if (inputnohp.getText().toString().trim().isEmpty()) {
+                                    Toast.makeText(rootView.getContext().getApplicationContext(), "Nomor HP Masih Kosong", Toast.LENGTH_LONG).show();
+                                } else if (inputemail.getText().toString().trim().isEmpty()) {
+                                    Toast.makeText(rootView.getContext().getApplicationContext(), "Email Masih Kosong", Toast.LENGTH_LONG).show();
+                                } else if (kolomPesan.getText().toString().trim().isEmpty()) {
+                                    Toast.makeText(rootView.getContext().getApplicationContext(), "Pesan Masih Kosong", Toast.LENGTH_LONG).show();
+                                } else {
+                                    new SaveData().execute();
+                                }
+                            }
+                        });
+
+                tampilKotakAlert.setNeutralButton(R.string.tidak, new DialogInterface.OnClickListener() {
+
+                    public void onClick(DialogInterface dialog, int which) {
+                        //ActionNya Apa
+                        dialog.cancel();
+                    }
+                });
+
+//                AlertDialog alert = tampilKotakAlert.create();
+                tampilKotakAlert.show();
             }
         });
 

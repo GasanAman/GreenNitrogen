@@ -298,7 +298,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
-                        android:layout_marginTop="10dp"/>
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/ImageViewKTP"/>
 
                     <Button
                         android:id="@+id/buttonUploadFoto"
@@ -311,7 +312,7 @@
                 </LinearLayout>
 
                 <Button
-                    android:id="@+id/buttonSubmit"
+                    android:id="@+id/buttonSubmitKerjaSama"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/UploadFoto"

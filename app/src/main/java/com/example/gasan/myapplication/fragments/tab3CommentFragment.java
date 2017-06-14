@@ -1,6 +1,8 @@
 package com.example.gasan.myapplication.fragments;
 
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Paint;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AlertDialog;
@@ -9,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import com.example.gasan.myapplication.JustifiedTextView;
 import com.example.gasan.myapplication.R;
 import com.example.gasan.myapplication.activities.*;
 
@@ -46,6 +49,7 @@ public class tab3CommentFragment extends Fragment implements View.OnClickListene
             case R.id.buttonTestimoni:
                 Intent Testimoni = new Intent(v.getContext(), TestimoniActivity.class);
                 startActivity(Testimoni);
+
                 break;
             case R.id.buttonIsuPalsu:
                 Intent IsuPalsu = new Intent(v.getContext(), IsuPalsuActivity.class);

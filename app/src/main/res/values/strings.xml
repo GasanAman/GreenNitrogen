@@ -90,6 +90,7 @@
     <string name="green_palsu_paragraf2">Untuk e-book dapat di download di Link yang akan kami kirim melalui Email/SMS, mohon lengkapi data pribadi Anda. Terima kasih.</string>
     <string name="award">Award</string>
     <string name="info">Info</string>
+    <string name="informasi">Informasi</string>
     <string name="garansi">Garansi</string>
     <string name="bisnis_kerja_sama">Bisnis Kerja Sama</string>
     <string name="layanan">Layanan</string>
@@ -274,5 +275,10 @@
     <string name="upload_foto">Upload Foto</string>
     <string name="steam_wash_p1">Dapatkan Gratis Layanan Cuci Interior mobil dengan mengikuti program komentar setiap periodenya akan terpilih setiap harinya 5 orang dengan komentar terbaik</string>
     <string name="steam_wash_p2">Agar kami dapat menghubungi pemenang yang berhak mendapatkan voucher gratis Cuci mobil, mohon lengkapi data pribadi Anda. Terima kasih.</string>
+    <string name="ya">Ya</string>
+    <string name="tidak">Tidak</string>
+    <string name="alert_message_inputan">Anda yakin data yang diinputkan sudah benar?</string>
+    <string name="ok">OK</string>
+    <string name="info_green_nitrogen">Green Nitrogen (GN) adalah salah satu unit bisnis strategis dari PT Global Insight Utama. GN merupakan pelopor layanan nitrogen dan tambal ban bergaransi di SPBU Pertamina dengan jaringan bisnis terluas di seluruh Indonesia. Konsep kerjasama bisnis menggunakan sistem kerjasama bagi hasil dan pengelolaan dilakukan sepenuhnya oleh Manajemen GN. Informasi lengkap untuk membangun kerjasama dengan kami dapat mengisi formulir berikut ini, dan selanjutnya team kami akan menghubungi Anda. Terima kasih telah menjadi bagian mitra strategis kami.</string>
 
 </resources>

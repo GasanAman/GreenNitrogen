@@ -1,12 +1,15 @@
 package com.example.gasan.myapplication.fragments;
 
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.Paint;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AlertDialog;
 import android.util.Base64;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -14,6 +17,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
+import com.example.gasan.myapplication.JustifiedTextView;
 import com.example.gasan.myapplication.R;
 
 import java.io.ByteArrayOutputStream;
@@ -24,9 +28,10 @@ import java.io.IOException;
  */
 public class KerjaSamaBisnisFragment extends Fragment {
 
-
+    View rootView;
     Bitmap bitmap;
     ImageView imageView;
+    JustifiedTextView mJTv;
     int success;
     int PICK_IMAGE_REQUEST = 1;
 
@@ -39,8 +44,27 @@ public class KerjaSamaBisnisFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+        rootView = inflater.inflate(R.layout.fragment_kerja_sama_bisnis, container, false);
         getActivity().setTitle(R.string.bisnis_kerja_sama);
-        return inflater.inflate(R.layout.fragment_kerja_sama_bisnis, container, false);
+        LayoutInflater inflater1 = getLayoutInflater(null);
+        View alertLayout = inflater1.inflate(R.layout.alert_dialog_konfirmasi_inputan, null);
+
+        mJTv = (JustifiedTextView) alertLayout.findViewById(R.id.justifyTextAlert);
+        mJTv.setText(getResources().getString(R.string.info_green_nitrogen));
+        mJTv.setAlignment(Paint.Align.LEFT);
+
+        AlertDialog.Builder alertDialog = new AlertDialog.Builder(rootView.getContext());
+        alertDialog.setTitle(R.string.informasi);
+        alertDialog.setIcon(R.drawable.ic_pref_info);
+        alertDialog.setView(alertLayout);
+        alertDialog.setNegativeButton(R.string.ok, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+            }
+        });
+        alertDialog.show();
+        return rootView;
     }
 
 
