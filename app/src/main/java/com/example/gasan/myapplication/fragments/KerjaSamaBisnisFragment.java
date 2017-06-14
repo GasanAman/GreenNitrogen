@@ -47,7 +47,7 @@ public class KerjaSamaBisnisFragment extends Fragment {
         rootView = inflater.inflate(R.layout.fragment_kerja_sama_bisnis, container, false);
         getActivity().setTitle(R.string.bisnis_kerja_sama);
         LayoutInflater inflater1 = getLayoutInflater(null);
-        View alertLayout = inflater1.inflate(R.layout.alert_dialog_konfirmasi_inputan, null);
+        View alertLayout = inflater1.inflate(R.layout.alert_dialog_kerjasama_bisnis, null);
 
         mJTv = (JustifiedTextView) alertLayout.findViewById(R.id.justifyTextAlert);
         mJTv.setText(getResources().getString(R.string.info_green_nitrogen));

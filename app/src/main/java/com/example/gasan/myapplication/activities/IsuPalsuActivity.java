@@ -8,6 +8,7 @@ import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -78,6 +79,8 @@ public class IsuPalsuActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 final AlertDialog.Builder tampilKotakAlert = new AlertDialog.Builder(v.getContext());
+//                LayoutInflater inflater1 = getLayoutInflater();
+//                View alertLayout = inflater1.inflate(R.layout.alert_dialog_konfirmasi_inputan, null);
 
                 tampilKotakAlert.setTitle("Alert");
                 tampilKotakAlert.setIcon(R.drawable.ic_pref_info);
@@ -106,7 +109,7 @@ public class IsuPalsuActivity extends AppCompatActivity {
                         }
                     }
                 });
-                tampilKotakAlert.setNeutralButton(R.string.tidak, new DialogInterface.OnClickListener() {
+                tampilKotakAlert.setNegativeButton(R.string.tidak, new DialogInterface.OnClickListener() {
 
                     public void onClick(DialogInterface dialog, int which) {
                         //ActionNya Apa
