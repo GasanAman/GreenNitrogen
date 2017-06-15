@@ -1,17 +1,13 @@
 package com.example.gasan.myapplication.fragments;
 
-import android.content.DialogInterface;
 import android.content.Intent;
-import android.graphics.Paint;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-import com.example.gasan.myapplication.JustifiedTextView;
 import com.example.gasan.myapplication.R;
 import com.example.gasan.myapplication.activities.*;
 
@@ -19,7 +15,7 @@ import com.example.gasan.myapplication.activities.*;
 public class tab3CommentFragment extends Fragment implements View.OnClickListener{
 
     View rootView;
-    Button b1, b2, b3, b4, b5;
+    Button b1, b2, b3, b4;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

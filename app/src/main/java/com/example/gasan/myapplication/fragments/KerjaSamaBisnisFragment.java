@@ -45,7 +45,7 @@ public class KerjaSamaBisnisFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         rootView = inflater.inflate(R.layout.fragment_kerja_sama_bisnis, container, false);
-        getActivity().setTitle(R.string.bisnis_kerja_sama);
+        getActivity().setTitle(R.string.kerja_sama_bisnis);
         LayoutInflater inflater1 = getLayoutInflater(null);
         View alertLayout = inflater1.inflate(R.layout.alert_dialog_kerjasama_bisnis, null);
 

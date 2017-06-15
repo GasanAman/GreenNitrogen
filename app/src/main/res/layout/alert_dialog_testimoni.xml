@@ -17,34 +17,33 @@
             android:textStyle="bold"/>
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/textView5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/alert_isu_palsu1"
-            android:textColor="#000000" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="10dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/bullet"
+            android:text="@string/alert_dialog_testimoni1"
             android:textColor="#000000"
-            android:layout_marginRight="5dp"
-            android:textStyle="bold"/>
+            />
 
-        <TextView
-            android:id="@+id/textView4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/alert_isu_palsu2"
-            android:textColor="#000000" />
+
+
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/alert_dialog_hotline"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/alert_dialog_testimoni2"
+        android:textColor="#000000"
+        android:paddingLeft="10dp"/>
 
 
 </LinearLayout>

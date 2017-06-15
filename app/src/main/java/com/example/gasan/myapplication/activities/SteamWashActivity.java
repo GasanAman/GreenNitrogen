@@ -9,6 +9,7 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -55,6 +56,21 @@ public class SteamWashActivity extends AppCompatActivity {
         mJTv2.setText(getResources().getString(R.string.steam_wash_p2));
         mJTv2.setAlignment(Paint.Align.LEFT);
 
+        LayoutInflater inflater1 = getLayoutInflater();
+        View alertLayout = inflater1.inflate(R.layout.alert_dialog_steam_wash, null);
+
+        android.app.AlertDialog.Builder alertDialog = new android.app.AlertDialog.Builder(this);
+        alertDialog.setTitle(R.string.informasi);
+        alertDialog.setIcon(R.drawable.ic_pref_info);
+        alertDialog.setView(alertLayout);
+        alertDialog.setNegativeButton(R.string.ok, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+            }
+        });
+        alertDialog.show();
+
         kolomComment = (EditText) findViewById(R.id.kolomCommentSteamWash);
         inputnama = (EditText) findViewById(R.id.inputnamaSteamWash);
         inputalamat = (EditText) findViewById(R.id.inputalamatSteamWash);
@@ -90,39 +106,50 @@ public class SteamWashActivity extends AppCompatActivity {
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (kolomComment.getText().toString().trim().isEmpty()) {
-                    Toast.makeText(v.getContext().getApplicationContext(), "Komentar Masih Kosong", Toast.LENGTH_LONG).show();
-                } else if (inputnama.getText().toString().trim().isEmpty()) {
-                    Toast.makeText(v.getContext().getApplicationContext(), "Nama Masih Kosong", Toast.LENGTH_LONG).show();
-                } else if (inputalamat.getText().toString().trim().isEmpty()) {
-                    Toast.makeText(v.getContext().getApplicationContext(), "Alamat Masih Kosong", Toast.LENGTH_LONG).show();
-                } else if (inputnohp.getText().toString().trim().isEmpty()) {
-                    Toast.makeText(v.getContext().getApplicationContext(), "Nomor HP Masih Kosong", Toast.LENGTH_LONG).show();
-                } else if (inputemail.getText().toString().trim().isEmpty()) {
-                    Toast.makeText(v.getContext().getApplicationContext(), "Email Masih Kosong", Toast.LENGTH_LONG).show();
-                } else if (inputnopol.getText().toString().trim().isEmpty()) {
-                    Toast.makeText(v.getContext().getApplicationContext(), "Nomor Polisi Masih Kosong", Toast.LENGTH_LONG).show();
-                } else if (spinner.getSelectedItem().toString().trim().isEmpty()) {
-                    Toast.makeText(v.getContext().getApplicationContext(), "Jenis Kendaraan Masih Kosong", Toast.LENGTH_LONG).show();
-                } else if (inputMrkKend.getText().toString().trim().isEmpty()) {
-                    Toast.makeText(v.getContext().getApplicationContext(), "Merek Kendaraan Masih Kosong", Toast.LENGTH_LONG).show();
-                } else {
-                    new SaveData().execute();
-                }
+                android.app.AlertDialog.Builder tampilKotakAlert = new android.app.AlertDialog.Builder(v.getContext());
+//                LayoutInflater inflater1 = getLayoutInflater();
+//                View alertLayout = inflater1.inflate(R.layout.alert_dialog_konfirmasi_inputan, null);
+
+                tampilKotakAlert.setTitle("Alert");
+                tampilKotakAlert.setIcon(android.R.drawable.ic_dialog_alert);
+//                tampilKotakAlert.setView(alertLayout);
+                tampilKotakAlert.setMessage(R.string.alert_message_inputan);
+                tampilKotakAlert.setPositiveButton (R.string.ya, new DialogInterface.OnClickListener(){
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        if (kolomComment.getText().toString().trim().isEmpty()) {
+                            Toast.makeText(getApplicationContext(), "Komentar Masih Kosong", Toast.LENGTH_LONG).show();
+                        } else if (inputnama.getText().toString().trim().isEmpty()) {
+                            Toast.makeText(getApplicationContext(), "Nama Masih Kosong", Toast.LENGTH_LONG).show();
+                        } else if (inputalamat.getText().toString().trim().isEmpty()) {
+                            Toast.makeText(getApplicationContext(), "Alamat Masih Kosong", Toast.LENGTH_LONG).show();
+                        } else if (inputnohp.getText().toString().trim().isEmpty()) {
+                            Toast.makeText(getApplicationContext(), "Nomor HP Masih Kosong", Toast.LENGTH_LONG).show();
+                        } else if (inputemail.getText().toString().trim().isEmpty()) {
+                            Toast.makeText(getApplicationContext(), "Email Masih Kosong", Toast.LENGTH_LONG).show();
+                        } else if (inputnopol.getText().toString().trim().isEmpty()) {
+                            Toast.makeText(getApplicationContext(), "Nomor Polisi Masih Kosong", Toast.LENGTH_LONG).show();
+                        } else if (spinner.getSelectedItem().toString().trim().isEmpty()) {
+                            Toast.makeText(getApplicationContext(), "Jenis Kendaraan Masih Kosong", Toast.LENGTH_LONG).show();
+                        } else if (inputMrkKend.getText().toString().trim().isEmpty()) {
+                            Toast.makeText(getApplicationContext(), "Merek Kendaraan Masih Kosong", Toast.LENGTH_LONG).show();
+                        } else {
+                            new SaveData().execute();
+                        }
+                    }
+                });
+                tampilKotakAlert.setNegativeButton(R.string.tidak, new DialogInterface.OnClickListener() {
+
+                    public void onClick(DialogInterface dialog, int which) {
+                        //ActionNya Apa
+                        dialog.dismiss();
+                    }
+                });
+
+//                AlertDialog alert = tampilKotakAlert.create();
+                tampilKotakAlert.show();
             }
         });
-
-//        final AlertDialog.Builder myAlert = new AlertDialog.Builder(this);
-//        myAlert.setTitle("TEST");
-//        myAlert.setMessage("Green Nitrogen (GN) adalah salah satu unit bisnis strategis dari PT Global Insight Utama. GN merupakan pelopor layanan nitrogen dan tambal ban bergaransi di SPBU Pertamina dengan jaringan bisnis terluas di seluruh Indonesia. Konsep kerjasama bisnis menggunakan sistem kerjasama bagi hasil dan pengelolaan dilakukan sepenuhnya oleh Manajemen GN. Informasi lengkap untuk membangun kerjasama dengan kami dapat mengisi formulir berikut ini, dan selanjutnya team kami akan menghubungi Anda. Terima kasih telah menjadi bagian mitra strategis kami.");
-//        myAlert.setNeutralButton("OK", new DialogInterface.OnClickListener() {
-//            public void onClick(DialogInterface dialog, int which) {
-//                // Write your code here to execute after dialog closed
-//                Toast.makeText(getApplicationContext(), "", Toast.LENGTH_SHORT).show();
-//
-//            }
-//        });
-//        myAlert.show();
     }
 
 

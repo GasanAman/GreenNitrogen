@@ -27,7 +27,7 @@
                 <item
                     android:id="@+id/drawer_kerja_sama_bisnis"
                     android:icon="@drawable/ic_work_white_36dp"
-                    android:title="@string/bisnis_kerja_sama" />
+                    android:title="@string/kerja_sama_bisnis" />
             </menu>
         </item>
 

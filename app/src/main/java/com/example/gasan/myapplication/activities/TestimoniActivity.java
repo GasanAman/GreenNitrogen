@@ -5,8 +5,6 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Paint;
 import android.os.AsyncTask;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -47,6 +45,21 @@ public class TestimoniActivity extends AppCompatActivity {
         inputemail = (EditText) findViewById(R.id.inputemailTestimoni);
         kolomTestimoni = (EditText) findViewById(R.id.kolomTestimoni);
 
+        LayoutInflater inflater1 = getLayoutInflater();
+        View alertLayout = inflater1.inflate(R.layout.alert_dialog_testimoni, null);
+
+        android.app.AlertDialog.Builder alertDialog = new android.app.AlertDialog.Builder(this);
+        alertDialog.setTitle(R.string.informasi);
+        alertDialog.setIcon(R.drawable.ic_pref_info);
+        alertDialog.setView(alertLayout);
+        alertDialog.setNegativeButton(R.string.ok, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+            }
+        });
+        alertDialog.show();
+
 
         ImageButton back = (ImageButton) findViewById(R.id.imageButton);
         back.setOnClickListener(new View.OnClickListener() {
@@ -65,17 +78,34 @@ public class TestimoniActivity extends AppCompatActivity {
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (inputnama.getText().toString().trim().isEmpty()) {
-                    Toast.makeText(v.getContext().getApplicationContext(), "Nama Masih Kosong", Toast.LENGTH_LONG).show();
-                } else if (inputnohp.getText().toString().trim().isEmpty()) {
-                    Toast.makeText(v.getContext().getApplicationContext(), "Nomor HP Masih Kosong", Toast.LENGTH_LONG).show();
-                } else if (inputemail.getText().toString().trim().isEmpty()) {
-                    Toast.makeText(v.getContext().getApplicationContext(), "Email Masih Kosong", Toast.LENGTH_LONG).show();
-                } else if (kolomTestimoni.getText().toString().trim().isEmpty()) {
-                    Toast.makeText(v.getContext().getApplicationContext(), "Testimoni Masih Kosong", Toast.LENGTH_LONG).show();
-                } else {
-                    new SaveData().execute();
-                }
+                android.app.AlertDialog.Builder tampilKotakAlert = new android.app.AlertDialog.Builder(v.getContext());
+                tampilKotakAlert.setTitle("Alert");
+                tampilKotakAlert.setIcon(android.R.drawable.ic_dialog_alert);
+                tampilKotakAlert.setMessage(R.string.alert_message_inputan);
+                tampilKotakAlert.setPositiveButton (R.string.ya, new DialogInterface.OnClickListener(){
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        if (inputnama.getText().toString().trim().isEmpty()) {
+                            Toast.makeText(getApplicationContext(), "Nama Masih Kosong", Toast.LENGTH_LONG).show();
+                        } else if (inputnohp.getText().toString().trim().isEmpty()) {
+                            Toast.makeText(getApplicationContext(), "Nomor HP Masih Kosong", Toast.LENGTH_LONG).show();
+                        } else if (inputemail.getText().toString().trim().isEmpty()) {
+                            Toast.makeText(getApplicationContext(), "Email Masih Kosong", Toast.LENGTH_LONG).show();
+                        } else if (kolomTestimoni.getText().toString().trim().isEmpty()) {
+                            Toast.makeText(getApplicationContext(), "Testimoni Masih Kosong", Toast.LENGTH_LONG).show();
+                        } else {
+                            new SaveData().execute();
+                        }
+                    }
+                });
+                tampilKotakAlert.setNegativeButton(R.string.tidak, new DialogInterface.OnClickListener() {
+
+                    public void onClick(DialogInterface dialog, int which) {
+                        //ActionNya Apa
+                        dialog.dismiss();
+                    }
+                });
+                tampilKotakAlert.show();
             }
         });
 

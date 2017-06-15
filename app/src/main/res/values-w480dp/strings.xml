@@ -27,7 +27,7 @@
     <string name="award">Award</string>
     <string name="info">Info</string>
     <string name="garansi">Garansi</string>
-    <string name="bisnis_kerja_sama">Bisnis Kerja Sama</string>
+    <string name="kerja_sama_bisnis">Bisnis Kerja Sama</string>
     <string name="layanan">Layanan</string>
     <string name="produk_dan_layanan">Produk dan Layanan</string>
     <string name="car_wash">Car Wash</string>
@@ -47,4 +47,14 @@
     <string name="alert_message_inputan">Anda yakin data yang diinputkan sudah benar?</string>
     <string name="ok">OK</string>
     <string name="info_green_nitrogen">Green Nitrogen (GN) adalah salah satu unit bisnis strategis dari PT Global Insight Utama. GN merupakan pelopor layanan nitrogen dan tambal ban bergaransi di SPBU Pertamina dengan jaringan bisnis terluas di seluruh Indonesia. Konsep kerjasama bisnis menggunakan sistem kerjasama bagi hasil dan pengelolaan dilakukan sepenuhnya oleh Manajemen GN. Informasi lengkap untuk membangun kerjasama dengan kami dapat mengisi formulir berikut ini, dan selanjutnya team kami akan menghubungi Anda. Terima kasih telah menjadi bagian mitra strategis kami.</string>
+    <string name="alert_isu_palsu1">Tuliskan komentar Anda tentang ISU HOAX NITROGEN PALSU, DAPATKAN VOUCHER ISI BARU NITROGEN selama setahun senilai Rp 400,000</string>
+    <string name="alert_isu_palsu2">Harap Lengkapi Alamat Anda, Kota/Kabupaten, Kecamatan/Kelurahan, serta KODE POS karena Voucher akan dikirim ke Rumah anda melalui Jasa Pelayanan Paket</string>
+    <string name="alert_dialog_testimoni1">Untuk info mengenai investasi, pihak kami akan menghubungi anda lebih lanjut melalui nomor telepon yang anda sertakan atau anda bisa langsung menghubungi kami di,</string>
+    <string name="alert_dialog_hotline">Hotline: 0851 0079 2450</string>
+    <string name="alert_dialog_testimoni2">Atau bisa daftar melalui menu Kerja Sama Bisnis</string>
+    <string name="alert_dialog_green_palsu1">Tuliskan komentar Anda tentang MEREBAKNYA OUTLET GREEN NITROGEN PALSU, Dapatkan Gratis e-book buku Angin Perubahan dari Adang Wijaya, Owner dan CEO Green Nitrogen. Pelopor dalam membangun raksasa bisnis dari menjual angin nitrogen dan tambal ban bergaransi di SPBU Pertamina seluruh Indonesia.</string>
+    <string name="alert_dialog_green_palsu2">Lengkapi alamat Anda karena Voucher akan terkirim ke alamat Anda. E-book dapat Anda download melalui email atau sms di nomor HP Anda.</string>
+    <string name="alert_dialog_steam_wash1">Tuliskan komentar Anda tentang Green Steam Wash Cuci Mobil Teknologi Uap Panas, Dapatkan Voucher Gratis Cuci Mobil dengan cara memberikan komentar pada form yang telah disediakan</string>
+    <string name="alert_dialog_steam_wash2">*Voucher Gratis akan kami berikan kepada Komentar terbaik setiap harinya</string>
+    <string name="alert_dialog_steam_wash3">Harap Lengkapi Email, No Telepon Anda karena jika komentar anda dirasa baik maka Tim Hotline akan menghubungi anda untuk memberikan Voucher Gratis</string>
 </resources>

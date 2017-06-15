@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context="com.example.gasan.myapplication.activities.IsuPalsuActivity">
 
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="55dp"
@@ -297,7 +296,6 @@
                     android:layout_below="@+id/inputMrkKendIsuPalsu"
                     android:layout_marginLeft="10dp"
                     android:text="@string/submit" />
-
 
             </RelativeLayout>
 

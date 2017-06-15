@@ -44,6 +44,20 @@ public class IsuPalsuActivity extends AppCompatActivity {
         setContentView(R.layout.activity_isu_palsu);
 
 //        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        LayoutInflater inflater1 = getLayoutInflater();
+        View alertLayout = inflater1.inflate(R.layout.alert_dialog_isu_palsu, null);
+
+        AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
+        alertDialog.setTitle(R.string.informasi);
+        alertDialog.setIcon(R.drawable.ic_pref_info);
+        alertDialog.setView(alertLayout);
+        alertDialog.setNegativeButton(R.string.ok, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+            }
+        });
+        alertDialog.show();
 
         kolomComment = (EditText) findViewById(R.id.kolomCommentIsuPalsu);
         inputnama = (EditText) findViewById(R.id.inputnamaIsuPalsu);
@@ -76,17 +90,19 @@ public class IsuPalsuActivity extends AppCompatActivity {
 
         submit  = (Button) findViewById(R.id.buttonSubmitIsuPalsu);
         submit.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View v) {
-                final AlertDialog.Builder tampilKotakAlert = new AlertDialog.Builder(v.getContext());
+                AlertDialog.Builder tampilKotakAlert = new AlertDialog.Builder(v.getContext());
 //                LayoutInflater inflater1 = getLayoutInflater();
 //                View alertLayout = inflater1.inflate(R.layout.alert_dialog_konfirmasi_inputan, null);
 
                 tampilKotakAlert.setTitle("Alert");
-                tampilKotakAlert.setIcon(R.drawable.ic_pref_info);
+                tampilKotakAlert.setIcon(android.R.drawable.ic_dialog_alert);
 //                tampilKotakAlert.setView(alertLayout);
                 tampilKotakAlert.setMessage(R.string.alert_message_inputan);
                 tampilKotakAlert.setPositiveButton (R.string.ya, new DialogInterface.OnClickListener(){
+                    @Override
                     public void onClick(DialogInterface dialog, int which) {
                         if (kolomComment.getText().toString().trim().isEmpty()) {
                             Toast.makeText(getApplicationContext(), "Komentar Masih Kosong", Toast.LENGTH_LONG).show();
