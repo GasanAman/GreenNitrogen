@@ -93,7 +93,7 @@ public class IsuPalsuActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                AlertDialog.Builder tampilKotakAlert = new AlertDialog.Builder(v.getContext());
+                AlertDialog.Builder tampilKotakAlert = new AlertDialog.Builder(v.getContext(), R.style.MyAlertDialogStyle);
 //                LayoutInflater inflater1 = getLayoutInflater();
 //                View alertLayout = inflater1.inflate(R.layout.alert_dialog_konfirmasi_inputan, null);
 

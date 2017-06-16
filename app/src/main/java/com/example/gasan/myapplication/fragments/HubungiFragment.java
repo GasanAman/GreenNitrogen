@@ -84,7 +84,7 @@ public class HubungiFragment extends Fragment {
                             }
                         });
 
-                tampilKotakAlert.setNeutralButton(R.string.tidak, new DialogInterface.OnClickListener() {
+                tampilKotakAlert.setNegativeButton(R.string.tidak, new DialogInterface.OnClickListener() {
 
                     public void onClick(DialogInterface dialog, int which) {
                         //ActionNya Apa

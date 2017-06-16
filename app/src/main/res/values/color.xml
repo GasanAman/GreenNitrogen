@@ -4,6 +4,7 @@
     <color name="colorPrimary">#D00000</color>
     <color name="colorPrimaryDark">#101010</color>
     <color name="colorAccent">#f2021e</color>
+    <color name="redNitrogen">#e11f22</color>
 
     <!--tab color-->
     <color name="tabIndicatorColor">#fbc500</color>
@@ -36,5 +37,6 @@
     <color name="global_color_green_primary_dark">#388e3c</color>
     <color name="global_color_green_accent">#ffc107</color>
     <color name="global_color_green_control_activated">#ffc107</color>
+    <color name="DarkRed">#900000</color>
 
 </resources>
