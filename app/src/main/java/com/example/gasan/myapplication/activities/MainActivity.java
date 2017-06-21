@@ -5,12 +5,11 @@ package com.example.gasan.myapplication.activities;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.Uri;
 import android.os.Bundle;
-import android.preference.DialogPreference;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AlertDialog;
@@ -19,7 +18,6 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.View;
 
 import com.example.gasan.myapplication.R;
 import com.example.gasan.myapplication.fragments.AsuransiFragment;
@@ -28,6 +26,7 @@ import com.example.gasan.myapplication.fragments.CarWashFragment;
 import com.example.gasan.myapplication.fragments.GaransiFragment;
 import com.example.gasan.myapplication.fragments.HubungiFragment;
 import com.example.gasan.myapplication.fragments.KerjaSamaBisnisFragment;
+import com.example.gasan.myapplication.fragments.PetaFragment;
 import com.example.gasan.myapplication.fragments.ProdukFragment;
 import com.example.gasan.myapplication.fragments.TabFragment;
 import com.example.gasan.myapplication.fragments.TentangFragment;
@@ -42,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
     NavigationView mNavigationView;
     FragmentManager mFragmentManager;
     FragmentTransaction mFragmentTransaction;
+    private Uri fileUri; // file url to store image/video
 
     SharedPreferences preferences;
     @Override
@@ -84,6 +84,13 @@ public class MainActivity extends AppCompatActivity {
                 if (menuItem.getItemId() == R.id.drawer_home) {
                     FragmentTransaction fragmentTransaction = mFragmentManager.beginTransaction();
                     fragmentTransaction.replace(R.id.frame_container, new TabFragment()).commit();
+                }
+
+                if (menuItem.getItemId() == R.id.drawer_peta) {
+//                    Intent map = new Intent(MainActivity.this, AreaOutletActvity.class);
+//                    startActivity(map);
+                    FragmentTransaction fragmentTransaction = mFragmentManager.beginTransaction();
+                    fragmentTransaction.replace(R.id.frame_container, new PetaFragment()).commit();
                 }
 
                 if (menuItem.getItemId() == R.id.drawer_award){
@@ -190,7 +197,22 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
 
+        // save file url in bundle as it will be null on scren orientation
+        // changes
+        outState.putParcelable("file_uri", fileUri);
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+
+        // get the file url
+        fileUri = savedInstanceState.getParcelable("file_uri");
+    }
 
 
 

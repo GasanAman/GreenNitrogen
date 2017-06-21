@@ -6,8 +6,10 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Paint;
 import android.os.AsyncTask;
+import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -31,7 +33,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class GreenPalsuActivity extends AppCompatActivity {
-
+    Toolbar toolbar;
     Spinner spinner;
     ArrayAdapter<CharSequence> arrayAdapter;
     ProgressDialog pDialog;
@@ -45,7 +47,12 @@ public class GreenPalsuActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_green_palsu);
-        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+//        toolbar = (Toolbar) findViewById(R.id.toolbar);
+//        setSupportActionBar(toolbar);
+//        assert getSupportActionBar() != null;
+//        if(getSupportActionBar() != null){
+//            getSupportActionBar().setDisplayShowHomeEnabled(true);
+//        }
 
         ls=(JustifiedTextView) findViewById(R.id.green_palsu_paragraf1);
         ls.setText(getResources().getString(R.string.green_palsu_paragraf1));

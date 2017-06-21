@@ -5,6 +5,7 @@ import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Paint;
 import android.net.Uri;
 import android.os.Bundle;
@@ -39,8 +40,13 @@ import org.json.JSONObject;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.HashMap;
+import java.util.Locale;
 import java.util.Map;
 
 import static android.content.ContentValues.TAG;
@@ -62,6 +68,10 @@ public class KerjaSamaBisnisFragment extends Fragment  implements AdapterView.On
     String tag_json_obj = "json_obj_req";
     EditText inputNama, inputAlamat, inputNoHP, inputEmail, inputInstansi, inputInfo, inputAlasan, inputMengenal, inputLamaMengenal, inputOutletDikunjungi, inputBandrex, inputUsaha, inputKritik;
     Button uploadKTP, submit;
+
+    private Uri fileUri; // file url to store image/video
+    public static final int MEDIA_TYPE_IMAGE = 1;
+    private static final String IMAGE_DIRECTORY_NAME = "KTP";
 
     private String UPLOAD_URL = "http://10.0.3.2/input_kerjasama.php";
 
@@ -118,29 +128,30 @@ public class KerjaSamaBisnisFragment extends Fragment  implements AdapterView.On
         uploadKTP.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                final CharSequence[] options = { "Take Photo", "Choose from Gallery","Cancel" };
-//                AlertDialog.Builder builder = new AlertDialog.Builder(v.getContext());
-//                builder.setTitle("Add Photo!");
-//                builder.setItems(options, new DialogInterface.OnClickListener() {
-//                    @Override
-//                    public void onClick(DialogInterface dialog, int item){
-//                        if (options[item].equals("Take Photo")){
+                final CharSequence[] options = { "Take Photo", "Choose from Gallery","Cancel" };
+                AlertDialog.Builder builder = new AlertDialog.Builder(v.getContext());
+                builder.setTitle("Add Photo!");
+                builder.setItems(options, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int item){
+                        if (options[item].equals("Take Photo")){
+                            cameraIntent(2);
 //                            Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
 //                            File f = new File(android.os.Environment.getExternalStorageDirectory(), "temp.jpg");
 //                            intent.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(f));
 //                            startActivityForResult(intent, 2);
-//                        } else if (options[item].equals("Choose from Gallery")){
+                        } else if (options[item].equals("Choose from Gallery")){
                             showFileChooser(1);
-//                        } else if (options[item].equals("Cancel")){
-//                            dialog.dismiss();
-//                        }
+                        } else if (options[item].equals("Cancel")){
+                            dialog.dismiss();
+                        }
 
 
-//                    }
+                    }
 
 
-//                });
-//                builder.show();
+                });
+                builder.show();
 
             }
         });
@@ -190,6 +201,36 @@ public class KerjaSamaBisnisFragment extends Fragment  implements AdapterView.On
         return temp;
     }
 
+
+    private void showFileChooser(int req_code) {
+        Intent intent = new Intent();
+        intent.setType("image/*");
+        intent.setAction(Intent.ACTION_GET_CONTENT);
+        startActivityForResult(Intent.createChooser(intent, "Select Picture"), req_code);
+    }
+
+    private void cameraIntent(int req_code)
+    {
+        Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+        fileUri = getOutputMediaFileUri(MEDIA_TYPE_IMAGE);
+
+        intent.putExtra(MediaStore.EXTRA_OUTPUT, fileUri);
+
+        startActivityForResult(intent, req_code);
+    }
+
+//    private void kosong(){
+//        imageView.setImageResource(0);
+//        TextView notif =  (TextView) rootView.findViewById(R.id.cNotifSukses);
+//        notif.setVisibility(View.VISIBLE);
+//        notif.setText(Html.fromHtml(" <b>SELAMAT Anda Berhasil Melaporkan Setoran Slip Bank Transfer</b><br/>" +
+//                " <p>Outlet "+cIdOutlet.getText().toString()+" " +
+//                " Tanggal "+dTglSetoran.getText().toString()+" " +
+//                " Keterangan " +cKeterangan.getText().toString()+"</p>"+
+//                " <p><b>Terima Kasih sudah melaporkan , Semoga Setoran Selanjutnya lebih baik dari ini :)</b></p>"
+//        ));
+//    }
+
     private void uploadImage(){
         //menampilkan progress dialog
         final ProgressDialog loading = ProgressDialog.show(getActivity(), "Upload KTP...", "Harap Tunggu...", false, false);
@@ -231,7 +272,8 @@ public class KerjaSamaBisnisFragment extends Fragment  implements AdapterView.On
                         Toast.makeText(getActivity(),"Kapasitas Gambar Terlalu Besar", Toast.LENGTH_LONG).show();
                         Log.d(TAG, error.getMessage().toString());
                     }
-                }){
+                })
+        {
             @Override
             protected Map<String, String> getParams() {
                 //membuat parameters
@@ -268,38 +310,47 @@ public class KerjaSamaBisnisFragment extends Fragment  implements AdapterView.On
         AppController.getInstance().addToRequestQueue(stringRequest, tag_json_obj);
     }
 
-    private void showFileChooser(int req_code) {
-        Intent intent = new Intent();
-        intent.setType("image/*");
-        intent.setAction(Intent.ACTION_GET_CONTENT);
-        startActivityForResult(Intent.createChooser(intent, "Select Picture"), req_code);
-    }
-
-//    private void kosong(){
-//        imageView.setImageResource(0);
-//        TextView notif =  (TextView) rootView.findViewById(R.id.cNotifSukses);
-//        notif.setVisibility(View.VISIBLE);
-//        notif.setText(Html.fromHtml(" <b>SELAMAT Anda Berhasil Melaporkan Setoran Slip Bank Transfer</b><br/>" +
-//                " <p>Outlet "+cIdOutlet.getText().toString()+" " +
-//                " Tanggal "+dTglSetoran.getText().toString()+" " +
-//                " Keterangan " +cKeterangan.getText().toString()+"</p>"+
-//                " <p><b>Terima Kasih sudah melaporkan , Semoga Setoran Selanjutnya lebih baik dari ini :)</b></p>"
-//        ));
-//    }
-
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
-        if (resultCode == getActivity().RESULT_OK && data != null && data.getData() != null) {
-            Uri filePath = data.getData();
-            try {
+        if (resultCode == getActivity().RESULT_OK ) {
+
+
                 if (requestCode == 1) {
                     //mengambil fambar dari Gallery
-                    bitmap = MediaStore.Images.Media.getBitmap(getActivity().getContentResolver(), filePath);
-                    int nh = (int) (bitmap.getHeight() * (512.0 / bitmap.getWidth()));
-                    Bitmap scaled = Bitmap.createScaledBitmap(bitmap, 512, nh, true);
-                    imageView.setImageBitmap(scaled);
+                    try {
+                        Uri filePath = data.getData();
+                        bitmap = MediaStore.Images.Media.getBitmap(getActivity().getContentResolver(), filePath);
+                        int nh = (int) (bitmap.getHeight() * (512.0 / bitmap.getWidth()));
+                        Bitmap scaled = Bitmap.createScaledBitmap(bitmap, 512, nh, true);
+                        imageView.setImageBitmap(scaled);
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                } else if (requestCode == 2) {
+                    previewCapturedImage();
+//                    Bitmap thumbnail = (Bitmap) data.getExtras().get("data");
+//                    bitmap = (Bitmap) data.getExtras().get("data");
+//                    ByteArrayOutputStream bytes = new ByteArrayOutputStream();
+//                    bitmap.compress(Bitmap.CompressFormat.JPEG, 100, bytes);
+//
+//                    File destination = new File(android.os.Environment.getExternalStorageDirectory(),
+//                            System.currentTimeMillis() + ".jpg");
+//                    FileOutputStream fo;
+//                    try {
+//                        destination.createNewFile();
+//                        fo = new FileOutputStream(destination);
+//                        fo.write(bytes.toByteArray());
+//                        fo.close();
+//                    } catch (FileNotFoundException e) {
+//                        e.printStackTrace();
+//                    } catch (IOException e) {
+//                        e.printStackTrace();
+//                    }
+
+//                    imageView.setImageBitmap(bitmap);
+//                    onCaptureImageResult(data);
                 }
 //                else if (requestCode == 2) {
 //                    //Ambil Foto
@@ -312,9 +363,87 @@ public class KerjaSamaBisnisFragment extends Fragment  implements AdapterView.On
 //                    }
 //                }
                 //menampilkan gambar yang dipilih dari gallery ke ImageView
-            } catch (IOException e) {
-                e.printStackTrace();
+
+        }
+    }
+
+    private void previewCapturedImage() {
+        try {
+            // bimatp factory
+            BitmapFactory.Options options = new BitmapFactory.Options();
+
+            // downsizing image as it throws OutOfMemory Exception for larger
+            // images
+            options.inSampleSize = 5;
+
+            final Bitmap bitmap = BitmapFactory.decodeFile(fileUri.getPath(),
+                    options);
+//            int nh = (int) (bitmap.getHeight() * (512.0 / bitmap.getWidth()));
+//            Bitmap scaled = Bitmap.createScaledBitmap(bitmap, 512, nh, true);
+            imageView.setImageBitmap(bitmap);
+        } catch (NullPointerException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void onCaptureImageResult(Intent data) {
+        Bitmap thumbnail = (Bitmap) data.getExtras().get("data");
+        ByteArrayOutputStream bytes = new ByteArrayOutputStream();
+        thumbnail.compress(Bitmap.CompressFormat.JPEG, 100, bytes);
+        File destination = new File(Environment.getExternalStorageDirectory(),
+                System.currentTimeMillis() + ".jpg");
+        FileOutputStream fo;
+        try {
+            destination.createNewFile();
+            fo = new FileOutputStream(destination);
+            fo.write(bytes.toByteArray());
+            fo.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        imageView.setImageBitmap(thumbnail);
+    }
+
+    public Uri getOutputMediaFileUri(int type) {
+        return Uri.fromFile(getOutputMediaFile(type));
+    }
+
+    private static File getOutputMediaFile(int type) {
+
+        // External sdcard location
+        File mediaStorageDir = new File(
+                Environment
+                        .getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES),
+                IMAGE_DIRECTORY_NAME);
+
+        // Create the storage directory if it does not exist
+        if (!mediaStorageDir.exists()) {
+            if (!mediaStorageDir.mkdirs()) {
+                Log.d(IMAGE_DIRECTORY_NAME, "Oops! Failed create "
+                        + IMAGE_DIRECTORY_NAME + " directory");
+                return null;
             }
+        }
+
+        // Create a media file name
+        String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss",
+                Locale.getDefault()).format(new Date());
+        File mediaFile;
+        if (type == MEDIA_TYPE_IMAGE) {
+            mediaFile = new File(mediaStorageDir.getPath() + File.separator
+                    + "IMG_" + timeStamp + ".jpg");
+        }  else {
+            return null;
+        }
+
+        return mediaFile;
+    }
+
+    private void requestFocus(View view) {
+        if (view.requestFocus()) {
+            getActivity().getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_VISIBLE);
         }
     }
 
@@ -327,13 +456,6 @@ public class KerjaSamaBisnisFragment extends Fragment  implements AdapterView.On
 
     @Override
     public void onNothingSelected(AdapterView<?> arg0) {
-    }
-
-
-    private void requestFocus(View view) {
-        if (view.requestFocus()) {
-            getActivity().getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_VISIBLE);
-        }
     }
 
 }

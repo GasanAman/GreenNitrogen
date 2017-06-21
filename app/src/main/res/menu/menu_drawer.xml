@@ -7,6 +7,11 @@
             android:icon="@drawable/ic_home"
             android:title="@string/drawer_home" />
 
+        <item
+            android:id="@+id/drawer_peta"
+            android:icon="@drawable/ic_home"
+            android:title="@string/peta_outlet_green_nitrogen" />
+
         <item android:title="@string/info">
             <menu>
                 <item
