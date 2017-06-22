@@ -2,11 +2,13 @@ package com.example.gasan.myapplication.fragments;
 
 
 import android.graphics.Paint;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 
 import com.example.gasan.myapplication.JustifiedTextView;
@@ -42,6 +44,14 @@ public class TentangFragment extends Fragment {
         mJTv3=(JustifiedTextView) rootView.findViewById(R.id.paragraf3);
         mJTv3.setText(getResources().getString(R.string.paragraf_3));
         mJTv3.setAlignment(Paint.Align.LEFT);
+
+        Typeface fontAwesomeFont = Typeface.createFromAsset(getActivity().getAssets(), "fontawesome-webfont.ttf");
+        TextView fontAwesomeEmailIcon = (TextView) rootView.findViewById(R.id.font_awesome_email_icon);
+        fontAwesomeEmailIcon.setTypeface(fontAwesomeFont);
+        TextView fontAwesomeFaxIcon = (TextView) rootView.findViewById(R.id.font_awesome_fax_icon);
+        fontAwesomeFaxIcon.setTypeface(fontAwesomeFont);
+        TextView fontAwesomePhoneIcon = (TextView) rootView.findViewById(R.id.font_awesome_phone_icon);
+        fontAwesomePhoneIcon.setTypeface(fontAwesomeFont);
         return rootView;
     }
 

@@ -87,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
                 }
 
                 if (menuItem.getItemId() == R.id.drawer_peta) {
-//                    Intent map = new Intent(MainActivity.this, AreaOutletActvity.class);
+//                    Intent map = new Intent(MainActivity.this, MapsActivity.class);
 //                    startActivity(map);
                     FragmentTransaction fragmentTransaction = mFragmentManager.beginTransaction();
                     fragmentTransaction.replace(R.id.frame_container, new PetaFragment()).commit();

@@ -35,7 +35,7 @@ public class AwardFragment extends Fragment {
         webAward = (WebView) rootView.findViewById(R.id.webaward);
         WebSettings ws1 = webAward.getSettings();
         ws1.setJavaScriptEnabled(true);
-        webAward.loadUrl("http://green-nitrogen.com/website/info_mobile/award.html");
+        webAward.loadUrl("https://green-nitrogen.com/website/info_mobile/award.html");
         webAward.setWebViewClient(new LihatAplikasi());
 
         return rootView;

@@ -82,7 +82,8 @@
 
         <activity
             android:name=".activities.MapsActivity"
-            android:label="@string/title_activity_maps" />
+            android:label="@string/title_activity_maps"
+            android:parentActivityName=".activities.MainActivity"/>
         <activity android:name=".activities.AreaOutletActvity"
             android:parentActivityName=".activities.MainActivity"></activity>
     </application>

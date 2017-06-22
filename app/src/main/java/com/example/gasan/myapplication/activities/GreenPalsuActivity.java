@@ -65,7 +65,7 @@ public class GreenPalsuActivity extends AppCompatActivity {
         LayoutInflater inflater1 = getLayoutInflater();
         View alertLayout = inflater1.inflate(R.layout.alert_dialog_green_palsu, null);
 
-        AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
+        AlertDialog.Builder alertDialog = new AlertDialog.Builder(this, R.style.AppTheme_Dialog_Alert_Red);
         alertDialog.setTitle(R.string.informasi);
         alertDialog.setIcon(R.drawable.ic_pref_info);
         alertDialog.setView(alertLayout);
@@ -99,8 +99,8 @@ public class GreenPalsuActivity extends AppCompatActivity {
             public void onClick(View view) {
 //                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
 //                        .setAction("Action", null).show();
-                Intent intent = new Intent(GreenPalsuActivity.this, MainActivity.class);
-                startActivity(intent);
+//                Intent intent = new Intent(GreenPalsuActivity.this, MainActivity.class);
+//                startActivity(intent);
                 finish();
             }
         });
@@ -109,7 +109,7 @@ public class GreenPalsuActivity extends AppCompatActivity {
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                android.app.AlertDialog.Builder tampilKotakAlert = new android.app.AlertDialog.Builder(v.getContext());
+                AlertDialog.Builder tampilKotakAlert = new AlertDialog.Builder(v.getContext(), R.style.AppTheme_Dialog_Alert_Red);
                 tampilKotakAlert.setTitle("Alert");
                 tampilKotakAlert.setIcon(android.R.drawable.ic_dialog_alert);
                 tampilKotakAlert.setMessage(R.string.alert_message_inputan);
@@ -134,6 +134,7 @@ public class GreenPalsuActivity extends AppCompatActivity {
                             Toast.makeText(getApplicationContext(), "Merek Kendaraan Masih Kosong", Toast.LENGTH_LONG).show();
                         } else {
                             new SaveData().execute();
+                            Toast.makeText(getApplicationContext(), "Data Berhasil Diinput", Toast.LENGTH_LONG).show();
                         }
                     }
                 });
@@ -153,7 +154,7 @@ public class GreenPalsuActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed(){
-        new AlertDialog.Builder(this).setIcon(android.R.drawable.ic_dialog_alert).setTitle("Exit")
+        new AlertDialog.Builder(this, R.style.AppTheme_Dialog_Alert_Red).setIcon(android.R.drawable.ic_dialog_alert).setTitle("Exit")
                 .setMessage("Apakah Yakin Untuk Keluar ?")
                 .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                     @Override

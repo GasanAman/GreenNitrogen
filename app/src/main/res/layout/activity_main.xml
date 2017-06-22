@@ -43,7 +43,6 @@
         android:layout_gravity="start"
         android:fitsSystemWindows="true"
         android:background="#ffffff"
-        app:headerLayout="@layout/drawer_header"
         app:itemTextColor="#000000"
         app:itemIconTint="#d00000"
         app:menu="@menu/menu_drawer" />

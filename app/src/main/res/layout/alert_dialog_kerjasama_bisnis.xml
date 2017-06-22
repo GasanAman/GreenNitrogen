@@ -18,6 +18,14 @@
         noghteh:textSize="14sp"
         />
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:text="*Pastikan Anda telah memfoto KTP anda sebelum mengisi form yang disediakan"/>
+
 
 
 </LinearLayout>

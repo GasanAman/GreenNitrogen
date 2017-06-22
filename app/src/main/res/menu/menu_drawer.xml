@@ -9,24 +9,24 @@
 
         <item
             android:id="@+id/drawer_peta"
-            android:icon="@drawable/ic_home"
+            android:icon="@drawable/map_marker"
             android:title="@string/peta_outlet_green_nitrogen" />
 
         <item android:title="@string/info">
             <menu>
                 <item
                     android:id="@+id/drawer_award"
-                    android:icon="@drawable/ic_rate"
+                    android:icon="@drawable/medal_icon"
                     android:title="@string/award" />
 
                 <item
                     android:id="@+id/drawer_garansi"
-                    android:icon="@drawable/ic_profile"
+                    android:icon="@drawable/garansi_icon"
                     android:title="@string/garansi" />
 
                 <item
                     android:id="@+id/drawer_asuransi"
-                    android:icon="@drawable/ic_profile"
+                    android:icon="@drawable/ic_verified_user_white_36dp"
                     android:title="@string/asuransi" />
 
                 <item
@@ -40,7 +40,7 @@
             <menu>
                 <item
                     android:id="@+id/drawer_produk"
-                    android:icon="@drawable/ic_gplus"
+                    android:icon="@drawable/layanan_icon"
                     android:title="@string/produk_dan_layanan" />
 
                 <item
@@ -54,17 +54,17 @@
             <menu>
                 <item
                     android:id="@+id/drawer_tentang"
-                    android:icon="@drawable/ic_info_white_36dp"
+                    android:icon="@drawable/about_us"
                     android:title="@string/tentang_kami" />
 
                 <item
                     android:id="@+id/drawer_visi_misi"
-                    android:icon="@drawable/ic_share"
+                    android:icon="@drawable/goal_icon"
                     android:title="@string/visi_misi" />
 
                 <item
                     android:id="@+id/drawer_unit_kerja_strategis"
-                    android:icon="@drawable/ic_exit"
+                    android:icon="@drawable/flow_chart_icon"
                     android:title="@string/unit_kerja_bisnis" />
             </menu>
         </item>

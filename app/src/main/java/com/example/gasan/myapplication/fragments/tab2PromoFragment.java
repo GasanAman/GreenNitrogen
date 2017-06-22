@@ -33,7 +33,7 @@ public class tab2PromoFragment extends Fragment {
         webPromo = (WebView)rootView.findViewById(R.id.webpromo);
         WebSettings ws2 = webPromo.getSettings();
         ws2.setJavaScriptEnabled(true);
-        webPromo.loadUrl("http://green-nitrogen.com/website/info_mobile/promo.html");
+        webPromo.loadUrl("https://green-nitrogen.com/website/info_mobile/promo.html");
         webPromo.setWebViewClient(new LihatAplikasi());
         return rootView;
     }

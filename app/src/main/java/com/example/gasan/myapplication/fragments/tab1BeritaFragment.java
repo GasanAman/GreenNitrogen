@@ -35,7 +35,7 @@ public class tab1BeritaFragment extends Fragment {
         webBerita = (WebView)rootView.findViewById(R.id.webberita);
         WebSettings ws2 = webBerita.getSettings();
         ws2.setJavaScriptEnabled(true);
-        webBerita.loadUrl("http://green-nitrogen.com/website/info_mobile/berita.html");
+        webBerita.loadUrl("https://green-nitrogen.com/website/info_mobile/berita.html");
         webBerita.setWebViewClient(new LihatAplikasi());
         return rootView;
     }

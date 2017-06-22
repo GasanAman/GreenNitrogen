@@ -6,6 +6,7 @@ import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.design.widget.TextInputEditText;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -33,7 +34,8 @@ public class HubungiFragment extends Fragment {
 
     View rootView;
     ProgressDialog pDialog;
-    EditText inputnama, inputnohp, inputemail, kolomPesan;
+    EditText inputnama, inputnohp;
+    TextInputEditText kolomPesan, inputemail;
     Button submit;
 
     private String URL_NEW_CATEGORY = "http://10.0.3.2/input_hubungi.php";
@@ -52,8 +54,8 @@ public class HubungiFragment extends Fragment {
 
         inputnama = (EditText) rootView.findViewById(R.id.inputnamaHubungi);
         inputnohp = (EditText) rootView.findViewById(R.id.inputnohpHubungi);
-        inputemail = (EditText) rootView.findViewById(R.id.inputemailHubungi);
-        kolomPesan = (EditText) rootView.findViewById(R.id.kolomPesanHubungi);
+        inputemail = (TextInputEditText) rootView.findViewById(R.id.inputemailHubungi);
+        kolomPesan = (TextInputEditText) rootView.findViewById(R.id.kolomPesanHubungi);
 
         submit = (Button) rootView.findViewById(R.id.buttonSubmitHubungi);
         submit.setOnClickListener(new View.OnClickListener() {
@@ -61,7 +63,7 @@ public class HubungiFragment extends Fragment {
             public void onClick(View v) {
 //                LayoutInflater inflater = getLayoutInflater(null);
 //                View alertLayout = inflater.inflate(R.layout.alert_dialog_konfirmasi_inputan, null);
-                final AlertDialog.Builder tampilKotakAlert = new AlertDialog.Builder(v.getContext());
+                final AlertDialog.Builder tampilKotakAlert = new AlertDialog.Builder(v.getContext(), R.style.AppTheme_Dialog_Alert_Red);
 
                 tampilKotakAlert.setTitle("Alert");
                 tampilKotakAlert.setIcon(R.drawable.ic_pref_info);
@@ -80,6 +82,7 @@ public class HubungiFragment extends Fragment {
                                     Toast.makeText(rootView.getContext().getApplicationContext(), "Pesan Masih Kosong", Toast.LENGTH_LONG).show();
                                 } else {
                                     new SaveData().execute();
+                                    Toast.makeText(rootView.getContext().getApplicationContext(), "Data Berhasil Diinput", Toast.LENGTH_LONG).show();
                                 }
                             }
                         });

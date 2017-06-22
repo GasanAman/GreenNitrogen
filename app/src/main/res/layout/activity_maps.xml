@@ -1,8 +1,37 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:orientation="vertical"
-    >
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:gravity="center"
+        android:background="#D00000"
+        android:id="@+id/header1"
+        android:orientation="horizontal">
+
+
+        <ImageButton
+            android:id="@+id/imageButtonMaps"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:background="#D00000"
+            app:srcCompat="@drawable/ic_arrow_back_white_36dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/judul_peta_activity"
+            android:layout_gravity="center"
+            android:textColor="@android:color/white"
+            android:layout_marginLeft="30dp"
+            android:textSize="20sp"
+            />
+
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/lineatas"
@@ -15,7 +44,7 @@
             android:id="@+id/judulTestimoni"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/judul_kerjasama_bisnis"
+            android:text="@string/judul_isi"
             android:textSize="20sp"
             android:textStyle="bold"
             android:textColor="#000000"/>
@@ -26,6 +55,160 @@
             android:background="@android:color/holo_red_dark" />
     </LinearLayout>
 
+    <LinearLayout
+        android:id="@+id/isisisisi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="10dp">
+
+        <LinearLayout
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/textView19"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:text="@string/wilayah" />
+
+            <TextView
+                android:layout_width="20dp"
+                android:gravity="right"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:text="@string/titik_dua" />
+
+            <TextView
+                android:id="@+id/nama_wilayah"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="" />
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/textView20"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:text="@string/nama_outlet" />
+
+            <TextView
+                android:layout_width="20dp"
+                android:gravity="right"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:text="@string/titik_dua" />
+
+            <TextView
+                android:id="@+id/nama_outlet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:textColor="#000000"
+                android:text="" />
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/textView21"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:text="@string/no_spbu"
+                android:textColor="#000000" />
+
+            <TextView
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="@string/titik_dua"
+                android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/no_spbu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text=""
+                android:textColor="#000000" />
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/textView22"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:text="@string/alamat"
+                android:textColor="#000000" />
+
+            <TextView
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="@string/titik_dua"
+                android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/alamat_outlet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text=""
+                android:textColor="#000000" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/peta_lokasi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="10dp">
+
+        <TextView
+            android:id="@+id/judul_peta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Peta Lokasi"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#000000"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:background="@android:color/holo_red_dark" />
+    </LinearLayout>
     <fragment xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:map="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
@@ -33,6 +216,7 @@
         android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_margin="10dp"
         tools:context="com.example.gasan.myapplication.activities.MapsActivity" />
 
 

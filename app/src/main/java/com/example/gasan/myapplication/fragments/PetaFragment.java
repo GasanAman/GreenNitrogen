@@ -24,6 +24,7 @@ import android.widget.TextView;
 import com.example.gasan.myapplication.Category;
 import com.example.gasan.myapplication.R;
 import com.example.gasan.myapplication.ServiceHandler;
+import com.example.gasan.myapplication.activities.MapsActivity;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -44,6 +45,8 @@ public class PetaFragment extends ListFragment implements AdapterView.OnItemSele
     private static final String cKodeOutlet = "kode";
     private static final String cNoSpbu = "no_spbu";
     private static final String cNamaOutlet = "nama";
+    private static final String cLatitude = "latitude";
+    private static final String cLongitude = "longitude";
 
     private Spinner spinnerArea;
     String url, success;
@@ -112,8 +115,8 @@ public class PetaFragment extends ListFragment implements AdapterView.OnItemSele
 
         ListAdapter adapter = new SimpleAdapter(rootView.getContext(), daftar_listOutlet2,
                 R.layout.list_item_area,
-                new String[] { cNamaOutlet, cKodeOutlet}, new int[] {
-                R.id.cNamaAreaLayout, R.id.kode});
+                new String[] { cNamaOutlet, cIdOutlet, cLatitude, cLongitude}, new int[] {
+                R.id.cNamaAreaLayout, R.id.kode, R.id.latitude, R.id.longitude});
 
 
         setListAdapter(adapter);
@@ -122,13 +125,16 @@ public class PetaFragment extends ListFragment implements AdapterView.OnItemSele
 
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                String kode = ((TextView) view.findViewById(R.id.kode)).getText().toString();
-                String cNamaOutletListView = ((TextView) view.findViewById(R.id.cNamaAreaLayout)).getText().toString();
-
-//                Intent in = new Intent(AreaOutletActvity.this, LaporanPenjualanActivity.class);
-//                in.putExtra("id_outlet_intent", kode);
-//                in.putExtra("nama_outlet_intent", cNamaOutletListView);
-//                startActivity(in);
+                String id_outlet    = ((TextView) view.findViewById(R.id.kode)).getText().toString();
+                String nama         = ((TextView) view.findViewById(R.id.cNamaAreaLayout)).getText().toString();
+                String latitude     = ((TextView) view.findViewById(R.id.latitude)).getText().toString();
+                String longitude    = ((TextView) view.findViewById(R.id.longitude)).getText().toString();
+                Intent in           = new Intent(view.getContext(), MapsActivity.class);
+                in.putExtra("id_outlet_intent", id_outlet);
+                in.putExtra("nama_outlet_area", nama);
+                in.putExtra("latitude_intent", latitude);
+                in.putExtra("longitude_intent", longitude);
+                startActivity(in);
 
             }
         });
@@ -224,6 +230,8 @@ public class PetaFragment extends ListFragment implements AdapterView.OnItemSele
                     String kode      = c.getString("kode").trim();
                     String no_spbu   = c.getString("no_spbu").trim();
                     String nama      = c.getString("nama").trim();
+                    String latitude      = c.getString("latitude").trim();
+                    String longitude      = c.getString("longitude").trim();
 //                    String alamat      = c.getString("alamat").trim();
 
                     HashMap<String, String> map = new HashMap<String, String>();
@@ -232,6 +240,8 @@ public class PetaFragment extends ListFragment implements AdapterView.OnItemSele
                     map.put("kode", kode);
                     map.put("no_spbu", no_spbu);
                     map.put("nama",nama);
+                    map.put("latitude",latitude);
+                    map.put("longitude",longitude);
                     daftar_listOutlet2.add(map);
 
                     Log.e("ok", " ambil data");
@@ -253,7 +263,6 @@ public class PetaFragment extends ListFragment implements AdapterView.OnItemSele
             super.onPostExecute(result);
             pDialog.dismiss();
             adapter_listview();
-            spinnerArea.setSelection(0);
         }
 
     }

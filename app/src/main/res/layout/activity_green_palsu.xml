@@ -260,6 +260,7 @@
                     android:textSize="16sp" />
 
                 <Spinner
+                    style="@style/Widget.AppCompat.Spinner.Underlined"
                     android:id="@+id/spinner"
                     android:layout_below="@+id/jnsKend"
                     android:layout_width="match_parent"

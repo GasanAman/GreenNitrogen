@@ -48,7 +48,7 @@ public class TestimoniActivity extends AppCompatActivity {
         LayoutInflater inflater1 = getLayoutInflater();
         View alertLayout = inflater1.inflate(R.layout.alert_dialog_testimoni, null);
 
-        android.app.AlertDialog.Builder alertDialog = new android.app.AlertDialog.Builder(this);
+        AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
         alertDialog.setTitle(R.string.informasi);
         alertDialog.setIcon(R.drawable.ic_pref_info);
         alertDialog.setView(alertLayout);
@@ -67,8 +67,8 @@ public class TestimoniActivity extends AppCompatActivity {
             public void onClick(View view) {
 //                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
 //                        .setAction("Action", null).show();
-                Intent intent = new Intent(TestimoniActivity.this, MainActivity.class);
-                startActivity(intent);
+//                Intent intent = new Intent(TestimoniActivity.this, MainActivity.class);
+//                startActivity(intent);
                 finish();
             }
         });
@@ -78,7 +78,7 @@ public class TestimoniActivity extends AppCompatActivity {
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                android.app.AlertDialog.Builder tampilKotakAlert = new android.app.AlertDialog.Builder(v.getContext());
+                AlertDialog.Builder tampilKotakAlert = new AlertDialog.Builder(v.getContext());
                 tampilKotakAlert.setTitle("Alert");
                 tampilKotakAlert.setIcon(android.R.drawable.ic_dialog_alert);
                 tampilKotakAlert.setMessage(R.string.alert_message_inputan);
@@ -95,6 +95,7 @@ public class TestimoniActivity extends AppCompatActivity {
                             Toast.makeText(getApplicationContext(), "Testimoni Masih Kosong", Toast.LENGTH_LONG).show();
                         } else {
                             new SaveData().execute();
+                            Toast.makeText(getApplicationContext(), "Data Berhasil Diinput", Toast.LENGTH_LONG).show();
                         }
                     }
                 });

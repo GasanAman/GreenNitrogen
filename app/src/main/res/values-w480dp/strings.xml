@@ -58,4 +58,10 @@
     <string name="alert_dialog_steam_wash2">*Voucher Gratis akan kami berikan kepada Komentar terbaik setiap harinya</string>
     <string name="alert_dialog_steam_wash3">Harap Lengkapi Email, No Telepon Anda karena jika komentar anda dirasa baik maka Tim Hotline akan menghubungi anda untuk memberikan Voucher Gratis</string>
     <string name="peta_outlet_green_nitrogen">Peta Outlet Green Nitrogen</string>
+    <string name="judul_peta_activity">Peta Outlet Nitrogen</string>
+    <string name="judul_isi">Detail Outlet</string>
+    <string name="wilayah">Wilayah</string>
+    <string name="nama_outlet">Nama Outlet</string>
+    <string name="no_spbu">No SPBU</string>
+    <string name="titik_dua">:</string>
 </resources>

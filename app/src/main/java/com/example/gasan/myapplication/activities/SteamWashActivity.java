@@ -59,7 +59,7 @@ public class SteamWashActivity extends AppCompatActivity {
         LayoutInflater inflater1 = getLayoutInflater();
         View alertLayout = inflater1.inflate(R.layout.alert_dialog_steam_wash, null);
 
-        android.app.AlertDialog.Builder alertDialog = new android.app.AlertDialog.Builder(this);
+        android.app.AlertDialog.Builder alertDialog = new android.app.AlertDialog.Builder(this, R.style.AppTheme_Dialog_Alert_Red);
         alertDialog.setTitle(R.string.informasi);
         alertDialog.setIcon(R.drawable.ic_pref_info);
         alertDialog.setView(alertLayout);
@@ -95,8 +95,8 @@ public class SteamWashActivity extends AppCompatActivity {
             public void onClick(View view) {
 //                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
 //                        .setAction("Action", null).show();
-                Intent intent = new Intent(SteamWashActivity.this, MainActivity.class);
-                startActivity(intent);
+//                Intent intent = new Intent(SteamWashActivity.this, MainActivity.class);
+//                startActivity(intent);
                 finish();
             }
         });
@@ -106,7 +106,7 @@ public class SteamWashActivity extends AppCompatActivity {
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                android.app.AlertDialog.Builder tampilKotakAlert = new android.app.AlertDialog.Builder(v.getContext());
+                android.app.AlertDialog.Builder tampilKotakAlert = new android.app.AlertDialog.Builder(v.getContext(), R.style.AppTheme_Dialog_Alert_Red);
 //                LayoutInflater inflater1 = getLayoutInflater();
 //                View alertLayout = inflater1.inflate(R.layout.alert_dialog_konfirmasi_inputan, null);
 
@@ -135,6 +135,7 @@ public class SteamWashActivity extends AppCompatActivity {
                             Toast.makeText(getApplicationContext(), "Merek Kendaraan Masih Kosong", Toast.LENGTH_LONG).show();
                         } else {
                             new SaveData().execute();
+                            Toast.makeText(getApplicationContext(), "Data Berhasil Diinput", Toast.LENGTH_LONG).show();
                         }
                     }
                 });

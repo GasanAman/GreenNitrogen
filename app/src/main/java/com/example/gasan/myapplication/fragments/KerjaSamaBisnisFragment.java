@@ -117,10 +117,20 @@ public class KerjaSamaBisnisFragment extends Fragment  implements AdapterView.On
         alertDialog.setTitle(R.string.informasi);
         alertDialog.setIcon(R.drawable.ic_pref_info);
         alertDialog.setView(alertLayout);
-        alertDialog.setNegativeButton(R.string.ok, new DialogInterface.OnClickListener() {
+        alertDialog.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                dialog.dismiss();
+//                dialog.dismiss();
+//                AlertDialog.Builder alertDialog1 = new AlertDialog.Builder(rootView.getContext());
+//                alertDialog1.setTitle(R.string.informasi);
+//                alertDialog1.setIcon(R.drawable.ic_pref_info);
+//                alertDialog1.setMessage("Pastikan Anda telah memfoto KTP anda sebelum mengisi form yang disediakan");
+//                alertDialog1.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
+//                    @Override
+//                    public void onClick(DialogInterface dialog, int which) {
+//                        dialog.dismiss();
+//                    }
+//                });
             }
         });
         alertDialog.show();
