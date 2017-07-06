@@ -39,8 +39,8 @@ public class PetaFragment extends ListFragment implements AdapterView.OnItemSele
 
     View rootView;
 
-    private static String link_url_area = "http://green-nitrogen.com/web/view_area_outlet";
-    private static String link_url_outlet = "http://green-nitrogen.com/web/view_outlet_per_area";
+    private static String link_url_area = "https://green-nitrogen.com/web/view_area_outlet";
+    private static String link_url_outlet = "https://green-nitrogen.com/web/view_outlet_per_area";
     private static final String cIdOutlet = "id_outlet";
     private static final String cKodeOutlet = "kode";
     private static final String cNoSpbu = "no_spbu";
@@ -66,6 +66,7 @@ public class PetaFragment extends ListFragment implements AdapterView.OnItemSele
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         rootView = inflater.inflate(R.layout.fragment_peta, container, false);
+        getActivity().setTitle(R.string.peta_outlet_green_nitrogen);
         spinnerArea = (Spinner) rootView.findViewById(R.id.spinnerArea);
 //        spinnerArea.setOnItemSelectedListener(this);
         spinnerArea.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {

@@ -29,7 +29,7 @@ public class UnitKerjaStrategisFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         rootView = inflater.inflate(R.layout.fragment_unit_kerja_strategis, container, false);
-
+        getActivity().setTitle(R.string.unit_kerja_bisnis);
         bs2=(JustifiedTextView) rootView.findViewById(R.id.bussines_strategic2);
         bs2.setText(getResources().getString(R.string.bussiness_strategic2));
         bs2.setAlignment(Paint.Align.LEFT);

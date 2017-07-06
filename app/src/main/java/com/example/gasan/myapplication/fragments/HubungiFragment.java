@@ -83,6 +83,10 @@ public class HubungiFragment extends Fragment {
                                 } else {
                                     new SaveData().execute();
                                     Toast.makeText(rootView.getContext().getApplicationContext(), "Data Berhasil Diinput", Toast.LENGTH_LONG).show();
+                                    inputnama.setText("");
+                                    inputnohp.setText("");
+                                    inputemail.setText("");
+                                    kolomPesan.setText("");
                                 }
                             }
                         });

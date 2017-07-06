@@ -67,7 +67,7 @@
                     android:background="@android:color/holo_red_dark" />
             </LinearLayout>
 
-            <RelativeLayout
+            <LinearLayout
                 android:id="@+id/isiIsuPalsu"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -81,7 +81,7 @@
                     android:ems="10"
                     android:inputType="text"
                     android:text="@string/isu_nitrogen_palsu"
-                    android:visibility="invisible"/>
+                    android:visibility="gone"/>
 
                 <TextView
                     android:id="@+id/textView2"
@@ -91,21 +91,33 @@
                     android:text="@string/pertanyaan_isu_palsu"
                     android:textColor="#000000" />
 
-                <EditText
-                    android:id="@+id/kolomCommentIsuPalsu"
+                <!--<EditText-->
+                    <!--android:id="@+id/kolomCommentIsuPalsu"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_below="@+id/textView2"-->
+                    <!--android:layout_marginLeft="10dp"-->
+                    <!--android:layout_marginRight="10dp"-->
+                    <!--android:inputType="textMultiLine"-->
+                    <!--android:hint="@string/comment" />-->
+
+                <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/textView2"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:inputType="textMultiLine"
-                    android:hint="@string/comment" />
+                    android:layout_margin="10dp"
+                    android:hint="@string/comment">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/kolomCommentIsuPalsu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textMultiLine"/>
+                </android.support.design.widget.TextInputLayout>
 
                 <TextView
                     android:id="@+id/text1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/kolomCommentIsuPalsu"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
                     android:layout_marginTop="10dp"
@@ -116,132 +128,136 @@
                     android:id="@+id/text2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/text1"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
                     android:layout_marginTop="10dp"
                     android:text="@string/paragraf_2_isu"
                     android:textColor="#000000" />
 
-                <TextView
-                    android:id="@+id/nama"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/text2"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginTop="10dp"
-                    android:text="@string/nama"
-                    android:textColor="#000000"
-                    android:textSize="16sp" />
+                <!--<EditText-->
+                    <!--android:id="@+id/inputnamaIsuPalsu"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_below="@+id/nama"-->
+                    <!--android:layout_marginLeft="10dp"-->
+                    <!--android:layout_marginRight="10dp"-->
+                    <!--android:layout_marginTop="10dp"-->
+                    <!--android:ems="10"-->
+                    <!--android:inputType="textPersonName"-->
+                    <!--android:hint="@string/nama" />-->
 
-                <EditText
-                    android:id="@+id/inputnamaIsuPalsu"
+                <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/nama"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginTop="10dp"
-                    android:ems="10"
-                    android:inputType="textPersonName"
-                    android:hint="@string/nama" />
+                    android:layout_margin="10dp"
+                    android:hint="@string/nama">
 
-                <TextView
-                    android:id="@+id/alamatIsuPalsu"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/inputnamaIsuPalsu"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginTop="10dp"
-                    android:text="@string/alamat"
-                    android:textColor="#000000"
-                    android:textSize="16sp" />
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/inputnamaIsuPalsu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"/>
+                </android.support.design.widget.TextInputLayout>
 
-                <EditText
-                    android:id="@+id/inputalamatIsuPalsu"
+                <!--<EditText-->
+                    <!--android:id="@+id/inputalamatIsuPalsu"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_below="@+id/alamatIsuPalsu"-->
+                    <!--android:layout_marginLeft="10dp"-->
+                    <!--android:layout_marginRight="10dp"-->
+                    <!--android:layout_marginTop="10dp"-->
+                    <!--android:ems="10"-->
+                    <!--android:hint="@string/alamat"-->
+                    <!--android:inputType="textMultiLine" />-->
+
+                <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/alamatIsuPalsu"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginTop="10dp"
-                    android:ems="10"
-                    android:hint="@string/alamat"
-                    android:inputType="textMultiLine" />
+                    android:layout_margin="10dp"
+                    android:hint="@string/alamat">
 
-                <TextView
-                    android:id="@+id/nohpIsuPalsu"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/inputalamatIsuPalsu"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginTop="10dp"
-                    android:text="@string/no_hp"
-                    android:textColor="#000000"
-                    android:textSize="16sp" />
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/inputalamatIsuPalsu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textMultiLine"/>
+                </android.support.design.widget.TextInputLayout>
 
-                <EditText
-                    android:id="@+id/inputnohpIsuPalsu"
+                <!--<EditText-->
+                    <!--android:id="@+id/inputnohpIsuPalsu"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_below="@+id/nohpIsuPalsu"-->
+                    <!--android:layout_marginLeft="10dp"-->
+                    <!--android:layout_marginRight="10dp"-->
+                    <!--android:layout_marginTop="10dp"-->
+                    <!--android:ems="10"-->
+                    <!--android:inputType="phone"-->
+                    <!--android:hint="@string/no_hp" />-->
+
+                <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/nohpIsuPalsu"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginTop="10dp"
-                    android:ems="10"
-                    android:inputType="phone"
-                    android:hint="@string/no_hp" />
+                    android:layout_margin="10dp"
+                    android:hint="@string/no_hp">
 
-                <TextView
-                    android:id="@+id/emailIsuPalsu"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/inputnohpIsuPalsu"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginTop="10dp"
-                    android:text="@string/email"
-                    android:textColor="#000000"
-                    android:textSize="16sp" />
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/inputnohpIsuPalsu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="phone"/>
+                </android.support.design.widget.TextInputLayout>
 
-                <EditText
-                    android:id="@+id/inputemailIsuPalsu"
+                <!--<EditText-->
+                    <!--android:id="@+id/inputemailIsuPalsu"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_below="@+id/emailIsuPalsu"-->
+                    <!--android:layout_marginLeft="10dp"-->
+                    <!--android:layout_marginRight="10dp"-->
+                    <!--android:layout_marginTop="10dp"-->
+                    <!--android:ems="10"-->
+                    <!--android:inputType="textEmailAddress"-->
+                    <!--android:hint="@string/email" />-->
+
+                <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/emailIsuPalsu"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginTop="10dp"
-                    android:ems="10"
-                    android:inputType="textEmailAddress"
-                    android:hint="@string/email" />
+                    android:layout_margin="10dp"
+                    android:hint="@string/email">
 
-                <TextView
-                    android:id="@+id/nopolIsuPalsu"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/inputemailIsuPalsu"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginTop="10dp"
-                    android:text="@string/no_polisi"
-                    android:textColor="#000000"
-                    android:textSize="16sp" />
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/inputemailIsuPalsu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textEmailAddress"/>
+                </android.support.design.widget.TextInputLayout>
 
-                <EditText
-                    android:id="@+id/inputnopolIsuPalsu"
+                <!--<EditText-->
+                    <!--android:id="@+id/inputnopolIsuPalsu"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_below="@+id/nopolIsuPalsu"-->
+                    <!--android:layout_marginLeft="10dp"-->
+                    <!--android:layout_marginRight="10dp"-->
+                    <!--android:layout_marginTop="10dp"-->
+                    <!--android:ems="10"-->
+                    <!--android:inputType="text"-->
+                    <!--android:hint="@string/no_polisi" />-->
+
+                <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/nopolIsuPalsu"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginTop="10dp"
-                    android:ems="10"
-                    android:inputType="text"
-                    android:hint="@string/no_polisi" />
+                    android:layout_margin="10dp"
+                    android:hint="@string/no_polisi">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/inputnopolIsuPalsu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textCapCharacters"/>
+                </android.support.design.widget.TextInputLayout>
 
                 <TextView
                     android:id="@+id/jnsKendIsuPalsu"
@@ -265,40 +281,40 @@
                     android:layout_marginRight="10dp"
                     android:layout_marginTop="10dp" />
 
+                <!--<EditText-->
+                    <!--android:id="@+id/inputMrkKendIsuPalsu"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_below="@+id/mrkKendIsuPalsu"-->
+                    <!--android:layout_marginLeft="10dp"-->
+                    <!--android:layout_marginRight="10dp"-->
+                    <!--android:layout_marginTop="10dp"-->
+                    <!--android:ems="10"-->
+                    <!--android:inputType="text"-->
+                    <!--android:hint="@string/merek_kendaraan" />-->
 
-                <TextView
-                    android:id="@+id/mrkKendIsuPalsu"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/spinner"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginTop="10dp"
-                    android:text="@string/merek_kendaraan"
-                    android:textColor="#000000"
-                    android:textSize="16sp" />
-
-                <EditText
-                    android:id="@+id/inputMrkKendIsuPalsu"
+                <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/mrkKendIsuPalsu"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginTop="10dp"
-                    android:ems="10"
-                    android:inputType="text"
-                    android:hint="@string/merek_kendaraan" />
+                    android:layout_margin="10dp"
+                    android:hint="@string/merek_kendaraan">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/inputMrkKendIsuPalsu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"/>
+                </android.support.design.widget.TextInputLayout>
 
                 <Button
+                    style="@style/Widget.AppCompat.Button.Colored"
                     android:id="@+id/buttonSubmitIsuPalsu"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/inputMrkKendIsuPalsu"
                     android:layout_marginLeft="10dp"
                     android:text="@string/submit" />
 
-            </RelativeLayout>
+            </LinearLayout>
 
         </RelativeLayout>
 

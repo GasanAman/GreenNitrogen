@@ -5,6 +5,7 @@ import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.AsyncTask;
+import android.support.design.widget.TextInputEditText;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -34,7 +35,8 @@ public class IsuPalsuActivity extends AppCompatActivity {
     ArrayAdapter<CharSequence> arrayAdapter;
     ProgressDialog pDialog;
     Button submit;
-    EditText kolomComment, inputnama, inputalamat, inputnohp, inputemail, inputnopol, inputMrkKend, judulText;
+    TextInputEditText kolomComment, inputnama, inputalamat, inputnohp, inputemail, inputnopol, inputMrkKend;
+    EditText judulText;
 
     private String URL_NEW_CATEGORY = "http://10.0.3.2/input_comment.php";
 
@@ -59,16 +61,16 @@ public class IsuPalsuActivity extends AppCompatActivity {
         });
         alertDialog.show();
 
-        kolomComment = (EditText) findViewById(R.id.kolomCommentIsuPalsu);
-        inputnama = (EditText) findViewById(R.id.inputnamaIsuPalsu);
-        inputalamat = (EditText) findViewById(R.id.inputalamatIsuPalsu);
-        inputnohp = (EditText) findViewById(R.id.inputnohpIsuPalsu);
-        inputemail = (EditText) findViewById(R.id.inputemailIsuPalsu);
-        inputnopol = (EditText) findViewById(R.id.inputnopolIsuPalsu);
+        kolomComment = (TextInputEditText) findViewById(R.id.kolomCommentIsuPalsu);
+        inputnama = (TextInputEditText) findViewById(R.id.inputnamaIsuPalsu);
+        inputalamat = (TextInputEditText) findViewById(R.id.inputalamatIsuPalsu);
+        inputnohp = (TextInputEditText) findViewById(R.id.inputnohpIsuPalsu);
+        inputemail = (TextInputEditText) findViewById(R.id.inputemailIsuPalsu);
+        inputnopol = (TextInputEditText) findViewById(R.id.inputnopolIsuPalsu);
 
         spinner = (Spinner) findViewById(R.id.spinner);
 
-        inputMrkKend = (EditText) findViewById(R.id.inputMrkKendIsuPalsu);
+        inputMrkKend = (TextInputEditText) findViewById(R.id.inputMrkKendIsuPalsu);
         judulText = (EditText) findViewById(R.id.judulTextIsuPalsu);
 
         arrayAdapter = ArrayAdapter.createFromResource(this, R.array.jenis_kendaraan, android.R.layout.simple_spinner_item);
@@ -123,6 +125,13 @@ public class IsuPalsuActivity extends AppCompatActivity {
                         } else {
                             new SaveData().execute();
                             Toast.makeText(getApplicationContext(), "Data Berhasil Diinput", Toast.LENGTH_LONG).show();
+                            kolomComment.setText("");
+                            inputnama.setText("");
+                            inputalamat.setText("");
+                            inputnohp.setText("");
+                            inputemail.setText("");
+                            inputnopol.setText("");
+                            inputMrkKend.setText("");
                         }
                     }
                 });
@@ -143,22 +152,22 @@ public class IsuPalsuActivity extends AppCompatActivity {
     }
 
 
-    @Override
-    public void onBackPressed(){
-        new AlertDialog.Builder(this, R.style.AppTheme_Dialog_Alert_Red).setIcon(android.R.drawable.ic_dialog_alert).setTitle("Exit")
-                .setMessage("Apakah Yakin Untuk Keluar ?")
-                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        Intent intent = new Intent(Intent.ACTION_MAIN);
-                        intent.addCategory(Intent.CATEGORY_HOME);
-                        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                        startActivity(intent);
-                        finish();
-                    }
-                }).setNegativeButton("No", null).show();
-
-    }
+//    @Override
+//    public void onBackPressed(){
+//        new AlertDialog.Builder(this, R.style.AppTheme_Dialog_Alert_Red).setIcon(android.R.drawable.ic_dialog_alert).setTitle("Exit")
+//                .setMessage("Apakah Yakin Untuk Keluar ?")
+//                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+//                    @Override
+//                    public void onClick(DialogInterface dialog, int which) {
+//                        Intent intent = new Intent(Intent.ACTION_MAIN);
+//                        intent.addCategory(Intent.CATEGORY_HOME);
+//                        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+//                        startActivity(intent);
+//                        finish();
+//                    }
+//                }).setNegativeButton("No", null).show();
+//
+//    }
 
 
     private class SaveData extends AsyncTask<String, String, String> {

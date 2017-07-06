@@ -152,22 +152,22 @@ public class GreenPalsuActivity extends AppCompatActivity {
     }
 
 
-    @Override
-    public void onBackPressed(){
-        new AlertDialog.Builder(this, R.style.AppTheme_Dialog_Alert_Red).setIcon(android.R.drawable.ic_dialog_alert).setTitle("Exit")
-                .setMessage("Apakah Yakin Untuk Keluar ?")
-                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        Intent intent = new Intent(Intent.ACTION_MAIN);
-                        intent.addCategory(Intent.CATEGORY_HOME);
-                        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                        startActivity(intent);
-                        finish();
-                    }
-                }).setNegativeButton("No", null).show();
-
-    }
+//    @Override
+//    public void onBackPressed(){
+//        new AlertDialog.Builder(this, R.style.AppTheme_Dialog_Alert_Red).setIcon(android.R.drawable.ic_dialog_alert).setTitle("Exit")
+//                .setMessage("Apakah Yakin Untuk Keluar ?")
+//                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+//                    @Override
+//                    public void onClick(DialogInterface dialog, int which) {
+//                        Intent intent = new Intent(Intent.ACTION_MAIN);
+//                        intent.addCategory(Intent.CATEGORY_HOME);
+//                        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+//                        startActivity(intent);
+//                        finish();
+//                    }
+//                }).setNegativeButton("No", null).show();
+//
+//    }
 
 
     private class SaveData extends AsyncTask<String, String, String> {

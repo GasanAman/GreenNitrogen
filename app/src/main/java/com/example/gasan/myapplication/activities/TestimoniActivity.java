@@ -5,6 +5,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Paint;
 import android.os.AsyncTask;
+import android.support.design.widget.TextInputEditText;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -30,7 +31,7 @@ import java.util.List;
 
 public class TestimoniActivity extends AppCompatActivity {
     ProgressDialog pDialog;
-    EditText inputnama, inputnohp, inputemail, kolomTestimoni;
+    TextInputEditText inputnama, inputnohp, inputemail, kolomTestimoni;
     Button submit;
 
     private String URL_NEW_CATEGORY = "http://10.0.3.2/input_testimoni.php";
@@ -40,10 +41,10 @@ public class TestimoniActivity extends AppCompatActivity {
         setContentView(R.layout.activity_testimoni);
 //        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        inputnama = (EditText) findViewById(R.id.inputnamaTestimoni);
-        inputnohp = (EditText) findViewById(R.id.inputnohpTestimoni);
-        inputemail = (EditText) findViewById(R.id.inputemailTestimoni);
-        kolomTestimoni = (EditText) findViewById(R.id.kolomTestimoni);
+        inputnama = (TextInputEditText) findViewById(R.id.inputnamaTestimoni);
+        inputnohp = (TextInputEditText) findViewById(R.id.inputnohpTestimoni);
+        inputemail = (TextInputEditText) findViewById(R.id.inputemailTestimoni);
+        kolomTestimoni = (TextInputEditText) findViewById(R.id.kolomTestimoni);
 
         LayoutInflater inflater1 = getLayoutInflater();
         View alertLayout = inflater1.inflate(R.layout.alert_dialog_testimoni, null);
@@ -96,6 +97,10 @@ public class TestimoniActivity extends AppCompatActivity {
                         } else {
                             new SaveData().execute();
                             Toast.makeText(getApplicationContext(), "Data Berhasil Diinput", Toast.LENGTH_LONG).show();
+                            inputnama.setText("");
+                            inputnohp.setText("");
+                            inputemail.setText("");
+                            kolomTestimoni.setText("");
                         }
                     }
                 });

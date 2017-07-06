@@ -5,6 +5,8 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Paint;
 import android.os.AsyncTask;
+import android.os.Build;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -17,6 +19,7 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.Toast;
+import android.widget.Toolbar;
 
 import com.example.gasan.myapplication.JustifiedTextView;
 import com.example.gasan.myapplication.R;
@@ -45,8 +48,17 @@ public class SteamWashActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_steam_wash);
 
-        // getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        //getSupportActionBar().setDisplayShowHomeEnabled(true);
+        android.support.v7.widget.Toolbar toolbar1 = (android.support.v7.widget.Toolbar) findViewById(R.id.toolbar1);
+//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            setSupportActionBar(toolbar1);
+
+        ActionBar ab = getSupportActionBar();
+        ab.setDisplayHomeAsUpEnabled(true);
+        ab.setTitle("Section Green Steam Wash");
+//            getActionBar().show();
+//        }
+//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+//        getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         mJTv=(JustifiedTextView) findViewById(R.id.text1);
         mJTv.setText(getResources().getString(R.string.steam_wash_p1));
@@ -90,16 +102,16 @@ public class SteamWashActivity extends AppCompatActivity {
 
         ImageButton back = (ImageButton) findViewById(R.id.imageButton);
 
-        back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-//                        .setAction("Action", null).show();
-//                Intent intent = new Intent(SteamWashActivity.this, MainActivity.class);
-//                startActivity(intent);
-                finish();
-            }
-        });
+//        back.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+////                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+////                        .setAction("Action", null).show();
+////                Intent intent = new Intent(SteamWashActivity.this, MainActivity.class);
+////                startActivity(intent);
+//                finish();
+//            }
+//        });
 
         submit  = (Button) findViewById(R.id.buttonSubmitSteamWash);
 
@@ -136,6 +148,13 @@ public class SteamWashActivity extends AppCompatActivity {
                         } else {
                             new SaveData().execute();
                             Toast.makeText(getApplicationContext(), "Data Berhasil Diinput", Toast.LENGTH_LONG).show();
+                            kolomComment.setText("");
+                            inputnama.setText("");
+                            inputalamat.setText("");
+                            inputnohp.setText("");
+                            inputemail.setText("");
+                            inputnopol.setText("");
+                            inputMrkKend.setText("");
                         }
                     }
                 });
@@ -154,22 +173,23 @@ public class SteamWashActivity extends AppCompatActivity {
     }
 
 
-    @Override
-    public void onBackPressed(){
-        new AlertDialog.Builder(this).setIcon(android.R.drawable.ic_dialog_alert).setTitle("Exit")
-                .setMessage("Apakah Yakin Untuk Keluar ?")
-                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        Intent intent = new Intent(Intent.ACTION_MAIN);
-                        intent.addCategory(Intent.CATEGORY_HOME);
-                        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                        startActivity(intent);
-                        finish();
-                    }
-                }).setNegativeButton("No", null).show();
+//    @Override
+//    public void onBackPressed(){
+//        new AlertDialog.Builder(this).setIcon(android.R.drawable.ic_dialog_alert).setTitle("Exit")
+//                .setMessage("Apakah Yakin Untuk Keluar ?")
+//                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+//                    @Override
+//                    public void onClick(DialogInterface dialog, int which) {
+//                        Intent intent = new Intent(Intent.ACTION_MAIN);
+//                        intent.addCategory(Intent.CATEGORY_HOME);
+//                        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+//                        startActivity(intent);
+//                        finish();
+//                    }
+//                }).setNegativeButton("No", null).show();
+//
+//    }
 
-    }
 
 
     class SaveData extends AsyncTask<String, String, String> {
@@ -251,5 +271,7 @@ public class SteamWashActivity extends AppCompatActivity {
 
         }
     }
+
+
 
 }

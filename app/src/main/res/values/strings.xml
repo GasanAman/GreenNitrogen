@@ -82,7 +82,7 @@
     <string name="steam_wash">Steam Wash</string>
     <string name="judul_steam_wash">Comment Of The Week Green Steam Wash</string>
     <string name="judul_testimoni">Testimoni Pelanggan Green Nitrogen</string>
-    <string name="pertanyaan_testimoni">Testimoni anda terhadap Pelayanan dan Produk dari Green Nitrogen</string>
+    <string name="pertanyaan_testimoni">Testimoni terhadap Pelayanan dan Produk dari Green Nitrogen</string>
     <string name="testimoni">Testimoni</string>
     <string name="comments_of_the_week_green_nitrogen">Comments Of The Week Green Nitrogen</string>
     <string name="pertanyaan_isu_palsu">Berikan komentar Anda tentang Isu HOAX Nitrogen Palsu?</string>
@@ -268,8 +268,8 @@
     <string name="informasi_yang_ingin_didapat">Informasi yang ingin didapat</string>
     <string name="alasan">Alasan utama ingin membangun kerjasama dengan Green Nitrogen</string>
     <string name="mengenal">Darimana mengenal Green Nitrogen ?</string>
-    <string name="berapa_lama_mengenal_nitrogen">Berapa Lama Mengenal Nitrogen</string>
-    <string name="outlet_dikunjungi">Outlet Green Nitrogen yang biasa dikunjungi ?</string>
+    <string name="berapa_lama_mengenal_nitrogen">Berapa Lama Mengenal Nitrogen?</string>
+    <string name="outlet_dikunjungi">Outlet Green Nitrogen yang biasa dikunjungi?</string>
     <string name="bandrex">Apakah pernah menggunakan layanan panggilan darurat tambal ban ekspres (BANDREX)? Mohon masukan dan sarannya ?</string>
     <string name="layanan_bandrex">Layanan Bandrex</string>
     <string name="usaha">Apakah Anda pernah menjalankan usaha? Bagaimana sikap Anda dalam menghadapi risiko kegagalan usaha?</string>

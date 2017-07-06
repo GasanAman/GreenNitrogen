@@ -66,7 +66,7 @@ public class KerjaSamaBisnisFragment extends Fragment  implements AdapterView.On
     private static final String TAG_MESSAGE = "message";
     private static final String TAG_SUCCESS = "success";
     String tag_json_obj = "json_obj_req";
-    EditText inputNama, inputAlamat, inputNoHP, inputEmail, inputInstansi, inputInfo, inputAlasan, inputMengenal, inputLamaMengenal, inputOutletDikunjungi, inputBandrex, inputUsaha, inputKritik;
+    EditText inputnama, inputalamat, inputnohp, inputemail, inputInstansi, inputInfo, inputAlasan, inputMengenal, inputLamaMengenal, inputOutletDikunjungi, inputBandrex, inputUsaha, inputKritik;
     Button uploadKTP, submit;
 
     private Uri fileUri; // file url to store image/video
@@ -87,10 +87,10 @@ public class KerjaSamaBisnisFragment extends Fragment  implements AdapterView.On
         rootView = inflater.inflate(R.layout.fragment_kerja_sama_bisnis, container, false);
         getActivity().setTitle(R.string.kerja_sama_bisnis);
 
-        inputNama = (EditText) rootView.findViewById(R.id.inputnamaKerjasama);
-        inputAlamat = (EditText) rootView.findViewById(R.id.inputalamatKerjasama);
-        inputNoHP = (EditText) rootView.findViewById(R.id.inputnohpKerjasama);
-        inputEmail = (EditText) rootView.findViewById(R.id.inputemailKerjasama);
+        inputnama = (EditText) rootView.findViewById(R.id.inputnamaKerjasama);
+        inputalamat = (EditText) rootView.findViewById(R.id.inputalamatKerjasama);
+        inputnohp = (EditText) rootView.findViewById(R.id.inputnohpKerjasama);
+        inputemail = (EditText) rootView.findViewById(R.id.inputemailKerjasama);
         inputInstansi = (EditText) rootView.findViewById(R.id.inputinstansiKerjasama);
         inputInfo = (EditText) rootView.findViewById(R.id.inputinfo);
         inputAlasan = (EditText) rootView.findViewById(R.id.inputalasan);
@@ -138,43 +138,103 @@ public class KerjaSamaBisnisFragment extends Fragment  implements AdapterView.On
         uploadKTP.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                final CharSequence[] options = { "Take Photo", "Choose from Gallery","Cancel" };
-                AlertDialog.Builder builder = new AlertDialog.Builder(v.getContext());
-                builder.setTitle("Add Photo!");
-                builder.setItems(options, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int item){
-                        if (options[item].equals("Take Photo")){
-                            cameraIntent(2);
-//                            Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-//                            File f = new File(android.os.Environment.getExternalStorageDirectory(), "temp.jpg");
-//                            intent.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(f));
-//                            startActivityForResult(intent, 2);
-                        } else if (options[item].equals("Choose from Gallery")){
-                            showFileChooser(1);
-                        } else if (options[item].equals("Cancel")){
-                            dialog.dismiss();
-                        }
-
-
-                    }
-
-
-                });
-                builder.show();
+                showFileChooser(1);
+//                final CharSequence[] options = { "Take Photo", "Choose from Gallery","Cancel" };
+//                AlertDialog.Builder builder = new AlertDialog.Builder(v.getContext());
+//                builder.setTitle("Add Photo!");
+//                builder.setItems(options, new DialogInterface.OnClickListener() {
+//                    @Override
+//                    public void onClick(DialogInterface dialog, int item){
+//                        if (options[item].equals("Take Photo")){
+//                            cameraIntent(2);
+////                            Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+////                            File f = new File(android.os.Environment.getExternalStorageDirectory(), "temp.jpg");
+////                            intent.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(f));
+////                            startActivityForResult(intent, 2);
+//                        } else if (options[item].equals("Choose from Gallery")){
+//                            showFileChooser(1);
+//                        } else if (options[item].equals("Cancel")){
+//                            dialog.dismiss();
+//                        }
+//
+//
+//                    }
+//
+//
+//                });
+//                builder.show();
 
             }
         });
 
-        submit.setOnClickListener(new View.OnClickListener(){
+        submit.setOnClickListener(new View.OnClickListener(){//, R.style.AppTheme_Dialog_Alert_Red
 
             @Override
             public void onClick(View v) {
+                AlertDialog.Builder tampilKotakAlert = new AlertDialog.Builder(v.getContext());
+                tampilKotakAlert.setTitle("Alert");
+                tampilKotakAlert.setIcon(android.R.drawable.ic_dialog_alert);
+//                tampilKotakAlert.setView(alertLayout);
+                tampilKotakAlert.setMessage(R.string.alert_message_inputan);
+                tampilKotakAlert.setPositiveButton (R.string.ya, new DialogInterface.OnClickListener(){
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        if(inputnama.getText().toString().trim().isEmpty()) {
+                            Toast.makeText(rootView.getContext().getApplicationContext(), "Nama Masih Kosong", Toast.LENGTH_LONG).show();
+                        } else if (inputalamat.getText().toString().trim().isEmpty()) {
+                            Toast.makeText(rootView.getContext().getApplicationContext(), "Alamat Masih Kosong", Toast.LENGTH_LONG).show();
+                        } else if (inputnohp.getText().toString().trim().isEmpty()) {
+                            Toast.makeText(rootView.getContext().getApplicationContext(), "Nomor HP Masih Kosong", Toast.LENGTH_LONG).show();
+                        } else if (inputemail.getText().toString().trim().isEmpty()) {
+                            Toast.makeText(rootView.getContext().getApplicationContext(), "Email Masih Kosong", Toast.LENGTH_LONG).show();
+                        } else if (inputInstansi.getText().toString().trim().isEmpty()) {
+                            Toast.makeText(rootView.getContext().getApplicationContext(), "Nomor Polisi Masih Kosong", Toast.LENGTH_LONG).show();
+                        } else if (inputInfo.getText().toString().trim().isEmpty()) {
+                            Toast.makeText(rootView.getContext().getApplicationContext(), "Merek Kendaraan Masih Kosong", Toast.LENGTH_LONG).show();
+                        } else if (inputAlasan.getText().toString().trim().isEmpty()) {
+                            Toast.makeText(rootView.getContext().getApplicationContext(), "Nomor Polisi Masih Kosong", Toast.LENGTH_LONG).show();
+                        } else if (inputMengenal.getText().toString().trim().isEmpty()) {
+                            Toast.makeText(rootView.getContext().getApplicationContext(), "Nomor Polisi Masih Kosong", Toast.LENGTH_LONG).show();
+                        } else if (inputLamaMengenal.getText().toString().trim().isEmpty()) {
+                            Toast.makeText(rootView.getContext().getApplicationContext(), "Nomor Polisi Masih Kosong", Toast.LENGTH_LONG).show();
+                        } else if (inputOutletDikunjungi.getText().toString().trim().isEmpty()) {
+                            Toast.makeText(rootView.getContext().getApplicationContext(), "Nomor Polisi Masih Kosong", Toast.LENGTH_LONG).show();
+                        } else if (inputBandrex.getText().toString().trim().isEmpty()) {
+                            Toast.makeText(rootView.getContext().getApplicationContext(), "Nomor Polisi Masih Kosong", Toast.LENGTH_LONG).show();
+                        } else if (inputUsaha.getText().toString().trim().isEmpty()) {
+                            Toast.makeText(rootView.getContext().getApplicationContext(), "Nomor Polisi Masih Kosong", Toast.LENGTH_LONG).show();
+                        } else if (inputKritik.getText().toString().trim().isEmpty()) {
+                            Toast.makeText(rootView.getContext().getApplicationContext(), "Nomor Polisi Masih Kosong", Toast.LENGTH_LONG).show();
+                        } else {
+                            uploadImage();
+                            Toast.makeText(rootView.getContext().getApplicationContext(), "Data Berhasil Diinput", Toast.LENGTH_LONG).show();
+                            inputnama.setText("");
+                            inputalamat.setText("");
+                            inputnohp.setText("");
+                            inputemail.setText("");
+                            inputInstansi.setText("");
+                            inputInfo.setText("");
+                            inputAlasan.setText("");
+                            inputMengenal.setText("");
+                            inputLamaMengenal.setText("");
+                            inputOutletDikunjungi.setText("");
+                            inputBandrex.setText("");
+                            inputUsaha.setText("");
+                            inputKritik.setText("");
+                        }
+                    }
+                });
+                tampilKotakAlert.setNegativeButton(R.string.tidak, new DialogInterface.OnClickListener() {
 
-//                if(cKeterangan.getText().toString().trim().isEmpty()) {
-//                    Toast.makeText(getActivity().getApplicationContext(), "Keterangan Harap Disi", Toast.LENGTH_LONG).show();
-//                }else{
-                uploadImage();
+                    public void onClick(DialogInterface dialog, int which) {
+                        //ActionNya Apa
+                        dialog.dismiss();
+                    }
+                });
+
+//                AlertDialog alert = tampilKotakAlert.create();
+                tampilKotakAlert.show();
+
 
 
             }
@@ -294,10 +354,10 @@ public class KerjaSamaBisnisFragment extends Fragment  implements AdapterView.On
 
 
                 //menambah parameter yang di kirim ke web servis
-                params.put("nama",inputNama.getText().toString().trim());
-                params.put("alamat",inputAlamat.getText().toString().trim());
-                params.put("no_hp",inputNoHP.getText().toString().trim());
-                params.put("email",inputEmail.getText().toString().trim());
+                params.put("nama",inputnama.getText().toString().trim());
+                params.put("alamat",inputalamat.getText().toString().trim());
+                params.put("no_hp",inputnohp.getText().toString().trim());
+                params.put("email",inputemail.getText().toString().trim());
                 params.put("instansi",inputInstansi.getText().toString().trim());
                 params.put("informasi",inputInfo.getText().toString().trim());
                 params.put("alasan",inputAlasan.getText().toString().trim());
