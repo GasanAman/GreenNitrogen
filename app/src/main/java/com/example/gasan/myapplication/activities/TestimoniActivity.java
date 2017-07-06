@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.graphics.Paint;
 import android.os.AsyncTask;
 import android.support.design.widget.TextInputEditText;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -41,6 +42,13 @@ public class TestimoniActivity extends AppCompatActivity {
         setContentView(R.layout.activity_testimoni);
 //        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+        android.support.v7.widget.Toolbar toolbar1 = (android.support.v7.widget.Toolbar) findViewById(R.id.toolbar1);
+        setSupportActionBar(toolbar1);
+
+        ActionBar ab = getSupportActionBar();
+        ab.setDisplayHomeAsUpEnabled(true);
+        ab.setTitle("Section Testimoni");
+
         inputnama = (TextInputEditText) findViewById(R.id.inputnamaTestimoni);
         inputnohp = (TextInputEditText) findViewById(R.id.inputnohpTestimoni);
         inputemail = (TextInputEditText) findViewById(R.id.inputemailTestimoni);
@@ -62,17 +70,17 @@ public class TestimoniActivity extends AppCompatActivity {
         alertDialog.show();
 
 
-        ImageButton back = (ImageButton) findViewById(R.id.imageButton);
-        back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-//                        .setAction("Action", null).show();
-//                Intent intent = new Intent(TestimoniActivity.this, MainActivity.class);
-//                startActivity(intent);
-                finish();
-            }
-        });
+//        ImageButton back = (ImageButton) findViewById(R.id.imageButton);
+//        back.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+////                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+////                        .setAction("Action", null).show();
+////                Intent intent = new Intent(TestimoniActivity.this, MainActivity.class);
+////                startActivity(intent);
+//                finish();
+//            }
+//        });
 
         submit  = (Button) findViewById(R.id.buttonSubmitTestimoni);
 
@@ -118,22 +126,22 @@ public class TestimoniActivity extends AppCompatActivity {
     }
 
 
-    @Override
-    public void onBackPressed(){
-        new AlertDialog.Builder(this).setIcon(android.R.drawable.ic_dialog_alert).setTitle("Exit")
-                .setMessage("Apakah Yakin Untuk Keluar ?")
-                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        Intent intent = new Intent(Intent.ACTION_MAIN);
-                        intent.addCategory(Intent.CATEGORY_HOME);
-                        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                        startActivity(intent);
-                        finish();
-                    }
-                }).setNegativeButton("No", null).show();
-
-    }
+//    @Override
+//    public void onBackPressed(){
+//        new AlertDialog.Builder(this).setIcon(android.R.drawable.ic_dialog_alert).setTitle("Exit")
+//                .setMessage("Apakah Yakin Untuk Keluar ?")
+//                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+//                    @Override
+//                    public void onClick(DialogInterface dialog, int which) {
+//                        Intent intent = new Intent(Intent.ACTION_MAIN);
+//                        intent.addCategory(Intent.CATEGORY_HOME);
+//                        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+//                        startActivity(intent);
+//                        finish();
+//                    }
+//                }).setNegativeButton("No", null).show();
+//
+//    }
 
 
     private class SaveData extends AsyncTask<String, String, String> {

@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.graphics.Paint;
 import android.os.AsyncTask;
 import android.support.annotation.Nullable;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -47,12 +48,13 @@ public class GreenPalsuActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_green_palsu);
-//        toolbar = (Toolbar) findViewById(R.id.toolbar);
-//        setSupportActionBar(toolbar);
-//        assert getSupportActionBar() != null;
-//        if(getSupportActionBar() != null){
-//            getSupportActionBar().setDisplayShowHomeEnabled(true);
-//        }
+
+        android.support.v7.widget.Toolbar toolbar1 = (android.support.v7.widget.Toolbar) findViewById(R.id.toolbar1);
+        setSupportActionBar(toolbar1);
+
+        ActionBar ab = getSupportActionBar();
+        ab.setDisplayHomeAsUpEnabled(true);
+        ab.setTitle("Section Green Nitrogen Palsu");
 
         ls=(JustifiedTextView) findViewById(R.id.green_palsu_paragraf1);
         ls.setText(getResources().getString(R.string.green_palsu_paragraf1));
@@ -93,17 +95,17 @@ public class GreenPalsuActivity extends AppCompatActivity {
         arrayAdapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
         spinner.setAdapter(arrayAdapter);
 
-        ImageButton back = (ImageButton) findViewById(R.id.imageButton);
-        back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-//                        .setAction("Action", null).show();
-//                Intent intent = new Intent(GreenPalsuActivity.this, MainActivity.class);
-//                startActivity(intent);
-                finish();
-            }
-        });
+//        ImageButton back = (ImageButton) findViewById(R.id.imageButton);
+//        back.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+////                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+////                        .setAction("Action", null).show();
+////                Intent intent = new Intent(GreenPalsuActivity.this, MainActivity.class);
+////                startActivity(intent);
+//                finish();
+//            }
+//        });
 
         b1 = (Button) findViewById(R.id.buttonSubmitNitrogenPalsu);
         b1.setOnClickListener(new View.OnClickListener() {

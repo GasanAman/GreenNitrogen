@@ -6,6 +6,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.support.design.widget.TextInputEditText;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -45,6 +46,13 @@ public class IsuPalsuActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_isu_palsu);
 
+        android.support.v7.widget.Toolbar toolbar1 = (android.support.v7.widget.Toolbar) findViewById(R.id.toolbar1);
+        setSupportActionBar(toolbar1);
+
+        ActionBar ab = getSupportActionBar();
+        ab.setDisplayHomeAsUpEnabled(true);
+        ab.setTitle("Section Isu Nitrogen Palsu");
+
 //        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         LayoutInflater inflater1 = getLayoutInflater();
         View alertLayout = inflater1.inflate(R.layout.alert_dialog_isu_palsu, null);
@@ -78,17 +86,17 @@ public class IsuPalsuActivity extends AppCompatActivity {
         spinner.setAdapter(arrayAdapter);
 
 
-        ImageButton back = (ImageButton) findViewById(R.id.imageButton);
-        back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-//                        .setAction("Action", null).show();
-//                Intent intent = new Intent(IsuPalsuActivity.this, MainActivity.class);
-//                startActivity(intent);
-                finish();
-            }
-        });
+//        ImageButton back = (ImageButton) findViewById(R.id.imageButton);
+//        back.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+////                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+////                        .setAction("Action", null).show();
+////                Intent intent = new Intent(IsuPalsuActivity.this, MainActivity.class);
+////                startActivity(intent);
+//                finish();
+//            }
+//        });
 
         submit  = (Button) findViewById(R.id.buttonSubmitIsuPalsu);
         submit.setOnClickListener(new View.OnClickListener() {

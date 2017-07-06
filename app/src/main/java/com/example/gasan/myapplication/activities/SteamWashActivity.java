@@ -100,7 +100,7 @@ public class SteamWashActivity extends AppCompatActivity {
         arrayAdapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
         spinner.setAdapter(arrayAdapter);
 
-        ImageButton back = (ImageButton) findViewById(R.id.imageButton);
+//        ImageButton back = (ImageButton) findViewById(R.id.imageButton);
 
 //        back.setOnClickListener(new View.OnClickListener() {
 //            @Override
