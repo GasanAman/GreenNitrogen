@@ -137,6 +137,13 @@ public class GreenPalsuActivity extends AppCompatActivity {
                         } else {
                             new SaveData().execute();
                             Toast.makeText(getApplicationContext(), "Data Berhasil Diinput", Toast.LENGTH_LONG).show();
+                            kolomComment.setText("");
+                            inputnama.setText("");
+                            inputalamat.setText("");
+                            inputnohp.setText("");
+                            inputemail.setText("");
+                            inputnopol.setText("");
+                            inputMrkKend.setText("");
                         }
                     }
                 });

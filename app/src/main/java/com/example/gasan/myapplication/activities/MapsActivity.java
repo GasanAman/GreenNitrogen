@@ -3,13 +3,16 @@ package com.example.gasan.myapplication.activities;
 import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
@@ -35,13 +38,21 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     String id_outlet, wilayah_outlet, ambil_id_outlet, nama_outlet, no_spbu, alamat_outlet, latitude_string, longitude_string, nama_outlet_intent;
     Double latitude1, longitude1;
     TextView wilayah, nama, nomor, alamat;
-    private static String URL_CATEGORIES = "http://green-nitrogen.com/web/view_detail_outlet/";
+    Button navigateBtn;
+    private static String URL_CATEGORIES = "http://green-nitrogen.com/nitrogen_android/web/view_detail_outlet/";
     private ProgressDialog pDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
+
+        android.support.v7.widget.Toolbar toolbar1 = (android.support.v7.widget.Toolbar) findViewById(R.id.toolbar1);
+        setSupportActionBar(toolbar1);
+
+        ActionBar ab = getSupportActionBar();
+        ab.setDisplayHomeAsUpEnabled(true);
+        ab.setTitle(R.string.judul_peta_activity);
 
         Intent i = getIntent();
         id_outlet = i.getStringExtra("id_outlet_intent");
@@ -52,15 +63,25 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         longitude1 = Double.parseDouble(longitude_string);
 //        latitude = Double.parseDouble(latitude_string);
 //        longitude = Double.parseDouble(longitude_string);
-        ImageButton back = (ImageButton) findViewById(R.id.imageButtonMaps);
-        back.setOnClickListener(new View.OnClickListener() {
+//        ImageButton back = (ImageButton) findViewById(R.id.imageButtonMaps);
+//        back.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+////                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+////                        .setAction("Action", null).show();
+////                Intent intent = new Intent(MapsActivity.this, MainActivity.class);
+////                startActivity(intent);
+//                finish();
+//            }
+//        });
+
+        navigateBtn = (Button) findViewById(R.id.navigateBtn);
+        navigateBtn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-//                        .setAction("Action", null).show();
-//                Intent intent = new Intent(MapsActivity.this, MainActivity.class);
-//                startActivity(intent);
-                finish();
+                Intent intent = new Intent(android.content.Intent.ACTION_VIEW,
+                        Uri.parse("google.navigation:q="+latitude1+","+longitude1));
+                startActivity(intent);
             }
         });
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.

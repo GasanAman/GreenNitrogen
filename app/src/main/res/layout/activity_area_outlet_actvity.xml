@@ -7,37 +7,42 @@
     tools:context="com.example.gasan.myapplication.activities.AreaOutletActvity"
     android:orientation="vertical">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="55dp"
-        android:gravity="center"
-        android:background="#D00000"
-        android:id="@+id/header1"
-        android:orientation="horizontal"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
+    <include
+        android:id="@+id/toolbar1"
+        layout="@layout/toolbar" />
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="55dp"-->
+        <!--android:gravity="center"-->
+        <!--android:background="#D00000"-->
+        <!--android:id="@+id/header1"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:layout_alignParentStart="true">-->
 
 
 
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Peta Area Outlet"
-            android:layout_gravity="center"
-            android:textColor="@android:color/white"
-            android:layout_marginLeft="30dp"
-            android:textSize="20sp"
-            />
-        <ImageView
-            android:id="@+id/imageButtonArea"
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:background="#D00000"
-            app:srcCompat="@drawable/ic_arrow_back_white_36dp" />
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="Peta Area Outlet"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:textColor="@android:color/white"-->
+            <!--android:layout_marginLeft="30dp"-->
+            <!--android:textSize="20sp"-->
+            <!--/>-->
+        <!--<ImageView-->
+            <!--android:id="@+id/imageButtonArea"-->
+            <!--android:layout_width="50dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:background="#D00000"-->
+            <!--app:srcCompat="@drawable/ic_arrow_back_white_36dp" />-->
 
-    </LinearLayout>
+    <!--</LinearLayout>-->
+
     <LinearLayout
         android:id="@+id/lineatas"
         android:layout_width="wrap_content"
@@ -78,7 +83,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="#000000"
-            android:id="@android:id/list">
+            android:id="@+id/listview">
 
         </ListView>
 

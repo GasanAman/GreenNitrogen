@@ -86,7 +86,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:layout_below="@+id/baris_logo"
-                android:layout_margin="10dp">
+                >
 
                 <com.example.gasan.myapplication.JustifiedTextView
                     android:id="@+id/paragraf1"

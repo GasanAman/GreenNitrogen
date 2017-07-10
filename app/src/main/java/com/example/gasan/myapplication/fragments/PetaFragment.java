@@ -39,8 +39,8 @@ public class PetaFragment extends ListFragment implements AdapterView.OnItemSele
 
     View rootView;
 
-    private static String link_url_area = "https://green-nitrogen.com/web/view_area_outlet";
-    private static String link_url_outlet = "https://green-nitrogen.com/web/view_outlet_per_area";
+    private static String link_url_area = "http://green-nitrogen.com/nitrogen_android/web/view_area_outlet";
+    private static String link_url_outlet = "http://green-nitrogen.com/nitrogen_android/web/view_outlet_per_area";
     private static final String cIdOutlet = "id_outlet";
     private static final String cKodeOutlet = "kode";
     private static final String cNoSpbu = "no_spbu";

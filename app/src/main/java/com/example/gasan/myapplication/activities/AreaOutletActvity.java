@@ -4,6 +4,7 @@ import android.app.ListActivity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.AsyncTask;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -25,13 +26,14 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class AreaOutletActvity extends ListActivity   {
+public class AreaOutletActvity extends AppCompatActivity   {
 
-    private static String link_url = "http://green-nitrogen.com/web/view_area_outlet";
+    private static String link_url = "http://green-nitrogen.com/nitrogen_android/web/view_area_outlet";
     private static final String cIdWilayah = "id_wilayah";
     private static final String cNoWilayah = "no_wilayah";
     private static final String cNamaWilayah = "nama_wilayah";
     private static final String cUrl = "url";
+    ListView listView;
 
     ArrayList<HashMap<String, String>> daftar_listOutlet = new ArrayList<HashMap<String, String>>();
 
@@ -40,17 +42,24 @@ public class AreaOutletActvity extends ListActivity   {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_area_outlet_actvity);
 
-        ImageView back = (ImageView) findViewById(R.id.imageButtonArea);
-        back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-//                        .setAction("Action", null).show();
-//                Intent intent = new Intent(AreaOutletActvity.this, MainActivity.class);
-                startActivity(new Intent(AreaOutletActvity.this, MainActivity.class));
-                finish();
-            }
-        });
+        android.support.v7.widget.Toolbar toolbar1 = (android.support.v7.widget.Toolbar) findViewById(R.id.toolbar1);
+        setSupportActionBar(toolbar1);
+
+        ActionBar ab = getSupportActionBar();
+        ab.setDisplayHomeAsUpEnabled(true);
+        ab.setTitle("Section Green Nitrogen Palsu");
+        listView = (ListView) findViewById(R.id.listview);
+//        ImageView back = (ImageView) findViewById(R.id.imageButtonArea);
+//        back.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+////                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+////                        .setAction("Action", null).show();
+////                Intent intent = new Intent(AreaOutletActvity.this, MainActivity.class);
+//                startActivity(new Intent(AreaOutletActvity.this, MainActivity.class));
+//                finish();
+//            }
+//        });
         new GetArea().execute();
     }
 
@@ -130,19 +139,19 @@ public class AreaOutletActvity extends ListActivity   {
                 R.id.cNamaAreaLayout, R.id.kode});
 
 
-        setListAdapter(adapter);
-        ListView lv = getListView();
-        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        listView.setAdapter(adapter);
+//        ListView lv = listView.get();
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 String kode = ((TextView) view.findViewById(R.id.kode)).getText().toString();
                 String cNamaOutletListView = ((TextView) view.findViewById(R.id.cNamaAreaLayout)).getText().toString();
 
-//                Intent in = new Intent(AreaOutletActvity.this, LaporanPenjualanActivity.class);
-//                in.putExtra("id_outlet_intent", kode);
-//                in.putExtra("nama_outlet_intent", cNamaOutletListView);
-//                startActivity(in);
+                Intent in = new Intent(AreaOutletActvity.this, MapsActivity.class);
+                in.putExtra("id_outlet_intent", kode);
+                in.putExtra("nama_outlet_intent", cNamaOutletListView);
+                startActivity(in);
 
             }
         });
