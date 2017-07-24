@@ -38,7 +38,6 @@
             tools:layout_editor_absoluteY="8dp"
             tools:layout_editor_absoluteX="8dp"
             android:orientation="vertical"
-            android:layout_gravity="center"
             >
 
             <LinearLayout

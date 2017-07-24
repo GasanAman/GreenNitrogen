@@ -2,12 +2,14 @@ package com.example.gasan.myapplication.activities;
 
 import android.app.Dialog;
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
@@ -74,6 +76,18 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 //                finish();
 //            }
 //        });
+
+        AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
+        alertDialog.setTitle(R.string.informasi);
+        alertDialog.setIcon(R.drawable.ic_pref_info);
+        alertDialog.setMessage("Jika anda menemukan lokasi outlet Green Nitrogen tidak tepat di SPBU Petamina pada Maps yang ada, mohon informasikan kepada kami melalui menu Hubungi Kami");
+        alertDialog.setNegativeButton(R.string.ok, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+            }
+        });
+        alertDialog.show();
 
         navigateBtn = (Button) findViewById(R.id.navigateBtn);
         navigateBtn.setOnClickListener(new View.OnClickListener(){
@@ -183,6 +197,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
                     //cStatus.setText(cStatusParam);
                 }
             });
+
         }
 
     }

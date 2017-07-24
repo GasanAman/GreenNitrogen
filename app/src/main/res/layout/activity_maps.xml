@@ -202,7 +202,7 @@
             android:id="@+id/judul_maps"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="10dp"
             android:orientation="vertical">
 
             <TextView
@@ -225,10 +225,10 @@
         <Button
             android:id="@+id/navigateBtn"
             style="@style/Widget.AppCompat.Button.Colored"
-            android:layout_width="wrap_content"
+            android:layout_width="130dp"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
-            android:drawableLeft="@drawable/ic_navigation_white_36dp"
+            android:drawableLeft="@drawable/ic_navigation_white_24dp"
             android:text="Navigate" />
 
 
